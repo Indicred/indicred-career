@@ -1,14 +1,1223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indicred Career</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indicred — India's Credible | LinkedIn Makeover</title>
+<meta name="description" content="Indicred transforms your LinkedIn profile into a clear, credible and compelling professional presence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================= */
+/* TOKENS                        */
+/* ============================= */
+:root{
+  --navy:#0B1220;
+  --blue:#1E4ED8;
+  --gold:#C9A227;
+  --bg:#F7F8FA;
+  --card:#FFFFFF;
+  --text:#172033;
+  --text-soft:#667085;
+  --border:#E4E7EC;
+
+  --font-display:'Manrope',sans-serif;
+  --font-body:'Inter',sans-serif;
+
+  --radius-sm:8px;
+  --radius-md:14px;
+  --radius-lg:22px;
+
+  --shadow-sm:0 1px 2px rgba(11,18,32,0.05), 0 1px 1px rgba(11,18,32,0.03);
+  --shadow-md:0 8px 24px rgba(11,18,32,0.08);
+  --shadow-lg:0 24px 60px rgba(11,18,32,0.14);
+
+  --max:1180px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.55;
+}
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  color:var(--navy);
+  margin:0;
+  line-height:1.15;
+  letter-spacing:-0.01em;
+}
+p{margin:0;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+button{font-family:inherit;cursor:pointer;}
+ul{margin:0;padding:0;list-style:none;}
+:focus-visible{outline:2px solid var(--blue); outline-offset:3px; border-radius:4px;}
+
+.wrap{max-width:var(--max); margin:0 auto; padding:0 24px;}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:12.5px;
+  font-weight:700;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--blue);
+  background:rgba(30,78,216,0.07);
+  border:1px solid rgba(30,78,216,0.15);
+  padding:7px 14px;
+  border-radius:100px;
+}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);}
+
+.section{padding:96px 0;}
+.section-tight{padding:64px 0;}
+.section-head{max-width:640px; margin:0 auto 56px; text-align:center;}
+.section-head h2{font-size:clamp(28px,4vw,40px); margin-top:16px;}
+.section-head p{color:var(--text-soft); font-size:17px; margin-top:14px;}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:15px 28px;
+  border-radius:10px;
+  font-weight:700;
+  font-size:15px;
+  border:1px solid transparent;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+  white-space:nowrap;
+}
+.btn:active{transform:translateY(1px);}
+.btn-primary{background:var(--blue); color:#fff; box-shadow:0 10px 24px rgba(30,78,216,0.28);}
+.btn-primary:hover{background:#1a41b8; box-shadow:0 14px 30px rgba(30,78,216,0.35);}
+.btn-ghost{background:transparent; color:var(--navy); border-color:var(--border);}
+.btn-ghost:hover{border-color:var(--navy);}
+.btn-gold{background:var(--gold); color:var(--navy); box-shadow:0 10px 24px rgba(201,162,39,0.28);}
+.btn-gold:hover{background:#b5901f;}
+.btn-light{background:#fff; color:var(--navy); box-shadow:0 10px 24px rgba(0,0,0,0.18);}
+.btn-light:hover{background:#f1f2f4;}
+.btn-block{width:100%;}
+
+/* ============================= */
+/* HEADER                        */
+/* ============================= */
+header.site{
+  position:sticky; top:0; z-index:500;
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 24px;
+  max-width:var(--max); margin:0 auto;
+}
+.brand{display:flex; flex-direction:column; line-height:1;}
+.brand .logo{font-family:var(--font-display); font-weight:800; font-size:22px; letter-spacing:0.02em; color:var(--navy);}
+.brand .logo span{color:var(--blue);}
+.brand .tag{font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-soft); margin-top:3px;}
+
+.nav-links{display:flex; align-items:center; gap:36px;}
+.nav-links a{
+  font-size:14.5px; font-weight:600; color:var(--text);
+  position:relative; padding:4px 0;
+}
+.nav-links a::after{
+  content:''; position:absolute; left:0; right:0; bottom:-3px; height:2px;
+  background:var(--blue); transform:scaleX(0); transform-origin:left;
+  transition:transform .2s ease;
+}
+.nav-links a:hover::after{transform:scaleX(1);}
+.nav-cta{display:flex; align-items:center; gap:14px;}
+.hamburger{display:none; flex-direction:column; gap:5px; background:none; border:none; padding:8px;}
+.hamburger span{width:22px; height:2px; background:var(--navy); border-radius:2px; transition:all .25s ease;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+.mobile-panel{
+  display:none; flex-direction:column; gap:2px;
+  background:#fff; border-top:1px solid var(--border);
+  padding:8px 24px 20px;
+}
+.mobile-panel a{
+  padding:14px 4px; font-weight:600; font-size:15px; color:var(--text);
+  border-bottom:1px solid var(--border);
+}
+.mobile-panel .btn{margin-top:14px;}
+.mobile-panel.show{display:flex;}
+
+@media (max-width:900px){
+  .nav-links{display:none;}
+  .nav-cta .btn-primary{display:none;}
+  .hamburger{display:flex;}
+}
+
+/* ============================= */
+/* HERO                          */
+/* ============================= */
+.hero{
+  padding:80px 0 90px;
+  background:
+    radial-gradient(1200px 500px at 85% -10%, rgba(30,78,216,0.07), transparent 60%),
+    var(--bg);
+  overflow:hidden;
+}
+.hero-grid{
+  display:grid; grid-template-columns:1.05fr 0.95fr; gap:64px; align-items:center;
+}
+.hero-copy h1{
+  font-size:clamp(34px,4.6vw,54px);
+  margin-top:22px;
+  letter-spacing:-0.02em;
+}
+.hero-copy h1 .hl{color:var(--blue);}
+.hero-copy p.lead{
+  margin-top:22px; font-size:17.5px; color:var(--text-soft); max-width:520px;
+}
+.hero-cta{display:flex; gap:14px; margin-top:32px; flex-wrap:wrap;}
+.hero-points{
+  margin-top:36px; display:grid; grid-template-columns:1fr 1fr; gap:12px 24px; max-width:520px;
+}
+.hero-points li{
+  display:flex; align-items:flex-start; gap:9px; font-size:14px; color:var(--text); font-weight:500;
+}
+.hero-points svg{flex:none; margin-top:2px;}
+
+/* Profile transformation visual */
+.hero-visual{position:relative;}
+.transform-stage{position:relative; display:grid; place-items:center; min-height:460px;}
+.pcard{
+  width:300px; background:var(--card); border-radius:var(--radius-lg);
+  border:1px solid var(--border); box-shadow:var(--shadow-md);
+  padding:22px; position:absolute;
+}
+.pcard.before{
+  left:0; top:12px; transform:rotate(-4deg);
+  filter:grayscale(0.5); opacity:0.85; z-index:1;
+}
+.pcard.after{
+  right:0; bottom:6px; transform:rotate(2deg);
+  z-index:2; box-shadow:var(--shadow-lg);
+}
+.pcard .avatar{
+  width:56px; height:56px; border-radius:50%;
+  background:linear-gradient(135deg,#c8cdd8,#e4e7eb);
+  margin-bottom:14px;
+}
+.pcard.after .avatar{background:linear-gradient(135deg,var(--blue),#3d6ae8);}
+.pcard .name{font-family:var(--font-display); font-weight:700; font-size:15px; color:var(--navy);}
+.pcard .role{font-size:12.5px; color:var(--text-soft); margin-top:4px;}
+.pcard.after .role{color:var(--blue); font-weight:600;}
+.pcard .bar{height:7px; border-radius:4px; background:var(--border); margin-top:14px;}
+.pcard .bar.w2{width:70%;}
+.pcard .bar.w3{width:45%;}
+.pcard.after .bar{background:rgba(30,78,216,0.18);}
+.pcard .tagchip{
+  display:inline-block; margin-top:14px; font-size:10.5px; font-weight:700;
+  letter-spacing:0.08em; text-transform:uppercase; padding:5px 10px; border-radius:100px;
+}
+.pcard.before .tagchip{background:#EEF0F3; color:var(--text-soft);}
+.pcard.after .tagchip{background:rgba(201,162,39,0.14); color:#8a6c15; border:1px solid rgba(201,162,39,0.35);}
+.stage-arrow{
+  position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+  width:52px; height:52px; border-radius:50%; background:var(--navy);
+  display:grid; place-items:center; box-shadow:var(--shadow-md); z-index:3;
+}
+
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr; gap:56px;}
+  .transform-stage{min-height:380px;}
+  .pcard{width:250px;}
+}
+@media (max-width:520px){
+  .hero-points{grid-template-columns:1fr;}
+  .pcard.before{left:0; top:0;}
+  .pcard.after{right:0; bottom:0;}
+}
+
+/* ============================= */
+/* TRUST STRIP                   */
+/* ============================= */
+.trust{background:#fff; border-top:1px solid var(--border); border-bottom:1px solid var(--border);}
+.trust-inner{
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px 40px;
+  padding:28px 24px; max-width:var(--max); margin:0 auto;
+}
+.trust-item{display:flex; align-items:center; gap:10px; font-size:14px; font-weight:600; color:var(--text-soft);}
+.trust-item svg{color:var(--blue); flex:none;}
+
+/* ============================= */
+/* CARD GRID PATTERNS             */
+/* ============================= */
+.grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
+.grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+.grid-2{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+@media (max-width:980px){ .grid-4{grid-template-columns:1fr 1fr;} .grid-3{grid-template-columns:1fr;} }
+@media (max-width:640px){ .grid-4{grid-template-columns:1fr;} .grid-2{grid-template-columns:1fr;} }
+
+.card{
+  background:var(--card); border:1px solid var(--border); border-radius:var(--radius-md);
+  padding:28px; transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.card:hover{transform:translateY(-4px); box-shadow:var(--shadow-md); border-color:#d7dbe3;}
+.card .icon-badge{
+  width:44px; height:44px; border-radius:12px; display:grid; place-items:center;
+  background:rgba(30,78,216,0.08); color:var(--blue); margin-bottom:18px;
+}
+.card h3{font-size:17px; margin-bottom:9px;}
+.card p{font-size:14.5px; color:var(--text-soft);}
+.card .num{
+  font-family:var(--font-display); font-weight:800; font-size:13px; color:var(--gold);
+  letter-spacing:0.06em; margin-bottom:10px; display:block;
+}
+
+.closing-line{
+  text-align:center; margin-top:44px; font-family:var(--font-display);
+  font-weight:700; font-size:19px; color:var(--navy);
+}
+.closing-line .dash{color:var(--gold);}
+
+/* ============================= */
+/* PILLARS (What is Makeover)     */
+/* ============================= */
+.pillars-wrap{background:#fff; border-top:1px solid var(--border); border-bottom:1px solid var(--border);}
+.pillars-head{max-width:680px; margin:0 auto 56px; text-align:center;}
+.pillar-row{display:grid; grid-template-columns:repeat(3,1fr); gap:36px;}
+.pillar{padding:8px;}
+.pillar .bignum{
+  font-family:var(--font-display); font-weight:800; font-size:44px; color:transparent;
+  -webkit-text-stroke:1.4px var(--blue); line-height:1; margin-bottom:16px;
+}
+.pillar h3{font-size:18px; letter-spacing:0.04em; text-transform:uppercase; margin-bottom:10px;}
+.pillar p{color:var(--text-soft); font-size:15px;}
+@media (max-width:800px){ .pillar-row{grid-template-columns:1fr;} }
+
+/* ============================= */
+/* BEFORE / AFTER SECTION         */
+/* ============================= */
+.ba-example{
+  display:grid; grid-template-columns:1fr 60px 1fr; align-items:center; gap:0;
+  margin-bottom:24px;
+}
+.ba-panel{border-radius:var(--radius-md); padding:26px 28px; min-height:96px; display:flex; align-items:center;}
+.ba-panel.before{background:#EEF0F3; border:1px solid var(--border); color:var(--text-soft); font-size:16px; font-weight:600;}
+.ba-panel.after{
+  background:#fff; border:1px solid var(--border); box-shadow:var(--shadow-sm);
+  border-left:3px solid var(--blue);
+  font-family:var(--font-display); font-weight:700; font-size:16px; color:var(--navy);
+}
+.ba-arrow{display:grid; place-items:center; color:var(--gold);}
+@media (max-width:760px){
+  .ba-example{grid-template-columns:1fr; gap:10px; text-align:left;}
+  .ba-arrow{transform:rotate(90deg); padding:2px 0;}
+}
+.ba-cta{text-align:center; margin-top:52px;}
+.ba-cta h3{font-size:22px; margin-bottom:18px;}
+
+/* ============================= */
+/* DELIVERABLES                   */
+/* ============================= */
+.deliv-grid{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:16px 28px;
+  background:#fff; border:1px solid var(--border); border-radius:var(--radius-lg);
+  padding:44px;
+}
+.deliv-item{display:flex; align-items:flex-start; gap:12px; font-size:14.5px; font-weight:600; color:var(--text); padding:10px 0;}
+.deliv-item svg{flex:none; margin-top:2px; color:var(--gold);}
+@media (max-width:900px){ .deliv-grid{grid-template-columns:1fr 1fr; padding:30px;} }
+@media (max-width:560px){ .deliv-grid{grid-template-columns:1fr;} }
+
+/* ============================= */
+/* PROCESS TIMELINE               */
+/* ============================= */
+.timeline{display:grid; grid-template-columns:repeat(4,1fr); gap:0; position:relative;}
+.timeline::before{
+  content:''; position:absolute; top:22px; left:6%; right:6%; height:2px; background:var(--border);
+}
+.tstep{position:relative; text-align:center; padding:0 16px;}
+.tstep .dotnum{
+  width:44px; height:44px; border-radius:50%; background:var(--navy); color:#fff;
+  display:grid; place-items:center; margin:0 auto 20px; position:relative; z-index:2;
+  font-family:var(--font-display); font-weight:700; font-size:15px;
+  border:4px solid var(--bg);
+}
+.tstep h3{font-size:16px; letter-spacing:0.04em; margin-bottom:8px;}
+.tstep p{font-size:13.5px; color:var(--text-soft);}
+@media (max-width:820px){
+  .timeline{grid-template-columns:1fr; gap:36px;}
+  .timeline::before{top:0; bottom:0; left:22px; width:2px; height:auto; right:auto;}
+  .tstep{text-align:left; padding-left:64px;}
+  .tstep .dotnum{position:absolute; left:0; top:0; margin:0;}
+}
+
+/* ============================= */
+/* TESTIMONIALS                   */
+/* ============================= */
+.testi-card{
+  background:#fff; border:1px solid var(--border); border-radius:var(--radius-md);
+  padding:30px; display:flex; flex-direction:column; gap:20px;
+}
+.testi-quote{font-size:15.5px; color:var(--text); line-height:1.65;}
+.testi-quote::before{content:'“'; color:var(--gold); font-size:28px; font-family:var(--font-display); line-height:0; display:inline-block; vertical-align:-6px; margin-right:2px;}
+.testi-person{display:flex; align-items:center; gap:12px; padding-top:16px; border-top:1px solid var(--border);}
+.testi-avatar{width:42px; height:42px; border-radius:50%; background:linear-gradient(135deg,var(--blue),#3d6ae8); flex:none;}
+.testi-name{font-weight:700; font-size:14.5px; color:var(--navy);}
+.testi-role{font-size:12.5px; color:var(--text-soft);}
+
+/* ============================= */
+/* WHY INDICRED (dark)            */
+/* ============================= */
+.why{background:var(--navy); color:#fff;}
+.why .section-head h2{color:#fff;}
+.why .section-head p{color:#98A2B3;}
+.why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:28px;}
+.why-item{border-left:2px solid rgba(201,162,39,0.5); padding-left:20px;}
+.why-item h3{color:#fff; font-size:16px; letter-spacing:0.05em; margin-bottom:10px;}
+.why-item p{color:#98A2B3; font-size:14.5px;}
+@media (max-width:900px){ .why-grid{grid-template-columns:1fr 1fr; gap:32px;} }
+@media (max-width:560px){ .why-grid{grid-template-columns:1fr;} }
+
+/* ============================= */
+/* FAQ                            */
+/* ============================= */
+.faq-list{max-width:800px; margin:0 auto; display:flex; flex-direction:column; gap:12px;}
+.faq-item{
+  background:#fff; border:1px solid var(--border); border-radius:var(--radius-sm); overflow:hidden;
+}
+.faq-q{
+  width:100%; text-align:left; background:none; border:none; padding:20px 22px;
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+  font-family:var(--font-display); font-weight:700; font-size:15.5px; color:var(--navy);
+}
+.faq-q .plus{flex:none; width:22px; height:22px; position:relative;}
+.faq-q .plus::before, .faq-q .plus::after{
+  content:''; position:absolute; background:var(--blue); border-radius:2px; transition:transform .25s ease;
+}
+.faq-q .plus::before{left:0; top:9px; width:22px; height:2px;}
+.faq-q .plus::after{left:9px; top:0; width:2px; height:22px;}
+.faq-item.open .faq-q .plus::after{transform:rotate(90deg); opacity:0;}
+.faq-a{max-height:0; overflow:hidden; transition:max-height .3s ease;}
+.faq-a-inner{padding:0 22px 20px; font-size:14.5px; color:var(--text-soft); max-width:680px;}
+
+/* ============================= */
+/* LEAD FORM SECTION               */
+/* ============================= */
+.lead-section{background:#fff; border-top:1px solid var(--border);}
+.lead-grid{display:grid; grid-template-columns:1fr 1.1fr; gap:56px; align-items:start;}
+.lead-copy h2{font-size:clamp(26px,3.4vw,34px);}
+.lead-copy p.lead-sub{margin-top:16px; color:var(--text-soft); font-size:16px; max-width:440px;}
+.lead-list{margin-top:30px; display:flex; flex-direction:column; gap:14px;}
+.lead-list li{display:flex; gap:10px; align-items:center; font-size:14.5px; font-weight:600;}
+.lead-list svg{color:var(--blue); flex:none;}
+
+.form-card{
+  background:var(--bg); border:1px solid var(--border); border-radius:var(--radius-lg);
+  padding:36px;
+}
+.form-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+.field{display:flex; flex-direction:column; gap:6px; margin-bottom:16px;}
+.field.full{grid-column:1 / -1;}
+.field label{font-size:13px; font-weight:700; color:var(--text);}
+.field label .req{color:var(--blue);}
+.field input, .field select, .field textarea{
+  border:1px solid var(--border); border-radius:8px; padding:12px 14px; font-size:14.5px;
+  font-family:inherit; background:#fff; color:var(--text); width:100%;
+  transition:border-color .18s ease, box-shadow .18s ease;
+}
+.field input:focus, .field select:focus, .field textarea:focus{
+  border-color:var(--blue); box-shadow:0 0 0 3px rgba(30,78,216,0.12); outline:none;
+}
+.field textarea{resize:vertical; min-height:90px;}
+.field .err{font-size:12px; color:#C0362C; min-height:14px;}
+.field.has-error input, .field.has-error select, .field.has-error textarea{border-color:#C0362C;}
+.form-note{font-size:12.5px; color:var(--text-soft); margin-top:14px; text-align:center;}
+.form-submit{margin-top:6px; position:relative;}
+.spinner{
+  width:16px; height:16px; border-radius:50%; border:2px solid rgba(255,255,255,0.4);
+  border-top-color:#fff; animation:spin .7s linear infinite; display:none;
+}
+.btn.loading .spinner{display:inline-block;}
+.btn.loading .btn-label{opacity:0.85;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+.form-success{
+  display:none; text-align:center; padding:40px 20px;
+}
+.form-success.show{display:block;}
+.form-success .check{
+  width:64px; height:64px; border-radius:50%; background:rgba(30,78,216,0.08); color:var(--blue);
+  display:grid; place-items:center; margin:0 auto 18px;
+}
+.form-success h3{font-size:19px; margin-bottom:10px;}
+.form-success p{color:var(--text-soft); font-size:14.5px; max-width:340px; margin:0 auto;}
+
+@media (max-width:980px){ .lead-grid{grid-template-columns:1fr;} }
+@media (max-width:560px){ .form-grid{grid-template-columns:1fr;} .form-card{padding:24px;} }
+
+/* ============================= */
+/* FINAL CTA                       */
+/* ============================= */
+.final-cta{background:var(--navy); color:#fff; text-align:center; position:relative; overflow:hidden;}
+.final-cta::before{
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(700px 300px at 50% 0%, rgba(201,162,39,0.12), transparent 70%);
+}
+.final-cta .inner{position:relative; max-width:640px; margin:0 auto;}
+.final-cta h2{color:#fff; font-size:clamp(28px,4vw,40px);}
+.final-cta h2 .line2{display:block; color:var(--gold);}
+.final-cta p{color:#98A2B3; margin-top:18px; font-size:16px;}
+.final-cta .btn{margin-top:30px;}
+
+/* ============================= */
+/* FOOTER                          */
+/* ============================= */
+footer.site{background:var(--navy); color:#98A2B3; padding:64px 0 28px;}
+.footer-grid{display:grid; grid-template-columns:1.4fr repeat(4,1fr); gap:32px; padding-bottom:44px; border-bottom:1px solid rgba(255,255,255,0.08);}
+.footer-brand .logo{font-family:var(--font-display); font-weight:800; font-size:20px; color:#fff;}
+.footer-brand .logo span{color:var(--blue);}
+.footer-brand .tag{font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#98A2B3; margin-top:6px;}
+.footer-col h4{color:#fff; font-size:13px; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:16px; font-family:var(--font-display);}
+.footer-col ul{display:flex; flex-direction:column; gap:10px;}
+.footer-col a{font-size:14px; color:#98A2B3; transition:color .18s ease;}
+.footer-col a:hover{color:#fff;}
+.footer-bottom{display:flex; justify-content:space-between; align-items:center; padding-top:24px; flex-wrap:wrap; gap:12px; font-size:13px;}
+.footer-bottom .legal{display:flex; gap:20px;}
+@media (max-width:900px){ .footer-grid{grid-template-columns:1fr 1fr;} }
+@media (max-width:520px){ .footer-grid{grid-template-columns:1fr;} }
+
+/* Reveal on scroll */
+.reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+.reveal.visible{opacity:1; transform:translateY(0);}
+</style>
 </head>
 <body>
 
-    <h1>Indicred Career</h1>
-    <p>Website is working successfully on GitHub Pages.</p>
+<!-- ============================= HEADER ============================= -->
+<header class="site">
+  <nav class="nav">
+    <a href="#top" class="brand">
+      <span class="logo">INDI<span>CRED</span></span>
+      <span class="tag">India's Credible</span>
+    </a>
+    <div class="nav-links">
+      <a href="#top">Home</a>
+      <a href="#why">Why Indicred</a>
+      <a href="#makeover">LinkedIn Makeover</a>
+      <a href="#before-after">Before &amp; After</a>
+      <a href="#stories">Success Stories</a>
+      <a href="#faq">FAQs</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#lead" class="btn btn-primary">Get Started</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#top">Home</a>
+    <a href="#why">Why Indicred</a>
+    <a href="#makeover">LinkedIn Makeover</a>
+    <a href="#before-after">Before &amp; After</a>
+    <a href="#stories">Success Stories</a>
+    <a href="#faq">FAQs</a>
+    <a href="#lead" class="btn btn-primary btn-block">Get Started</a>
+  </div>
+</header>
+
+<!-- ============================= HERO ============================= -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="dot"></span>LINKEDIN MAKEOVER</span>
+      <h1>Your LinkedIn Profile Should Reflect Your <span class="hl">Professional Value.</span></h1>
+      <p class="lead">Your experience may be impressive, but if your LinkedIn profile doesn't communicate it effectively, valuable opportunities can be missed. Indicred transforms your profile into a clear, credible and compelling professional presence.</p>
+      <div class="hero-cta">
+        <a href="#lead" class="btn btn-primary">Get Your LinkedIn Makeover</a>
+        <a href="#before-after" class="btn btn-ghost">See the Transformation</a>
+      </div>
+      <ul class="hero-points">
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#1E4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Expert-written profile content</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#1E4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Professional personal branding</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#1E4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>LinkedIn visibility optimization</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#1E4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Industry-focused positioning</li>
+      </ul>
+    </div>
+    <div class="hero-visual">
+      <div class="transform-stage">
+        <div class="pcard before">
+          <div class="avatar"></div>
+          <div class="name">Profile Owner</div>
+          <div class="role">Senior Manager</div>
+          <div class="bar w2"></div>
+          <div class="bar w3"></div>
+          <span class="tagchip">BEFORE</span>
+        </div>
+        <div class="stage-arrow">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="pcard after">
+          <div class="avatar"></div>
+          <div class="name">Profile Owner</div>
+          <div class="role">Strategy &amp; Growth Leader</div>
+          <div class="bar w2"></div>
+          <div class="bar w3"></div>
+          <span class="tagchip">TRANSFORMED</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= TRUST STRIP ============================= -->
+<section class="trust">
+  <div class="trust-inner">
+    <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg>Professional Positioning</div>
+    <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Profile Optimization</div>
+    <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21v-6M4 9V3M12 21v-10M12 7V3M20 21v-4M20 13V3"/><path d="M2 15h4M8 7h4M18 17h4"/></svg>Personal Branding</div>
+    <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>Career Visibility</div>
+  </div>
+</section>
+
+<!-- ============================= PROBLEM SECTION ============================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span>THE PROBLEM</span>
+      <h2>Is Your LinkedIn Profile Working As Hard As You Are?</h2>
+      <p>Many professionals have years of experience but their LinkedIn profile doesn't communicate their expertise, achievements or career direction clearly.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card reveal">
+        <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01M8 16s1.5-2 4-2 4 2 4 2" stroke-linecap="round"/></svg></div>
+        <h3>Weak First Impression</h3>
+        <p>Your profile may not immediately communicate what you do or what you bring to the table.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h13" stroke-linecap="round"/></svg></div>
+        <h3>Unclear Positioning</h3>
+        <p>Your experience is visible, but your professional story isn't.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3" stroke-linecap="round"/></svg></div>
+        <h3>Low Discoverability</h3>
+        <p>Without relevant keywords and structured positioning, your profile can be difficult to discover.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/></svg></div>
+        <h3>Missed Opportunities</h3>
+        <p>Recruiters, clients and professional connections may overlook a profile that doesn't communicate value clearly.</p>
+      </div>
+    </div>
+    <p class="closing-line reveal"><span class="dash">—</span> Your experience deserves better representation.</p>
+  </div>
+</section>
+
+<!-- ============================= WHAT IS LINKEDIN MAKEOVER ============================= -->
+<section class="pillars-wrap" id="makeover">
+  <div class="wrap section">
+    <div class="pillars-head reveal">
+      <span class="eyebrow"><span class="dot"></span>WHAT IS LINKEDIN MAKEOVER</span>
+      <h2 style="margin-top:16px; font-size:clamp(28px,4vw,38px);">More Than a Profile Update</h2>
+      <p style="margin-top:14px; color:var(--text-soft); font-size:17px;">LinkedIn Makeover is a complete professional profile transformation designed around your experience, expertise, career goals and industry.</p>
+    </div>
+    <div class="pillar-row">
+      <div class="pillar reveal">
+        <div class="bignum">01</div>
+        <h3>Position</h3>
+        <p>Clearly communicate who you are and what you are known for.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="bignum">02</div>
+        <h3>Present</h3>
+        <p>Present your experience and achievements in a compelling professional narrative.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="bignum">03</div>
+        <h3>Discover</h3>
+        <p>Improve your profile structure and keyword relevance to increase professional discoverability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= WHAT WE DO ============================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span>WHAT WE DO</span>
+      <h2>Everything Your LinkedIn Profile Needs</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <span class="num">01</span>
+        <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h10M4 17h7"/></svg></div>
+        <h3>SEO-Focused Headline</h3>
+        <p>Create a clear headline incorporating relevant professional keywords.</p>
+      </div>
+      <div class="card reveal">
+        <span class="num">02</span>
+        <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h3>Professional About Section</h3>
+        <p>Turn your experience, expertise and career story into a compelling narrative.</p>
+      </div>
+      <div class="card reveal">
+        <span class="num">03</span>
+        <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 15l4-5 3 3 5-7"/></svg></div>
+        <h3>Experience &amp; Skills Enhancement</h3>
+        <p>Present your responsibilities and achievements in a stronger professional format.</p>
+      </div>
+      <div class="card reveal">
+        <span class="num">04</span>
+        <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+        <h3>Personal Branding</h3>
+        <p>Build a consistent professional identity across your LinkedIn presence.</p>
+      </div>
+      <div class="card reveal">
+        <span class="num">05</span>
+        <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M14 15l2-2 5 5"/></svg></div>
+        <h3>Professional Visuals</h3>
+        <p>Create professional LinkedIn banners and profile visuals.</p>
+      </div>
+      <div class="card reveal">
+        <span class="num">06</span>
+        <div class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h3>Content Guidance</h3>
+        <p>Provide structured content guidance to help strengthen your professional presence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= BEFORE & AFTER ============================= -->
+<section class="section" id="before-after" style="background:#fff; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span>THE TRANSFORMATION</span>
+      <h2>See the Difference a Stronger Profile Can Make</h2>
+      <p>Good experience deserves good positioning.</p>
+    </div>
+
+    <div class="ba-example reveal">
+      <div class="ba-panel before">Senior Manager</div>
+      <div class="ba-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="ba-panel after">Business Strategy &amp; Growth Leader | P&amp;L | Market Expansion | Digital Transformation</div>
+    </div>
+    <div class="ba-example reveal">
+      <div class="ba-panel before">HR Professional</div>
+      <div class="ba-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="ba-panel after">HR Strategy | Talent Development | Employee Experience | Organizational Growth</div>
+    </div>
+    <div class="ba-example reveal">
+      <div class="ba-panel before">Sales Head</div>
+      <div class="ba-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="ba-panel after">Revenue Growth | Strategic Accounts | Sales Leadership | B2B Growth</div>
+    </div>
+
+    <div class="ba-cta reveal">
+      <h3>Want to Transform Your Profile?</h3>
+      <a href="#lead" class="btn btn-primary">Get Started</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= DELIVERABLES ============================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span>DELIVERABLES</span>
+      <h2>What You Get With Indicred</h2>
+    </div>
+    <div class="deliv-grid reveal">
+      <div class="deliv-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>SEO-focused LinkedIn Headline</div>
+      <div class="deliv-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Professionally Written About Section</div>
+      <div class="deliv-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Experience &amp; Skills Enhancement</div>
+      <div class="deliv-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Personal Branding Guidance</div>
+      <div class="deliv-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Professional LinkedIn Banners</div>
+      <div class="deliv-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Professional Profile Visuals</div>
+      <div class="deliv-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Day Content Calendar</div>
+      <div class="deliv-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>LinkedIn Profile Optimization</div>
+      <div class="deliv-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Visibility &amp; Positioning Guidance</div>
+      <div class="deliv-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Recruiter/Company Targeting Guidance</div>
+      <div class="deliv-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Interview Preparation Resources</div>
+      <div class="deliv-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Profile Review &amp; Refinement</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= PROCESS ============================= -->
+<section class="section" style="background:#fff; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span>THE PROCESS</span>
+      <h2>From Profile to Professional Brand</h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="tstep">
+        <div class="dotnum">01</div>
+        <h3>DISCOVER</h3>
+        <p>Understand your career journey, expertise, goals and target audience.</p>
+      </div>
+      <div class="tstep">
+        <div class="dotnum">02</div>
+        <h3>STRATEGIZE</h3>
+        <p>Define your positioning and professional narrative.</p>
+      </div>
+      <div class="tstep">
+        <div class="dotnum">03</div>
+        <h3>TRANSFORM</h3>
+        <p>Rewrite and redesign the important elements of your LinkedIn profile.</p>
+      </div>
+      <div class="tstep">
+        <div class="dotnum">04</div>
+        <h3>REFINE</h3>
+        <p>Review the profile and make final improvements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= SUCCESS STORIES ============================= -->
+<section class="section" id="stories">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span>SUCCESS STORIES</span>
+      <h2>Professionals Who Chose to Be More Credible</h2>
+    </div>
+    <div class="grid-3">
+      <div class="testi-card reveal">
+        <p class="testi-quote">Indicred helped me communicate my experience much more clearly. My profile finally feels aligned with the level I operate at.</p>
+        <div class="testi-person">
+          <div class="testi-avatar"></div>
+          <div>
+            <div class="testi-name">Rohan Mehta</div>
+            <div class="testi-role">Senior Product Manager</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <p class="testi-quote">The transformation was not just visual. My entire professional positioning became clearer.</p>
+        <div class="testi-person">
+          <div class="testi-avatar"></div>
+          <div>
+            <div class="testi-name">Priya Nair</div>
+            <div class="testi-role">Marketing Director</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <p class="testi-quote">My LinkedIn profile now tells a much stronger story about my experience and expertise.</p>
+        <div class="testi-person">
+          <div class="testi-avatar"></div>
+          <div>
+            <div class="testi-name">Arjun Rao</div>
+            <div class="testi-role">Business Consultant</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= WHY INDICRED ============================= -->
+<section class="section why" id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="background:rgba(201,162,39,0.12); border-color:rgba(201,162,39,0.3); color:var(--gold);"><span class="dot"></span>WHY INDICRED</span>
+      <h2>Why Professionals Choose Indicred</h2>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-item">
+        <h3>EXPERTISE</h3>
+        <p>Professional profile development based on your experience and goals.</p>
+      </div>
+      <div class="why-item">
+        <h3>PERSONALIZATION</h3>
+        <p>Your profile is built around your individual career story.</p>
+      </div>
+      <div class="why-item">
+        <h3>CREDIBILITY</h3>
+        <p>Clear positioning that communicates professional value.</p>
+      </div>
+      <div class="why-item">
+        <h3>PRECISION</h3>
+        <p>Every important profile element is structured intentionally.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FAQ ============================= -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="dot"></span>FAQS</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list reveal" id="faqList">
+      <div class="faq-item">
+        <button class="faq-q"><span>What is LinkedIn Makeover?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">LinkedIn Makeover is a complete transformation of your LinkedIn profile — headline, About section, experience, skills and visuals — built around your professional story.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Who should consider a LinkedIn Makeover?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Professionals, founders, executives and consultants who want their LinkedIn profile to reflect their real experience and career direction more clearly.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Will my complete LinkedIn profile be rewritten?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">The key sections that shape how you're perceived — headline, About, experience and skills — are rewritten and restructured for clarity and impact.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Is the content customized according to my industry?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Positioning, language and keywords are tailored to your industry, role and target audience.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Can LinkedIn Makeover improve my visibility?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">A well-structured, keyword-relevant profile is easier to discover by recruiters, clients and professional connections searching within your field.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>How long does the process take?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Timelines vary by profile depth and revisions. Our team will share a clear timeline once your requirements are reviewed.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Can I request changes?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, the process includes a review and refinement stage so the final profile reflects your input.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Does Indicred guarantee a job?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">LinkedIn Makeover is designed to strengthen your professional positioning, profile quality and visibility. However, no service can guarantee employment because hiring decisions are ultimately made by employers.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= LEAD FORM ============================= -->
+<section class="section lead-section" id="lead">
+  <div class="wrap">
+    <div class="lead-grid">
+      <div class="lead-copy reveal">
+        <span class="eyebrow"><span class="dot"></span>GET STARTED</span>
+        <h2 style="margin-top:16px;">Ready to Make Your LinkedIn Profile More Credible?</h2>
+        <p class="lead-sub">Tell us a little about yourself. Our team will review your requirements and connect with you to discuss the right approach for your LinkedIn profile.</p>
+        <ul class="lead-list">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#1E4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Professional positioning</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#1E4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Stronger profile presentation</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#1E4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Better visibility</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#1E4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Personal branding</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#1E4ED8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Expert profile development</li>
+        </ul>
+      </div>
+
+      <div class="form-card reveal">
+        <form id="leadForm" novalidate>
+  <div class="form-grid">
+    <div class="field">
+      <label for="name">Name <span class="req">*</span></label>
+      <input type="text" id="name" name="name" autocomplete="name" placeholder="Your full name">
+      <div class="err"></div>
+    </div>
+    <div class="field">
+      <label for="email">Email <span class="req">*</span></label>
+      <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com">
+      <div class="err"></div>
+    </div>
+    <div class="field">
+      <label for="phone">Phone <span class="req">*</span></label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+91 98765 43210">
+      <div class="err"></div>
+    </div>
+    <div class="field">
+      <label for="experience">Experience <span class="req">*</span></label>
+      <input type="number" id="experience" name="experience" min="0" max="60" step="1" placeholder="Years of experience">
+      <div class="err"></div>
+    </div>
+    <div class="field">
+      <label for="current_role">Current Role <span class="req">*</span></label>
+      <input type="text" id="current_role" name="current_role" placeholder="e.g. Senior Product Manager">
+      <div class="err"></div>
+    </div>
+    <div class="field">
+      <label for="target_role">Target Role</label>
+      <input type="text" id="target_role" name="target_role" placeholder="e.g. Product Director">
+      <div class="err"></div>
+    </div>
+    <div class="field full">
+      <label for="linkedin_url">LinkedIn URL <span class="req">*</span></label>
+      <input type="url" id="linkedin_url" name="linkedin_url"
+             placeholder="https://www.linkedin.com/in/yourname" autocomplete="url">
+      <div class="err"></div>
+    </div>
+    <div class="field full">
+      <label for="problem">Requirement / Problem <span class="req">*</span></label>
+      <textarea id="problem" name="problem"
+                placeholder="Tell us what you want to improve or achieve with your LinkedIn profile..."></textarea>
+      <div class="err"></div>
+    </div>
+
+    <input type="hidden" name="landing_page" id="landing_page">
+    <input type="hidden" name="page_url" id="page_url">
+    <input type="hidden" name="referrer" id="referrer">
+    <input type="hidden" name="utm_source" id="utm_source">
+    <input type="hidden" name="utm_medium" id="utm_medium">
+    <input type="hidden" name="utm_campaign" id="utm_campaign">
+    <input type="hidden" name="utm_term" id="utm_term">
+    <input type="hidden" name="utm_content" id="utm_content">
+    <input type="hidden" name="gclid" id="gclid">
+    <input type="hidden" name="fbclid" id="fbclid">
+    <input type="hidden" name="session_id" id="session_id">
+    <input type="hidden" name="device" id="device">
+    <input type="hidden" name="user_agent" id="user_agent">
+    <input type="hidden" name="lead_source" id="lead_source">
+    <input type="hidden" name="lead_type" id="lead_type">
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-block form-submit" id="submitBtn">
+    <span class="spinner"></span>
+    <span class="btn-label">Submit Your Details</span>
+  </button>
+  <p class="form-note">Your information is secure and will only be used to contact you regarding your LinkedIn enquiry.</p>
+</form>
+
+        <div class="form-success" id="formSuccess">
+          <div class="check"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Thank you.</h3>
+          <p>Your details have been submitted successfully. Our team will get in touch with you shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FINAL CTA ============================= -->
+<section class="section final-cta">
+  <div class="wrap inner">
+    <h2>Your Experience Is Valuable.<span class="line2">Make Sure Your LinkedIn Profile Shows It.</span></h2>
+    <p>Build a professional presence that reflects where you've been — and where you're going.</p>
+    <a href="#lead" class="btn btn-gold">Start Your LinkedIn Makeover</a>
+  </div>
+</section>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">INDI<span>CRED</span></div>
+        <div class="tag">India's Credible</div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul><li><a href="#top">About</a></li><li><a href="#lead">Contact</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul><li><a href="#makeover">LinkedIn Makeover</a></li><li><a href="#why">Personal Branding</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul><li><a href="#before-after">Before &amp; After</a></li><li><a href="#stories">Success Stories</a></li><li><a href="#faq">FAQs</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul><li><a href="mailto:hello@indicred.com">hello@indicred.com</a></li><li><a href="tel:+910000000000">+91 00000 00000</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Indicred. All Rights Reserved.</span>
+      <div class="legal"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ---------- Mobile nav ----------
+const hamburger = document.getElementById('hamburger');
+const mobilePanel = document.getElementById('mobilePanel');
+hamburger.addEventListener('click', () => {
+  const isOpen = mobilePanel.classList.toggle('show');
+  hamburger.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', isOpen);
+});
+mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mobilePanel.classList.remove('show');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+}));
+
+// ---------- Scroll reveal ----------
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => io.observe(el));
+
+// ---------- FAQ accordion ----------
+document.querySelectorAll('.faq-item').forEach(item => {
+  const q = item.querySelector('.faq-q');
+  const a = item.querySelector('.faq-a');
+  q.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(openItem => {
+      if (openItem !== item) {
+        openItem.classList.remove('open');
+        openItem.querySelector('.faq-a').style.maxHeight = null;
+      }
+    });
+    if (isOpen) {
+      item.classList.remove('open');
+      a.style.maxHeight = null;
+    } else {
+      item.classList.add('open');
+      a.style.maxHeight = a.scrollHeight + 'px';
+    }
+  });
+});
+
+// ---------- Lead form ----------
+const leadForm = document.getElementById('leadForm');
+const submitBtn = document.getElementById('submitBtn');
+const formSuccess = document.getElementById('formSuccess');
+
+const APPS_SCRIPT_URL =
+  'https://script.google.com/macros/s/AKfycbwJapeLA72pfL5LJvx0U2Lq5C_sAjpwoj0PE2hJ3wCmWPkUmv8XsJjOy-iShcqlXu6qTw/exec';
+
+const validators = {
+  name: v => v.trim().length >= 2 ? '' : 'Please enter your name.',
+  email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? '' : 'Please enter a valid email address.',
+  phone: v => {
+    const digits = v.replace(/\D/g, '');
+    return (digits.length === 10 || (digits.length === 12 && digits.startsWith('91')))
+      ? '' : 'Please enter a valid Indian mobile number.';
+  },
+  experience: v => (v.trim() !== '' && Number(v) >= 0) ? '' : 'Please enter your experience.',
+  current_role: v => v.trim().length >= 2 ? '' : 'Please enter your current role.',
+  linkedin_url: v => /^https?:\/\/(www\.)?linkedin\.com\/.+/i.test(v.trim())
+    ? '' : 'Please enter a valid LinkedIn profile URL.',
+  problem: v => v.trim().length >= 3 ? '' : 'Please tell us your requirement or problem.'
+};
+
+function setFieldError(name, msg) {
+  const field = document.getElementById(name).closest('.field');
+  field.querySelector('.err').textContent = msg;
+  field.classList.toggle('has-error', !!msg);
+}
+
+function getQueryParam(name) {
+  return new URLSearchParams(window.location.search).get(name) || '';
+}
+
+function getSessionId() {
+  const key = 'indicred_session_id';
+  let id = sessionStorage.getItem(key);
+  if (!id) {
+    id = (crypto.randomUUID ? crypto.randomUUID() :
+      Date.now().toString(36) + '-' + Math.random().toString(36).slice(2));
+    sessionStorage.setItem(key, id);
+  }
+  return id;
+}
+
+function populateAttribution() {
+  document.getElementById('landing_page').value = document.title || 'Indicred LinkedIn Makeover';
+  document.getElementById('page_url').value = window.location.href;
+  document.getElementById('referrer').value = document.referrer || '';
+  document.getElementById('utm_source').value = getQueryParam('utm_source');
+  document.getElementById('utm_medium').value = getQueryParam('utm_medium');
+  document.getElementById('utm_campaign').value = getQueryParam('utm_campaign');
+  document.getElementById('utm_term').value = getQueryParam('utm_term');
+  document.getElementById('utm_content').value = getQueryParam('utm_content');
+  document.getElementById('gclid').value = getQueryParam('gclid');
+  document.getElementById('fbclid').value = getQueryParam('fbclid');
+  document.getElementById('session_id').value = getSessionId();
+  document.getElementById('device').value =
+    /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop';
+  document.getElementById('user_agent').value = navigator.userAgent;
+  document.getElementById('lead_source').value =
+    getQueryParam('utm_source') || document.referrer || 'Direct';
+  document.getElementById('lead_type').value = 'LinkedIn Makeover';
+}
+
+populateAttribution();
+
+leadForm.addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  let firstInvalid = null;
+  let valid = true;
+
+  Object.keys(validators).forEach(name => {
+    const el = document.getElementById(name);
+    const msg = validators[name](el.value);
+    setFieldError(name, msg);
+    if (msg) {
+      valid = false;
+      if (!firstInvalid) firstInvalid = el;
+    }
+  });
+
+  if (!valid) {
+    if (firstInvalid) firstInvalid.focus();
+    return;
+  }
+
+  populateAttribution();
+  submitBtn.classList.add('loading');
+  submitBtn.disabled = true;
+
+  const formData = new FormData(leadForm);
+  const payload = {};
+  formData.forEach((value, key) => {
+    payload[key] = String(value).trim();
+  });
+
+  try {
+    const response = await fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    });
+
+    const result = await response.json();
+
+    if (!result.success) {
+      throw new Error(result.message || 'Submission failed.');
+    }
+
+    leadForm.style.display = 'none';
+    formSuccess.classList.add('show');
+
+    if (result.duplicate) {
+      formSuccess.querySelector('h3').textContent = 'Details Already Received';
+      formSuccess.querySelector('p').textContent =
+        result.message || 'You have already submitted your details. Our team will connect with you shortly.';
+    }
+
+  } catch (error) {
+    console.error('Lead submission error:', error);
+    submitBtn.classList.remove('loading');
+    submitBtn.disabled = false;
+    alert('Unable to submit your details right now. Please try again.');
+  }
+});
+</script>
 
 </body>
 </html>
