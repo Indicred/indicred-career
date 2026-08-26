@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>LinkedIn Profile Makeover | Indicred Career</title>
+  <meta name="description" content="Professionally transform your LinkedIn profile with strategic positioning, profile optimization and personal branding." />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --text: #172033;
+      --muted: #667085;
+      --border: #e5e7eb;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --success: #15803d;
+      --danger: #dc2626;
+      --shadow: 0 20px 60px rgba(15, 23, 42, .10);
+      --radius: 18px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 20;
+      padding: 22px 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 21px;
+      color: #fff;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      background: rgba(255,255,255,.16);
+      display: grid;
+      place-items: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-cta {
+      padding: 10px 18px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 10px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .25s;
+    }
+
+    .nav-cta:hover {
+      background: #fff;
+      color: var(--primary);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 790px;
+      padding: 130px 0 80px;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(96,165,250,.35), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(59,130,246,.30), transparent 30%),
+        linear-gradient(135deg, #0f2f75 0%, #1d4ed8 55%, #2563eb 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      right: -220px;
+      bottom: -250px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.07);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 70px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 13px;
+      border: 1px solid rgba(255,255,255,.25);
+      background: rgba(255,255,255,.10);
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 22px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+      max-width: 700px;
+    }
+
+    .hero h1 span {
+      color: #bfdbfe;
+    }
+
+    .hero-description {
+      font-size: 17px;
+      color: #dbeafe;
+      max-width: 620px;
+      margin-bottom: 30px;
+    }
+
+    .hero-points {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .hero-point {
+      display: flex;
+      gap: 11px;
+      align-items: center;
+      font-size: 14px;
+      color: #eff6ff;
+    }
+
+    .hero-point i {
+      color: #93c5fd;
+    }
+
+    .hero-trust {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      color: #dbeafe;
+      font-size: 12px;
+    }
+
+    .hero-trust span {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    /* =========================
+       FORM CARD
+    ========================= */
+
+    .form-card {
+      background: #fff;
+      color: var(--text);
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: 0 30px 80px rgba(0,0,0,.22);
+    }
+
+    .form-header {
+      margin-bottom: 22px;
+    }
+
+    .form-header h2 {
+      font-size: 24px;
+      line-height: 1.25;
+      margin-bottom: 7px;
+    }
+
+    .form-header p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-group {
+      position: relative;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #344054;
+    }
+
+    .input-wrap {
+      position: relative;
+    }
+
+    .input-wrap i {
+      position: absolute;
+      left: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #98a2b3;
+      font-size: 13px;
+      pointer-events: none;
+    }
+
+    .input-wrap textarea + i {
+      top: 17px;
+      transform: none;
+    }
+
+    .input-wrap input,
+    .input-wrap select,
+    .input-wrap textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: #f9fafb;
+      border-radius: 10px;
+      padding: 12px 12px 12px 38px;
+      outline: none;
+      color: var(--text);
+      font-size: 12px;
+      transition: .2s;
+    }
+
+    .input-wrap textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    .input-wrap input:focus,
+    .input-wrap select:focus,
+    .input-wrap textarea:focus {
+      border-color: var(--primary);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(37,99,235,.10);
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 17px;
+      padding: 14px 20px;
+      border: 0;
+      border-radius: 11px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: .25s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .submit-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .submit-btn:disabled {
+      opacity: .65;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .form-note {
+      text-align: center;
+      color: #98a2b3;
+      font-size: 10px;
+      margin-top: 11px;
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 50px;
+    }
+
+    .section-label {
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 9px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.2;
+      letter-spacing: -.8px;
+      margin-bottom: 13px;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       PROBLEM
+    ========================= */
+
+    .problem-section {
+      background: var(--bg);
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .problem-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 25px;
+      border-radius: 16px;
+      transition: .25s;
+    }
+
+    .problem-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .problem-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: #eff6ff;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .problem-card h3 {
+      font-size: 15px;
+      margin-bottom: 7px;
+    }
+
+    .problem-card p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* =========================
+       BEFORE AFTER
+    ========================= */
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .compare-card {
+      border-radius: 18px;
+      padding: 30px;
+      border: 1px solid var(--border);
+    }
+
+    .compare-card.before {
+      background: #fafafa;
+    }
+
+    .compare-card.after {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+    }
+
+    .compare-title {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .compare-list {
+      display: grid;
+      gap: 13px;
+      list-style: none;
+    }
+
+    .compare-list li {
+      display: flex;
+      gap: 11px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .before .compare-list i {
+      color: #ef4444;
+    }
+
+    .after .compare-list i {
+      color: #16a34a;
+    }
+
+    /* =========================
+       DELIVERABLES
+    ========================= */
+
+    .deliverables-section {
+      background: var(--bg);
+    }
+
+    .deliverables {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .deliverable {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .deliverable i {
+      color: var(--primary);
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .deliverable h3 {
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+
+    .deliverable p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* =========================
+       WHO
+    ========================= */
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .who-card {
+      padding: 28px;
+      border-radius: 17px;
+      border: 1px solid var(--border);
+    }
+
+    .who-card h3 {
+      margin-bottom: 17px;
+      font-size: 18px;
+    }
+
+    .who-list {
+      display: grid;
+      gap: 12px;
+      list-style: none;
+    }
+
+    .who-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .who-list i {
+      color: var(--primary);
+    }
+
+    .not-for {
+      background: #fff7ed;
+      border-color: #fed7aa;
+    }
+
+    .not-for i {
+      color: #ea580c;
+    }
+
+    /* =========================
+       PROCESS
+    ========================= */
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .process-card {
+      position: relative;
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .step {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .process-card i {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    .process-card h3 {
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+
+    .process-card p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 75px 0;
+      background: linear-gradient(135deg, #0f2f75, #2563eb);
+      color: #fff;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 13px;
+    }
+
+    .cta p {
+      color: #dbeafe;
+      max-width: 600px;
+      margin: 0 auto 25px;
+      font-size: 14px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: #fff;
+      color: var(--primary);
+      padding: 13px 22px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #0b1730;
+      color: #94a3b8;
+      padding: 25px 0;
+      text-align: center;
+      font-size: 11px;
+    }
+
+    /* =========================
+       MODAL / SUCCESS
+    ========================= */
+
+    .message-box {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(15,23,42,.65);
+      backdrop-filter: blur(5px);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .message-card {
+      background: #fff;
+      border-radius: 20px;
+      max-width: 420px;
+      width: 100%;
+      padding: 35px;
+      text-align: center;
+      box-shadow: 0 30px 80px rgba(0,0,0,.25);
+      animation: pop .25s ease;
+    }
+
+    @keyframes pop {
+      from {
+        transform: scale(.94);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .message-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 18px;
+      background: #dcfce7;
+      color: #16a34a;
+      font-size: 24px;
+    }
+
+    .message-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .message-card p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    .close-message {
+      border: 0;
+      padding: 11px 25px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 9px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 950px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .hero {
+        padding-top: 115px;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-points {
+        width: max-content;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+      }
+
+      .hero-trust {
+        justify-content: center;
+      }
+
+      .form-card {
+        max-width: 650px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .problem-grid,
+      .deliverables {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .header {
+        padding: 15px 0;
+      }
+
+      .logo {
+        font-size: 17px;
+      }
+
+      .logo-mark {
+        width: 33px;
+        height: 33px;
+      }
+
+      .nav-cta {
+        padding: 8px 12px;
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 100px 0 50px;
+        min-height: auto;
+      }
+
+      .hero h1 {
+        font-size: 37px;
+        letter-spacing: -1.3px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .hero-points {
+        width: 100%;
+      }
+
+      .form-card {
+        padding: 22px 17px;
+        border-radius: 17px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .section-header {
+        margin-bottom: 32px;
+      }
+
+      .problem-grid,
+      .deliverables,
+      .comparison,
+      .who-grid,
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison {
+        gap: 14px;
+      }
+
+      .compare-card {
+        padding: 22px;
+      }
+
+      .process {
+        gap: 12px;
+      }
+
+      .cta {
+        padding: 60px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header class="header">
+    <div class="container nav">
+
+      <a href="#" class="logo">
+        Indicred Career
+      </a>
+
+      <a href="#apply" class="nav-cta">
+        Get Started
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero" id="apply">
+
+    <div class="container hero-grid">
+
+      <div class="hero-copy">
+
+        <div class="eyebrow">
+          <i class="fa-brands fa-linkedin"></i>
+          Professional LinkedIn Makeover
+        </div>
+
+        <h1>
+          Turn Your LinkedIn Profile Into a
+          <span>Powerful Professional Brand.</span>
+        </h1>
+
+        <p class="hero-description">
+          Your LinkedIn profile should communicate your expertise,
+          experience and professional value within seconds.
+          We professionally reposition and optimize your profile
+          for your next career or business opportunity.
+        </p>
+
+        <div class="hero-points">
+
+          <div class="hero-point">
+            <i class="fa-solid fa-circle-check"></i>
+            Strategic profile positioning
+          </div>
+
+          <div class="hero-point">
+            <i class="fa-solid fa-circle-check"></i>
+            Professional content transformation
+          </div>
+
+          <div class="hero-point">
+            <i class="fa-solid fa-circle-check"></i>
+            Keyword and profile optimization
+          </div>
+
+          <div class="hero-point">
+            <i class="fa-solid fa-circle-check"></i>
+            Built for experienced professionals & leaders
+          </div>
+
+        </div>
+
+        <div class="hero-trust">
+
+          <span>
+            <i class="fa-solid fa-shield-halved"></i>
+            Confidential
+          </span>
+
+          <span>
+            <i class="fa-solid fa-user-tie"></i>
+            Professional Review
+          </span>
+
+          <span>
+            <i class="fa-solid fa-bullseye"></i>
+            Goal-focused
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- FORM -->
+
+      <div class="form-card">
+
+        <div class="form-header">
+          <h2>Request Your LinkedIn Makeover</h2>
+          <p>
+            Tell us about your profile and what you want to achieve.
+          </p>
+        </div>
+
+        <form id="leadForm">
+
+          <div class="form-grid">
+
+            <!-- Name -->
+            <div class="form-group">
+
+              <label>Full Name *</label>
+
+              <div class="input-wrap">
+                <i class="fa-regular fa-user"></i>
+
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                >
+              </div>
+
+            </div>
+
+
+            <!-- Email -->
+            <div class="form-group">
+
+              <label>Email *</label>
+
+              <div class="input-wrap">
+                <i class="fa-regular fa-envelope"></i>
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                >
+              </div>
+
+            </div>
+
+
+            <!-- Phone -->
+            <div class="form-group">
+
+              <label>WhatsApp / Mobile *</label>
+
+              <div class="input-wrap">
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="+91 98765 43210"
+                  pattern="[0-9+\-\s()]{10,16}"
+                  required
+                >
+              </div>
+
+            </div>
+
+
+            <!-- Experience -->
+            <div class="form-group">
+
+              <label>Experience *</label>
+
+              <div class="input-wrap">
+                <i class="fa-solid fa-briefcase"></i>
+
+                <select name="experience" required>
+                  <option value="">Select experience</option>
+                  <option value="7-10 Years">0–3 Years</option>
+                  <option value="7-10 Years">3–7 Years</option>
+                  <option value="7-10 Years">7–10 Years</option>
+                  <option value="10-15 Years">10–15 Years</option>
+                  <option value="15-20 Years">15–20 Years</option>
+                  <option value="20+ Years">20+ Years</option>
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <!-- LinkedIn -->
+            <div class="form-group full">
+
+              <label>LinkedIn Profile URL *</label>
+
+              <div class="input-wrap">
+
+                <i class="fa-brands fa-linkedin"></i>
+
+                <input
+                  type="url"
+                  name="linkedin_url"
+                  placeholder="https://www.linkedin.com/in/your-profile"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- Current Role -->
+            <div class="form-group">
+
+              <label>Current Role *</label>
+
+              <div class="input-wrap">
+
+                <i class="fa-solid fa-id-badge"></i>
+
+                <input
+                  type="text"
+                  name="current_role"
+                  placeholder="e.g. Project Manager"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- Target Role -->
+            <div class="form-group">
+
+              <label>Target Role</label>
+
+              <div class="input-wrap">
+
+                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                <input
+                  type="text"
+                  name="target_role"
+                  placeholder="e.g. Senior Director"
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- Requirement -->
+            <div class="form-group full">
+
+              <label>What do you want to improve?</label>
+
+              <div class="input-wrap">
+
+                <i class="fa-regular fa-comment-dots"></i>
+
+                <textarea
+                  name="problem"
+                  placeholder="Tell us briefly about your goal or LinkedIn profile problem..."
+                ></textarea>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="submit-btn"
+            id="submitBtn"
+          >
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Request My LinkedIn Makeover</span>
+          </button>
+
+          <div class="form-note">
+            <i class="fa-solid fa-lock"></i>
+            Your information is kept confidential.
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROBLEMS
+  ========================= -->
+
+  <section class="problem-section">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          Your Profile
+        </div>
+
+        <h2>
+          Your Experience Is Strong.
+          Does Your LinkedIn Profile Show It?
+        </h2>
+
+        <p>
+          A strong career can still look ordinary when your LinkedIn
+          profile doesn't communicate your professional value clearly.
+        </p>
+
+      </div>
+
+
+      <div class="problem-grid">
+
+        <div class="problem-card">
+          <div class="problem-icon">
+            <i class="fa-solid fa-heading"></i>
+          </div>
+          <h3>Weak Headline</h3>
+          <p>
+            Your headline describes your job instead of positioning your expertise.
+          </p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">
+            <i class="fa-regular fa-file-lines"></i>
+          </div>
+          <h3>Generic About Section</h3>
+          <p>
+            Your professional story doesn't immediately communicate your value.
+          </p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">
+            <i class="fa-solid fa-list-check"></i>
+          </div>
+          <h3>Job-Description Experience</h3>
+          <p>
+            Responsibilities dominate your profile while achievements remain hidden.
+          </p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <h3>Poor Keyword Positioning</h3>
+          <p>
+            Important expertise and industry keywords may not be visible where they matter.
+          </p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">
+            <i class="fa-solid fa-user-slash"></i>
+          </div>
+          <h3>Weak Personal Brand</h3>
+          <p>
+            Your profile doesn't differentiate you from professionals with similar roles.
+          </p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-icon">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <h3>No Clear Direction</h3>
+          <p>
+            Visitors can't quickly understand what opportunities you are targeting.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       BEFORE / AFTER
+  ========================= -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          Transformation
+        </div>
+
+        <h2>
+          From Generic Profile to Professional Positioning
+        </h2>
+
+      </div>
+
+
+      <div class="comparison">
+
+        <div class="compare-card before">
+
+          <div class="compare-title">
+            <i class="fa-solid fa-xmark"></i>
+            Typical Profile
+          </div>
+
+          <ul class="compare-list">
+
+            <li>
+              <i class="fa-solid fa-xmark"></i>
+              Generic job-title headline
+            </li>
+
+            <li>
+              <i class="fa-solid fa-xmark"></i>
+              Responsibilities-focused experience
+            </li>
+
+            <li>
+              <i class="fa-solid fa-xmark"></i>
+              Long, unfocused About section
+            </li>
+
+            <li>
+              <i class="fa-solid fa-xmark"></i>
+              Weak keyword positioning
+            </li>
+
+            <li>
+              <i class="fa-solid fa-xmark"></i>
+              No clear professional positioning
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="compare-card after">
+
+          <div class="compare-title">
+            <i class="fa-solid fa-check"></i>
+            Professionally Positioned
+          </div>
+
+          <ul class="compare-list">
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Positioning-focused headline
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Achievement-focused experience
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Clear professional narrative
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Strategic keyword placement
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Clear career / business positioning
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       DELIVERABLES
+  ========================= -->
+
+  <section class="deliverables-section">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          What's Included
+        </div>
+
+        <h2>
+          Complete LinkedIn Profile Makeover
+        </h2>
+
+        <p>
+          We optimize the parts of your profile that influence
+          positioning, credibility and professional perception.
+        </p>
+
+      </div>
+
+
+      <div class="deliverables">
+
+        <div class="deliverable">
+          <i class="fa-solid fa-compass"></i>
+          <h3>Profile Positioning</h3>
+          <p>Define how your expertise and professional value should be communicated.</p>
+        </div>
+
+        <div class="deliverable">
+          <i class="fa-solid fa-heading"></i>
+          <h3>Headline Optimization</h3>
+          <p>Create a stronger headline aligned with your professional positioning.</p>
+        </div>
+
+        <div class="deliverable">
+          <i class="fa-regular fa-user"></i>
+          <h3>About Section</h3>
+          <p>Transform your About section into a clear professional narrative.</p>
+        </div>
+
+        <div class="deliverable">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>Experience Optimization</h3>
+          <p>Turn responsibilities into stronger achievement-focused positioning.</p>
+        </div>
+
+        <div class="deliverable">
+          <i class="fa-solid fa-key"></i>
+          <h3>Keyword Optimization</h3>
+          <p>Improve strategic keyword placement throughout your profile.</p>
+        </div>
+
+        <div class="deliverable">
+          <i class="fa-solid fa-star"></i>
+          <h3>Featured & Skills</h3>
+          <p>Recommendations to strengthen important profile sections.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       WHO IS IT FOR
+  ========================= -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          Qualification
+        </div>
+
+        <h2>
+          Is This LinkedIn Makeover Right For You?
+        </h2>
+
+      </div>
+
+
+      <div class="who-grid">
+
+        <div class="who-card">
+
+          <h3>
+            <i class="fa-solid fa-circle-check"></i>
+            Best Suited For
+          </h3>
+
+          <ul class="who-list">
+
+            <li><i class="fa-solid fa-check"></i> Senior professionals</li>
+            <li><i class="fa-solid fa-check"></i> Managers & leaders</li>
+            <li><i class="fa-solid fa-check"></i> Founders & entrepreneurs</li>
+            <li><i class="fa-solid fa-check"></i> Consultants</li>
+            <li><i class="fa-solid fa-check"></i> CXOs & executives</li>
+            <li><i class="fa-solid fa-check"></i> Professionals changing roles</li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="who-card not-for">
+
+          <h3>
+            <i class="fa-solid fa-circle-info"></i>
+            Not Primarily Designed For
+          </h3>
+
+          <ul class="who-list">
+
+            <li><i class="fa-solid fa-minus"></i> Freshers</li>
+            <li><i class="fa-solid fa-minus"></i> Entry-level profiles</li>
+            <li><i class="fa-solid fa-minus"></i> People looking only for a resume template</li>
+            <li><i class="fa-solid fa-minus"></i> Generic profile creation without positioning</li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROCESS
+  ========================= -->
+
+  <section class="problem-section">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          Our Process
+        </div>
+
+        <h2>
+          Simple. Strategic. Professional.
+        </h2>
+
+      </div>
+
+
+      <div class="process">
+
+        <div class="process-card">
+          <div class="step">STEP 01</div>
+          <i class="fa-solid fa-link"></i>
+          <h3>Submit Your Profile</h3>
+          <p>Share your LinkedIn URL and professional goals.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step">STEP 02</div>
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+          <h3>Profile Analysis</h3>
+          <p>We identify positioning, messaging and optimization gaps.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step">STEP 03</div>
+          <i class="fa-solid fa-pen-nib"></i>
+          <h3>Makeover</h3>
+          <p>Your profile content is strategically rewritten and optimized.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step">STEP 04</div>
+          <i class="fa-solid fa-circle-check"></i>
+          <h3>Final Review</h3>
+          <p>Review the improved profile and recommendations.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CTA
+  ========================= -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <h2>
+        Ready to Reposition Your LinkedIn Profile?
+      </h2>
+
+      <p>
+        Tell us where you are today and where you want your
+        professional profile to take you.
+      </p>
+
+      <a href="#apply" class="cta-btn">
+        <i class="fa-solid fa-arrow-up"></i>
+        Request My LinkedIn Makeover
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+    © 2026 Indicred Career. All rights reserved.
+  </footer>
+
+
+  <!-- =========================
+       SUCCESS / DUPLICATE MODAL
+  ========================= -->
+
+  <div class="message-box" id="messageBox">
+
+    <div class="message-card">
+
+      <div class="message-icon" id="messageIcon">
+        <i class="fa-solid fa-check"></i>
+      </div>
+
+      <h3 id="messageTitle">
+        Thank You!
+      </h3>
+
+      <p id="messageText">
+        Your details have been submitted successfully.
+        Our team will connect with you shortly.
+      </p>
+
+      <button class="close-message" id="closeMessage">
+        Done
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    /* ========================================
+       GOOGLE APPS SCRIPT API
+    ======================================== */
+
+    const API_URL =
+      "https://script.google.com/macros/s/AKfycbwJapeLA72pfL5LJvx0U2Lq5C_sAjpwoj0PE2hJ3wCmWPkUmv8XsJjOy-iShcqlXu6qTw/exec";
+
+
+    /* ========================================
+       SESSION ID
+    ======================================== */
+
+    function getSessionId() {
+
+      let sessionId =
+        sessionStorage.getItem("indicred_session_id");
+
+      if (!sessionId) {
+
+        sessionId =
+          "sess_" +
+          Date.now() +
+          "_" +
+          Math.random()
+            .toString(36)
+            .substring(2, 10);
+
+        sessionStorage.setItem(
+          "indicred_session_id",
+          sessionId
+        );
+
+      }
+
+      return sessionId;
+
+    }
+
+
+    /* ========================================
+       DEVICE
+    ======================================== */
+
+    function getDevice() {
+
+      const width = window.innerWidth;
+
+      if (width <= 767) {
+        return "Mobile";
+      }
+
+      if (width <= 1024) {
+        return "Tablet";
+      }
+
+      return "Desktop";
+
+    }
+
+
+    /* ========================================
+       URL PARAMETERS
+    ======================================== */
+
+    function getParam(name) {
+
+      const params =
+        new URLSearchParams(window.location.search);
+
+      return params.get(name) || "";
+
+    }
+
+
+    /* ========================================
+       LEAD FORM
+    ======================================== */
+
+    const form =
+      document.getElementById("leadForm");
+
+    const submitBtn =
+      document.getElementById("submitBtn");
+
+
+    form.addEventListener("submit", async function(event) {
+
+      event.preventDefault();
+
+
+      /* Native validation */
+
+      if (!form.checkValidity()) {
+
+        form.reportValidity();
+        return;
+
+      }
+
+
+      submitBtn.disabled = true;
+
+      submitBtn.innerHTML = `
+        <i class="fa-solid fa-spinner fa-spin"></i>
+        <span>Submitting...</span>
+      `;
+
+
+      const formData =
+        new FormData(form);
+
+
+      const data = {
+
+        /* Lead Information */
+
+        name:
+          formData.get("name"),
+
+        email:
+          formData.get("email"),
+
+        phone:
+          formData.get("phone"),
+
+        linkedin_url:
+          formData.get("linkedin_url"),
+
+        experience:
+          formData.get("experience"),
+
+        current_role:
+          formData.get("current_role"),
+
+        target_role:
+          formData.get("target_role"),
+
+        problem:
+          formData.get("problem"),
+
+
+        /* Page Information */
+
+        landing_page:
+          "LinkedIn Makeover Campaign",
+
+        page_url:
+          window.location.href,
+
+        referrer:
+          document.referrer,
+
+
+        /* UTM */
+
+        utm_source:
+          getParam("utm_source"),
+
+        utm_medium:
+          getParam("utm_medium"),
+
+        utm_campaign:
+          getParam("utm_campaign"),
+
+        utm_term:
+          getParam("utm_term"),
+
+        utm_content:
+          getParam("utm_content"),
+
+
+        /* Ad Tracking */
+
+        gclid:
+          getParam("gclid"),
+
+        fbclid:
+          getParam("fbclid"),
+
+
+        /* Session */
+
+        session_id:
+          getSessionId(),
+
+
+        /* Device */
+
+        device:
+          getDevice(),
+
+        user_agent:
+          navigator.userAgent,
+
+
+        /* Lead Classification */
+
+        lead_source:
+          getLeadSource(),
+
+        lead_type:
+          "LinkedIn Makeover"
+
+      };
+
+
+      try {
+
+        const response =
+          await fetch(API_URL, {
+
+            method: "POST",
+
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8"
+            },
+
+            body: JSON.stringify(data)
+
+          });
+
+
+        const result =
+          await response.json();
+
+
+        if (result.success) {
+
+          showMessage(result);
+
+          form.reset();
+
+        } else {
+
+          showError(
+            result.message ||
+            "Unable to submit your details."
+          );
+
+        }
+
+
+      } catch (error) {
+
+        console.error(error);
+
+        showError(
+          "Unable to connect right now. Please try again."
+        );
+
+      }
+
+
+      submitBtn.disabled = false;
+
+      submitBtn.innerHTML = `
+        <i class="fa-solid fa-paper-plane"></i>
+        <span>Request My LinkedIn Makeover</span>
+      `;
+
+    });
+
+
+    /* ========================================
+       LEAD SOURCE
+    ======================================== */
+
+    function getLeadSource() {
+
+      const source =
+        getParam("utm_source");
+
+      if (source) {
+        return source;
+      }
+
+      if (document.referrer) {
+
+        try {
+
+          const ref =
+            new URL(document.referrer);
+
+          if (
+            ref.hostname.includes("linkedin.com")
+          ) {
+
+            return "LinkedIn";
+
+          }
+
+          return ref.hostname;
+
+        } catch (error) {
+
+          return "Referral";
+
+        }
+
+      }
+
+      return "Direct";
+
+    }
+
+
+    /* ========================================
+       SUCCESS / DUPLICATE MESSAGE
+    ======================================== */
+
+    function showMessage(result) {
+
+      const box =
+        document.getElementById("messageBox");
+
+      const title =
+        document.getElementById("messageTitle");
+
+      const text =
+        document.getElementById("messageText");
+
+      const icon =
+        document.getElementById("messageIcon");
+
+
+      if (result.duplicate) {
+
+        title.textContent =
+          "Already Submitted";
+
+        text.textContent =
+          result.message ||
+          "You have already submitted your details. Our team will connect with you shortly.";
+
+        icon.innerHTML =
+          '<i class="fa-solid fa-clock"></i>';
+
+        icon.style.background =
+          "#fef3c7";
+
+        icon.style.color =
+          "#d97706";
+
+      } else {
+
+        title.textContent =
+          "Thank You!";
+
+        text.textContent =
+          result.message ||
+          "Your details have been submitted successfully. Our team will connect with you shortly.";
+
+        icon.innerHTML =
+          '<i class="fa-solid fa-check"></i>';
+
+        icon.style.background =
+          "#dcfce7";
+
+        icon.style.color =
+          "#16a34a";
+
+      }
+
+
+      box.style.display =
+        "flex";
+
+    }
+
+
+    /* ========================================
+       ERROR
+    ======================================== */
+
+    function showError(message) {
+
+      const box =
+        document.getElementById("messageBox");
+
+      const title =
+        document.getElementById("messageTitle");
+
+      const text =
+        document.getElementById("messageText");
+
+      const icon =
+        document.getElementById("messageIcon");
+
+
+      title.textContent =
+        "Something Went Wrong";
+
+      text.textContent =
+        message;
+
+      icon.innerHTML =
+        '<i class="fa-solid fa-triangle-exclamation"></i>';
+
+      icon.style.background =
+        "#fee2e2";
+
+      icon.style.color =
+        "#dc2626";
+
+
+      box.style.display =
+        "flex";
+
+    }
+
+
+    /* ========================================
+       CLOSE MESSAGE
+    ======================================== */
+
+    document
+      .getElementById("closeMessage")
+      .addEventListener("click", function() {
+
+        document
+          .getElementById("messageBox")
+          .style.display = "none";
+
+      });
+
+
+    /* Close when clicking outside */
+
+    document
+      .getElementById("messageBox")
+      .addEventListener("click", function(event) {
+
+        if (event.target === this) {
+
+          this.style.display =
+            "none";
+
+        }
+
+      });
+
+
+    /* ========================================
+       AUTO SESSION INITIALIZATION
+    ======================================== */
+
+    getSessionId();
+
+  </script>
+
+</body>
+</html>
