@@ -1,0 +1,2424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LinkedIn Profile Audit | Indicred Career</title>
+
+  <meta
+    name="description"
+    content="Find out what's holding your LinkedIn profile back. Get a professional LinkedIn profile audit covering positioning, headline, About section, experience, keywords and personal branding."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+
+  <style>
+
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --navy: #0f2f75;
+      --text: #172033;
+      --muted: #667085;
+      --border: #e5e7eb;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --success: #16a34a;
+      --warning: #d97706;
+      --danger: #dc2626;
+      --shadow: 0 20px 60px rgba(15, 23, 42, .10);
+      --radius: 18px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 20;
+      padding: 22px 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-weight: 800;
+      font-size: 21px;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      background: rgba(255, 255, 255, .15);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-cta {
+      padding: 10px 18px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 10px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .25s;
+    }
+
+    .nav-cta:hover {
+      background: #fff;
+      color: var(--primary);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 790px;
+      padding: 130px 0 80px;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+
+      background:
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(96,165,250,.35),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(59,130,246,.30),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #0f2f75 0%,
+          #1d4ed8 55%,
+          #2563eb 100%
+        );
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      right: -220px;
+      bottom: -250px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.07);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 70px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 13px;
+      margin-bottom: 22px;
+      border: 1px solid rgba(255,255,255,.25);
+      background: rgba(255,255,255,.10);
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero h1 {
+      max-width: 700px;
+      margin-bottom: 22px;
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+    }
+
+    .hero h1 span {
+      color: #bfdbfe;
+    }
+
+    .hero-description {
+      max-width: 620px;
+      margin-bottom: 30px;
+      color: #dbeafe;
+      font-size: 17px;
+    }
+
+    .hero-points {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .hero-point {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: #eff6ff;
+      font-size: 14px;
+    }
+
+    .hero-point i {
+      color: #93c5fd;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      color: #dbeafe;
+      font-size: 12px;
+    }
+
+    .hero-trust span {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    /* =========================
+       FORM CARD
+    ========================= */
+
+    .form-card {
+      padding: 30px;
+      border-radius: 22px;
+      background: #fff;
+      color: var(--text);
+      box-shadow: 0 30px 80px rgba(0,0,0,.22);
+    }
+
+    .form-header {
+      margin-bottom: 22px;
+    }
+
+    .form-header h2 {
+      margin-bottom: 7px;
+      font-size: 24px;
+      line-height: 1.25;
+    }
+
+    .form-header p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      color: #344054;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .input-wrap {
+      position: relative;
+    }
+
+    .input-wrap i {
+      position: absolute;
+      top: 50%;
+      left: 13px;
+      z-index: 2;
+      transform: translateY(-50%);
+      color: #98a2b3;
+      font-size: 13px;
+      pointer-events: none;
+    }
+
+    .input-wrap textarea + i {
+      top: 17px;
+      transform: none;
+    }
+
+    .input-wrap input,
+    .input-wrap select,
+    .input-wrap textarea {
+      width: 100%;
+      padding: 12px 12px 12px 38px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      outline: none;
+      background: #f9fafb;
+      color: var(--text);
+      font-size: 12px;
+      transition: .2s;
+    }
+
+    .input-wrap textarea {
+      min-height: 82px;
+      resize: vertical;
+    }
+
+    .input-wrap input:focus,
+    .input-wrap select:focus,
+    .input-wrap textarea:focus {
+      border-color: var(--primary);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(37,99,235,.10);
+    }
+
+    .submit-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      margin-top: 17px;
+      padding: 14px 20px;
+      border: 0;
+      border-radius: 11px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .25s;
+    }
+
+    .submit-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .submit-btn:disabled {
+      opacity: .65;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .form-note {
+      margin-top: 11px;
+      color: #98a2b3;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-header {
+      max-width: 720px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+
+    .section-label {
+      margin-bottom: 9px;
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .section-header h2 {
+      margin-bottom: 13px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.2;
+      letter-spacing: -.8px;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       PROBLEMS
+    ========================= */
+
+    .problem-section {
+      background: var(--bg);
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .problem-card {
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #fff;
+      transition: .25s;
+    }
+
+    .problem-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .problem-icon {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+      border-radius: 12px;
+      background: #eff6ff;
+      color: var(--primary);
+    }
+
+    .problem-card h3 {
+      margin-bottom: 7px;
+      font-size: 15px;
+    }
+
+    .problem-card p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* =========================
+       AUDIT SCORE
+    ========================= */
+
+    .audit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .audit-card {
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: #fff;
+    }
+
+    .audit-card.highlight {
+      border-color: #bfdbfe;
+      background: #eff6ff;
+    }
+
+    .audit-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .audit-title i {
+      color: var(--primary);
+    }
+
+    .audit-list {
+      display: grid;
+      gap: 14px;
+      list-style: none;
+    }
+
+    .audit-list li {
+      display: flex;
+      gap: 11px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .audit-list i {
+      margin-top: 4px;
+      color: var(--primary);
+    }
+
+    /* =========================
+       WHAT WE CHECK
+    ========================= */
+
+    .check-section {
+      background: var(--bg);
+    }
+
+    .checks {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .check-card {
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .check-card i {
+      margin-bottom: 15px;
+      color: var(--primary);
+      font-size: 21px;
+    }
+
+    .check-card h3 {
+      margin-bottom: 7px;
+      font-size: 14px;
+    }
+
+    .check-card p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* =========================
+       WHO
+    ========================= */
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .who-card {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+    }
+
+    .who-card h3 {
+      margin-bottom: 17px;
+      font-size: 18px;
+    }
+
+    .who-list {
+      display: grid;
+      gap: 12px;
+      list-style: none;
+    }
+
+    .who-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .who-list i {
+      color: var(--primary);
+    }
+
+    .not-for {
+      border-color: #fed7aa;
+      background: #fff7ed;
+    }
+
+    .not-for i {
+      color: #ea580c;
+    }
+
+    /* =========================
+       PROCESS
+    ========================= */
+
+    .process-section {
+      background: var(--bg);
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .process-card {
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .step {
+      margin-bottom: 20px;
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .process-card i {
+      margin-bottom: 15px;
+      color: var(--primary);
+      font-size: 22px;
+    }
+
+    .process-card h3 {
+      margin-bottom: 7px;
+      font-size: 14px;
+    }
+
+    .process-card p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 75px 0;
+      background: linear-gradient(135deg, #0f2f75, #2563eb);
+      color: #fff;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 13px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.2;
+    }
+
+    .cta p {
+      max-width: 600px;
+      margin: 0 auto 25px;
+      color: #dbeafe;
+      font-size: 14px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 13px 22px;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 25px 0;
+      background: #0b1730;
+      color: #94a3b8;
+      text-align: center;
+      font-size: 11px;
+    }
+
+    /* =========================
+       MESSAGE MODAL
+    ========================= */
+
+    .message-box {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(15,23,42,.65);
+      backdrop-filter: blur(5px);
+    }
+
+    .message-card {
+      width: 100%;
+      max-width: 420px;
+      padding: 35px;
+      border-radius: 20px;
+      background: #fff;
+      text-align: center;
+      box-shadow: 0 30px 80px rgba(0,0,0,.25);
+      animation: pop .25s ease;
+    }
+
+    @keyframes pop {
+      from {
+        opacity: 0;
+        transform: scale(.94);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .message-icon {
+      width: 60px;
+      height: 60px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background: #dcfce7;
+      color: var(--success);
+      font-size: 24px;
+    }
+
+    .message-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .message-card p {
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .close-message {
+      padding: 11px 25px;
+      border: 0;
+      border-radius: 9px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 950px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .hero {
+        padding-top: 115px;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-description {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .hero-points {
+        width: max-content;
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: left;
+      }
+
+      .hero-trust {
+        justify-content: center;
+      }
+
+      .form-card {
+        width: 100%;
+        max-width: 650px;
+        margin: auto;
+      }
+
+      .problem-grid,
+      .checks {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .audit-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .header {
+        padding: 15px 0;
+      }
+
+      .logo {
+        font-size: 17px;
+      }
+
+      .logo-mark {
+        width: 33px;
+        height: 33px;
+      }
+
+      .nav-cta {
+        padding: 8px 12px;
+        font-size: 11px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 100px 0 50px;
+      }
+
+      .hero h1 {
+        font-size: 37px;
+        letter-spacing: -1.3px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .hero-points {
+        width: 100%;
+      }
+
+      .form-card {
+        padding: 22px 17px;
+        border-radius: 17px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .section-header {
+        margin-bottom: 32px;
+      }
+
+      .problem-grid,
+      .checks,
+      .comparison,
+      .who-grid,
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      .process {
+        gap: 12px;
+      }
+
+      .cta {
+        padding: 60px 0;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header class="header">
+
+    <div class="container nav">
+
+      <a href="#" class="logo">
+        Indicred Career
+
+      </a>
+
+      <a href="#audit-form" class="nav-cta">
+        Get Your Audit
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero" id="audit-form">
+
+    <div class="container hero-grid">
+
+      <div class="hero-copy">
+
+        <div class="eyebrow">
+          <i class="fa-brands fa-linkedin"></i>
+          LinkedIn Profile Audit
+        </div>
+
+        <h1>
+          Not Getting Enough
+          <span>Opportunities From LinkedIn?</span>
+        </h1>
+
+        <p class="hero-description">
+          Your experience may be strong, but your LinkedIn profile
+          could be hiding your professional value. Get your profile
+          reviewed to identify the gaps affecting your positioning,
+          visibility and credibility.
+        </p>
+
+        <div class="hero-points">
+
+          <div class="hero-point">
+            <i class="fa-solid fa-circle-check"></i>
+            Identify what's weakening your profile
+          </div>
+
+          <div class="hero-point">
+            <i class="fa-solid fa-circle-check"></i>
+            Find positioning and messaging gaps
+          </div>
+
+          <div class="hero-point">
+            <i class="fa-solid fa-circle-check"></i>
+            Review headline, About and experience
+          </div>
+
+          <div class="hero-point">
+            <i class="fa-solid fa-circle-check"></i>
+            Discover opportunities to improve your profile
+          </div>
+
+        </div>
+
+        <div class="hero-trust">
+
+          <span>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Profile Analysis
+          </span>
+
+          <span>
+            <i class="fa-solid fa-shield-halved"></i>
+            Confidential
+          </span>
+
+          <span>
+            <i class="fa-solid fa-bullseye"></i>
+            Action-focused
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- =========================
+           FORM
+      ========================= -->
+
+      <div class="form-card">
+
+        <div class="form-header">
+
+          <h2>
+            Request Your LinkedIn Audit
+          </h2>
+
+          <p>
+            Share your profile and tell us what you're trying to achieve.
+          </p>
+
+        </div>
+
+
+        <form id="leadForm">
+
+          <div class="form-grid">
+
+            <!-- NAME -->
+
+            <div class="form-group">
+
+              <label>
+                Full Name *
+              </label>
+
+              <div class="input-wrap">
+
+                <i class="fa-regular fa-user"></i>
+
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+              <label>
+                Email *
+              </label>
+
+              <div class="input-wrap">
+
+                <i class="fa-regular fa-envelope"></i>
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- PHONE -->
+
+            <div class="form-group">
+
+              <label>
+                WhatsApp / Mobile *
+              </label>
+
+              <div class="input-wrap">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="+91 98765 43210"
+                  pattern="[0-9+\-\s()]{10,16}"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- EXPERIENCE -->
+
+            <div class="form-group">
+
+              <label>
+                Experience *
+              </label>
+
+              <div class="input-wrap">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <select
+                  name="experience"
+                  required
+                >
+
+                  <option value="">
+                    Select experience
+                  </option>
+
+                  <option value="7-10 Years">
+                    7–10 Years
+                  </option>
+
+                  <option value="10-15 Years">
+                    10–15 Years
+                  </option>
+
+                  <option value="15-20 Years">
+                    15–20 Years
+                  </option>
+
+                  <option value="20+ Years">
+                    20+ Years
+                  </option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <!-- LINKEDIN -->
+
+            <div class="form-group full">
+
+              <label>
+                LinkedIn Profile URL *
+              </label>
+
+              <div class="input-wrap">
+
+                <i class="fa-brands fa-linkedin"></i>
+
+                <input
+                  type="url"
+                  name="linkedin_url"
+                  placeholder="https://www.linkedin.com/in/your-profile"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- CURRENT ROLE -->
+
+            <div class="form-group">
+
+              <label>
+                Current Role *
+              </label>
+
+              <div class="input-wrap">
+
+                <i class="fa-solid fa-id-badge"></i>
+
+                <input
+                  type="text"
+                  name="current_role"
+                  placeholder="e.g. Project Manager"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- TARGET ROLE -->
+
+            <div class="form-group">
+
+              <label>
+                Target Role
+              </label>
+
+              <div class="input-wrap">
+
+                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                <input
+                  type="text"
+                  name="target_role"
+                  placeholder="e.g. Senior Director"
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- PROBLEM -->
+
+            <div class="form-group full">
+
+              <label>
+                What's the main problem?
+              </label>
+
+              <div class="input-wrap">
+
+                <textarea
+                  name="problem"
+                  placeholder="Example: I'm not getting enough recruiter calls, profile views or relevant opportunities..."
+                ></textarea>
+
+                <i class="fa-regular fa-comment-dots"></i>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="submit-btn"
+            id="submitBtn"
+          >
+
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+
+            <span>
+              Request My LinkedIn Audit
+            </span>
+
+          </button>
+
+
+          <div class="form-note">
+
+            <i class="fa-solid fa-lock"></i>
+
+            Your information is kept confidential.
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROBLEM SECTION
+  ========================= -->
+
+  <section class="problem-section">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          The Problem
+        </div>
+
+        <h2>
+          Your LinkedIn Profile May Be Losing Opportunities Before You Know It
+        </h2>
+
+        <p>
+          Small positioning and messaging problems can make an experienced
+          professional look less relevant than they actually are.
+        </p>
+
+      </div>
+
+
+      <div class="problem-grid">
+
+        <div class="problem-card">
+
+          <div class="problem-icon">
+            <i class="fa-solid fa-heading"></i>
+          </div>
+
+          <h3>
+            Weak Headline
+          </h3>
+
+          <p>
+            Your headline says what your job is, but not why your expertise matters.
+          </p>
+
+        </div>
+
+
+        <div class="problem-card">
+
+          <div class="problem-icon">
+            <i class="fa-regular fa-file-lines"></i>
+          </div>
+
+          <h3>
+            Unclear About Section
+          </h3>
+
+          <p>
+            Visitors can't quickly understand your expertise, achievements or direction.
+          </p>
+
+        </div>
+
+
+        <div class="problem-card">
+
+          <div class="problem-icon">
+            <i class="fa-solid fa-chart-simple"></i>
+          </div>
+
+          <h3>
+            Experience Doesn't Show Impact
+          </h3>
+
+          <p>
+            Your profile focuses on responsibilities instead of measurable professional value.
+          </p>
+
+        </div>
+
+
+        <div class="problem-card">
+
+          <div class="problem-icon">
+            <i class="fa-solid fa-key"></i>
+          </div>
+
+          <h3>
+            Keyword Gaps
+          </h3>
+
+          <p>
+            Important skills and industry keywords may not be positioned effectively.
+          </p>
+
+        </div>
+
+
+        <div class="problem-card">
+
+          <div class="problem-icon">
+            <i class="fa-solid fa-user-tag"></i>
+          </div>
+
+          <h3>
+            Weak Positioning
+          </h3>
+
+          <p>
+            Your profile doesn't clearly communicate what you want to be known for.
+          </p>
+
+        </div>
+
+
+        <div class="problem-card">
+
+          <div class="problem-icon">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+
+          <h3>
+            No Clear Target
+          </h3>
+
+          <p>
+            Recruiters, clients or business contacts may not understand your next direction.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       WHAT AUDIT REVEALS
+  ========================= -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          What We Look For
+        </div>
+
+        <h2>
+          Find the Gaps That Could Be Holding Your Profile Back
+        </h2>
+
+        <p>
+          The audit focuses on the areas that influence how your professional
+          profile is understood and positioned.
+        </p>
+
+      </div>
+
+
+      <div class="audit-grid">
+
+        <div class="audit-card">
+
+          <div class="audit-title">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            Profile Analysis
+
+          </div>
+
+          <ul class="audit-list">
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Headline positioning
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              About section clarity
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Experience presentation
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Skills and keyword positioning
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Featured section
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="audit-card highlight">
+
+          <div class="audit-title">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            Opportunity Positioning
+
+          </div>
+
+          <ul class="audit-list">
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Does your profile communicate your expertise?
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Is your target direction clear?
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Does your profile differentiate you?
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Are your strongest achievements visible?
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Does your profile support your professional goals?
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       AUDIT CHECKLIST
+  ========================= -->
+
+  <section class="check-section">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          Audit Areas
+        </div>
+
+        <h2>
+          What We Review
+        </h2>
+
+      </div>
+
+
+      <div class="checks">
+
+        <div class="check-card">
+
+          <i class="fa-solid fa-heading"></i>
+
+          <h3>
+            Headline
+          </h3>
+
+          <p>
+            Check whether your headline communicates your professional positioning clearly.
+          </p>
+
+        </div>
+
+
+        <div class="check-card">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>
+            About Section
+          </h3>
+
+          <p>
+            Review your professional story, credibility and value proposition.
+          </p>
+
+        </div>
+
+
+        <div class="check-card">
+
+          <i class="fa-solid fa-briefcase"></i>
+
+          <h3>
+            Experience
+          </h3>
+
+          <p>
+            Identify whether your career history demonstrates impact and expertise.
+          </p>
+
+        </div>
+
+
+        <div class="check-card">
+
+          <i class="fa-solid fa-key"></i>
+
+          <h3>
+            Keywords
+          </h3>
+
+          <p>
+            Identify missing or poorly positioned skills and industry terms.
+          </p>
+
+        </div>
+
+
+        <div class="check-card">
+
+          <i class="fa-solid fa-star"></i>
+
+          <h3>
+            Featured & Skills
+          </h3>
+
+          <p>
+            Review supporting sections that can strengthen professional credibility.
+          </p>
+
+        </div>
+
+
+        <div class="check-card">
+
+          <i class="fa-solid fa-compass"></i>
+
+          <h3>
+            Overall Positioning
+          </h3>
+
+          <p>
+            Determine whether the profile supports your desired career or business direction.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       WHO IS IT FOR
+  ========================= -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          Qualification
+        </div>
+
+        <h2>
+          Who Should Get a LinkedIn Audit?
+        </h2>
+
+      </div>
+
+
+      <div class="who-grid">
+
+        <div class="who-card">
+
+          <h3>
+            <i class="fa-solid fa-circle-check"></i>
+            Best Suited For
+          </h3>
+
+          <ul class="who-list">
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Professionals with 7+ years of experience
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Managers and senior professionals
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Founders and entrepreneurs
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Consultants and business leaders
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Professionals looking for better opportunities
+            </li>
+
+            <li>
+              <i class="fa-solid fa-check"></i>
+              Professionals changing roles or industries
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="who-card not-for">
+
+          <h3>
+            <i class="fa-solid fa-circle-info"></i>
+            Probably Not the Right Fit
+          </h3>
+
+          <ul class="who-list">
+
+            <li>
+              <i class="fa-solid fa-minus"></i>
+              Freshers
+            </li>
+
+            <li>
+              <i class="fa-solid fa-minus"></i>
+              Entry-level professionals
+            </li>
+
+            <li>
+              <i class="fa-solid fa-minus"></i>
+              People without an active LinkedIn profile
+            </li>
+
+            <li>
+              <i class="fa-solid fa-minus"></i>
+              People looking only for a resume
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROCESS
+  ========================= -->
+
+  <section class="process-section">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          Simple Process
+        </div>
+
+        <h2>
+          Get Your Profile Reviewed in 4 Steps
+        </h2>
+
+      </div>
+
+
+      <div class="process">
+
+        <div class="process-card">
+
+          <div class="step">
+            STEP 01
+          </div>
+
+          <i class="fa-solid fa-link"></i>
+
+          <h3>
+            Submit Your Profile
+          </h3>
+
+          <p>
+            Share your LinkedIn profile and professional information.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="step">
+            STEP 02
+          </div>
+
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+
+          <h3>
+            Profile Review
+          </h3>
+
+          <p>
+            We evaluate your profile across key positioning areas.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="step">
+            STEP 03
+          </div>
+
+          <i class="fa-solid fa-list-check"></i>
+
+          <h3>
+            Identify Gaps
+          </h3>
+
+          <p>
+            We identify the areas that may be limiting your profile.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="step">
+            STEP 04
+          </div>
+
+          <i class="fa-solid fa-arrow-trend-up"></i>
+
+          <h3>
+            Next Steps
+          </h3>
+
+          <p>
+            Understand what should be improved and how to move forward.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CTA
+  ========================= -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <h2>
+        Is Your LinkedIn Profile Working Hard Enough?
+      </h2>
+
+      <p>
+        Find the gaps, understand your positioning and discover
+        what could be improved before your next opportunity.
+      </p>
+
+      <a href="#audit-form" class="cta-btn">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        Request My LinkedIn Audit
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    © 2026 Indicred Career. All rights reserved.
+
+  </footer>
+
+
+  <!-- =========================
+       SUCCESS / DUPLICATE MODAL
+  ========================= -->
+
+  <div
+    class="message-box"
+    id="messageBox"
+  >
+
+    <div class="message-card">
+
+      <div
+        class="message-icon"
+        id="messageIcon"
+      >
+        <i class="fa-solid fa-check"></i>
+      </div>
+
+      <h3 id="messageTitle">
+        Thank You!
+      </h3>
+
+      <p id="messageText">
+        Your details have been submitted successfully.
+        Our team will connect with you shortly.
+      </p>
+
+      <button
+        class="close-message"
+        id="closeMessage"
+      >
+        Done
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    /* ========================================
+       GOOGLE APPS SCRIPT
+    ======================================== */
+
+    const API_URL =
+      "https://script.google.com/macros/s/AKfycbwJapeLA72pfL5LJvx0U2Lq5C_sAjpwoj0PE2hJ3wCmWPkUmv8XsJjOy-iShcqlXu6qTw/exec";
+
+
+    /* ========================================
+       SESSION ID
+    ======================================== */
+
+    function getSessionId() {
+
+      let sessionId =
+        sessionStorage.getItem(
+          "indicred_session_id"
+        );
+
+      if (!sessionId) {
+
+        sessionId =
+          "sess_" +
+          Date.now() +
+          "_" +
+          Math.random()
+            .toString(36)
+            .substring(2, 10);
+
+        sessionStorage.setItem(
+          "indicred_session_id",
+          sessionId
+        );
+
+      }
+
+      return sessionId;
+
+    }
+
+
+    /* ========================================
+       DEVICE
+    ======================================== */
+
+    function getDevice() {
+
+      const width =
+        window.innerWidth;
+
+      if (width <= 767) {
+        return "Mobile";
+      }
+
+      if (width <= 1024) {
+        return "Tablet";
+      }
+
+      return "Desktop";
+
+    }
+
+
+    /* ========================================
+       URL PARAMETER
+    ======================================== */
+
+    function getParam(name) {
+
+      const params =
+        new URLSearchParams(
+          window.location.search
+        );
+
+      return params.get(name) || "";
+
+    }
+
+
+    /* ========================================
+       LEAD SOURCE
+    ======================================== */
+
+    function getLeadSource() {
+
+      const source =
+        getParam("utm_source");
+
+      if (source) {
+        return source;
+      }
+
+      if (document.referrer) {
+
+        try {
+
+          const ref =
+            new URL(document.referrer);
+
+          if (
+            ref.hostname.includes(
+              "linkedin.com"
+            )
+          ) {
+
+            return "LinkedIn";
+
+          }
+
+          return ref.hostname;
+
+        } catch (error) {
+
+          return "Referral";
+
+        }
+
+      }
+
+      return "Direct";
+
+    }
+
+
+    /* ========================================
+       FORM
+    ======================================== */
+
+    const form =
+      document.getElementById(
+        "leadForm"
+      );
+
+    const submitBtn =
+      document.getElementById(
+        "submitBtn"
+      );
+
+
+    form.addEventListener(
+      "submit",
+      async function(event) {
+
+        event.preventDefault();
+
+
+        if (!form.checkValidity()) {
+
+          form.reportValidity();
+
+          return;
+
+        }
+
+
+        submitBtn.disabled = true;
+
+        submitBtn.innerHTML = `
+          <i class="fa-solid fa-spinner fa-spin"></i>
+          <span>Submitting...</span>
+        `;
+
+
+        const formData =
+          new FormData(form);
+
+
+        const data = {
+
+          /* Lead */
+
+          name:
+            formData.get("name"),
+
+          email:
+            formData.get("email"),
+
+          phone:
+            formData.get("phone"),
+
+          linkedin_url:
+            formData.get("linkedin_url"),
+
+          experience:
+            formData.get("experience"),
+
+          current_role:
+            formData.get("current_role"),
+
+          target_role:
+            formData.get("target_role"),
+
+          problem:
+            formData.get("problem"),
+
+
+          /* Page */
+
+          landing_page:
+            "LinkedIn Audit Campaign",
+
+          page_url:
+            window.location.href,
+
+          referrer:
+            document.referrer,
+
+
+          /* UTM */
+
+          utm_source:
+            getParam("utm_source"),
+
+          utm_medium:
+            getParam("utm_medium"),
+
+          utm_campaign:
+            getParam("utm_campaign"),
+
+          utm_term:
+            getParam("utm_term"),
+
+          utm_content:
+            getParam("utm_content"),
+
+
+          /* Ads */
+
+          gclid:
+            getParam("gclid"),
+
+          fbclid:
+            getParam("fbclid"),
+
+
+          /* Session */
+
+          session_id:
+            getSessionId(),
+
+
+          /* Device */
+
+          device:
+            getDevice(),
+
+          user_agent:
+            navigator.userAgent,
+
+
+          /* Classification */
+
+          lead_source:
+            getLeadSource(),
+
+          lead_type:
+            "LinkedIn Audit"
+
+        };
+
+
+        try {
+
+          const response =
+            await fetch(
+              API_URL,
+              {
+                method: "POST",
+
+                headers: {
+                  "Content-Type":
+                    "text/plain;charset=utf-8"
+                },
+
+                body:
+                  JSON.stringify(data)
+              }
+            );
+
+
+          const result =
+            await response.json();
+
+
+          if (result.success) {
+
+            showMessage(result);
+
+            form.reset();
+
+          } else {
+
+            showError(
+              result.message ||
+              "Unable to submit your details."
+            );
+
+          }
+
+        } catch (error) {
+
+          console.error(error);
+
+          showError(
+            "Unable to connect right now. Please try again."
+          );
+
+        }
+
+
+        submitBtn.disabled = false;
+
+        submitBtn.innerHTML = `
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+          <span>Request My LinkedIn Audit</span>
+        `;
+
+      }
+    );
+
+
+    /* ========================================
+       MESSAGE
+    ======================================== */
+
+    function showMessage(result) {
+
+      const box =
+        document.getElementById(
+          "messageBox"
+        );
+
+      const title =
+        document.getElementById(
+          "messageTitle"
+        );
+
+      const text =
+        document.getElementById(
+          "messageText"
+        );
+
+      const icon =
+        document.getElementById(
+          "messageIcon"
+        );
+
+
+      if (result.duplicate) {
+
+        title.textContent =
+          "Already Submitted";
+
+        text.textContent =
+          result.message ||
+          "You have already submitted your details. Our team will connect with you shortly.";
+
+        icon.innerHTML =
+          '<i class="fa-solid fa-clock"></i>';
+
+        icon.style.background =
+          "#fef3c7";
+
+        icon.style.color =
+          "#d97706";
+
+      } else {
+
+        title.textContent =
+          "Audit Request Received";
+
+        text.textContent =
+          result.message ||
+          "Your LinkedIn audit request has been submitted successfully. Our team will connect with you shortly.";
+
+        icon.innerHTML =
+          '<i class="fa-solid fa-check"></i>';
+
+        icon.style.background =
+          "#dcfce7";
+
+        icon.style.color =
+          "#16a34a";
+
+      }
+
+
+      box.style.display =
+        "flex";
+
+    }
+
+
+    /* ========================================
+       ERROR MESSAGE
+    ======================================== */
+
+    function showError(message) {
+
+      const box =
+        document.getElementById(
+          "messageBox"
+        );
+
+      const title =
+        document.getElementById(
+          "messageTitle"
+        );
+
+      const text =
+        document.getElementById(
+          "messageText"
+        );
+
+      const icon =
+        document.getElementById(
+          "messageIcon"
+        );
+
+
+      title.textContent =
+        "Something Went Wrong";
+
+      text.textContent =
+        message;
+
+      icon.innerHTML =
+        '<i class="fa-solid fa-triangle-exclamation"></i>';
+
+      icon.style.background =
+        "#fee2e2";
+
+      icon.style.color =
+        "#dc2626";
+
+
+      box.style.display =
+        "flex";
+
+    }
+
+
+    /* ========================================
+       CLOSE MODAL
+    ======================================== */
+
+    document
+      .getElementById("closeMessage")
+      .addEventListener(
+        "click",
+        function() {
+
+          document
+            .getElementById(
+              "messageBox"
+            )
+            .style.display =
+            "none";
+
+        }
+      );
+
+
+    document
+      .getElementById("messageBox")
+      .addEventListener(
+        "click",
+        function(event) {
+
+          if (event.target === this) {
+
+            this.style.display =
+              "none";
+
+          }
+
+        }
+      );
+
+
+    /* ========================================
+       INITIALIZE SESSION
+    ======================================== */
+
+    getSessionId();
+
+  </script>
+
+</body>
+</html>
