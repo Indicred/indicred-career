@@ -1,0 +1,1831 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Become an Indicred Sales Agent | Commission-Based Opportunity</title>
+
+    <meta name="description"
+        content="Become an Indicred Sales and Referral Agent. Earn commission by referring customers for LinkedIn Makeover and Resume Writing services. Remote and flexible opportunity.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #eff6ff;
+            --dark: #0f172a;
+            --text: #334155;
+            --muted: #64748b;
+            --border: #e2e8f0;
+            --white: #ffffff;
+            --light: #f8fafc;
+            --success: #16a34a;
+            --success-light: #dcfce7;
+            --whatsapp: #25D366;
+            --whatsapp-dark: #20b858;
+
+            --radius: 18px;
+            --shadow: 0 15px 45px rgba(15, 23, 42, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1140px, 92%);
+            margin: auto;
+        }
+
+        /* =========================================
+           SVG ICON SYSTEM
+        ========================================= */
+
+        .icon {
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+            flex: 0 0 auto;
+        }
+
+        .icon-sm {
+            width: 18px;
+            height: 18px;
+        }
+
+        .icon-lg {
+            width: 27px;
+            height: 27px;
+        }
+
+        .icon-xl {
+            width: 32px;
+            height: 32px;
+        }
+
+        svg {
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .whatsapp-icon svg {
+            fill: none;
+            stroke: currentColor;
+        }
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            color: var(--dark);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            background: var(--whatsapp);
+            color: var(--white);
+            padding: 11px 19px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.25s ease;
+        }
+
+        .nav-whatsapp:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+        }
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            padding: 95px 0 85px;
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(37, 99, 235, .10),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 10% 80%,
+                    rgba(37, 211, 102, .07),
+                    transparent 28%
+                ),
+                var(--white);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border: 1px solid #dbeafe;
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .eyebrow-dot {
+            width: 7px;
+            height: 7px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            color: var(--dark);
+            font-size: clamp(38px, 5vw, 64px);
+            line-height: 1.1;
+            letter-spacing: -2.5px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero-text {
+            font-size: 18px;
+            color: var(--muted);
+            max-width: 680px;
+            margin-bottom: 30px;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--whatsapp);
+            color: var(--white);
+            padding: 15px 25px;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: .25s ease;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, .20);
+        }
+
+        .hero-cta:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px rgba(37, 211, 102, .30);
+        }
+
+        .hero-note {
+            margin-top: 13px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        /* =========================================
+           HERO CARD
+        ========================================= */
+
+        .opportunity-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            padding: 32px;
+            box-shadow: var(--shadow);
+        }
+
+        .card-top {
+            background: var(--primary-light);
+            padding: 20px;
+            border-radius: 17px;
+            margin-bottom: 20px;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            background: var(--white);
+            color: var(--primary);
+            border-radius: 13px;
+            margin-bottom: 14px;
+        }
+
+        .card-top small {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .card-top h3 {
+            color: var(--dark);
+            font-size: 24px;
+            line-height: 1.3;
+            margin-top: 4px;
+        }
+
+        .check-list {
+            list-style: none;
+            display: grid;
+            gap: 14px;
+        }
+
+        .check-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            font-size: 14px;
+        }
+
+        .check {
+            flex: 0 0 23px;
+            width: 23px;
+            height: 23px;
+            display: grid;
+            place-items: center;
+            background: var(--success-light);
+            color: var(--success);
+            border-radius: 50%;
+        }
+
+        /* =========================================
+           GENERAL
+        ========================================= */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-head {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 50px;
+        }
+
+        .section-head h2 {
+            color: var(--dark);
+            font-size: clamp(30px, 4vw, 44px);
+            line-height: 1.2;
+            letter-spacing: -1.3px;
+            margin-bottom: 14px;
+        }
+
+        .section-head p {
+            color: var(--muted);
+        }
+
+        /* =========================================
+           SERVICES
+        ========================================= */
+
+        .services {
+            background: var(--light);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            transition: .25s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .service-icon {
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 16px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: var(--dark);
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* =========================================
+           PROCESS
+        ========================================= */
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .process-card {
+            padding: 25px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--white);
+            transition: .25s ease;
+        }
+
+        .process-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .process-icon {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 14px;
+            margin-bottom: 17px;
+        }
+
+        .step-number {
+            color: var(--muted);
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .process-card h3 {
+            color: var(--dark);
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .process-card p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================================
+           AUDIENCE
+        ========================================= */
+
+        .audience {
+            background: var(--light);
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .audience-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 17px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .audience-icon {
+            width: 36px;
+            height: 36px;
+            flex: 0 0 36px;
+            display: grid;
+            place-items: center;
+            color: var(--primary);
+            background: var(--primary-light);
+            border-radius: 10px;
+        }
+
+        /* =========================================
+           BENEFITS
+        ========================================= */
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .benefit {
+            text-align: center;
+            padding: 28px 20px;
+        }
+
+        .benefit-icon {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 17px;
+            display: grid;
+            place-items: center;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 16px;
+        }
+
+        .benefit h3 {
+            color: var(--dark);
+            font-size: 17px;
+            margin-bottom: 7px;
+        }
+
+        .benefit p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================================
+           COMMISSION
+        ========================================= */
+
+        .commission-box {
+            background: var(--dark);
+            color: var(--white);
+            border-radius: 28px;
+            padding: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .commission-box .eyebrow {
+            background: rgba(255,255,255,.08);
+            border-color: rgba(255,255,255,.1);
+            color: #93c5fd;
+        }
+
+        .commission-box .eyebrow-dot {
+            background: #60a5fa;
+        }
+
+        .commission-box h2 {
+            font-size: clamp(30px, 4vw, 45px);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .commission-box > div > p {
+            color: #cbd5e1;
+        }
+
+        .commission-points {
+            display: grid;
+            gap: 12px;
+        }
+
+        .commission-point {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 15px;
+            background: rgba(255,255,255,.06);
+            border-radius: 12px;
+            color: #e2e8f0;
+            font-size: 14px;
+        }
+
+        .commission-point-icon {
+            color: #4ade80;
+            flex: 0 0 auto;
+        }
+
+        /* =========================================
+           FINAL CTA
+        ========================================= */
+
+        .final-cta {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .final-cta h2 {
+            color: var(--dark);
+            font-size: clamp(32px, 5vw, 52px);
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .final-cta p {
+            max-width: 650px;
+            margin: 0 auto 28px;
+            color: var(--muted);
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 55px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 50px;
+            padding-bottom: 35px;
+        }
+
+        .footer-logo {
+            font-size: 25px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .footer-logo span {
+            color: #60a5fa;
+        }
+
+        .footer-description {
+            color: #94a3b8;
+            font-size: 14px;
+            max-width: 500px;
+        }
+
+        .footer-contact h4 {
+            margin-bottom: 12px;
+        }
+
+        .footer-contact a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .footer-contact a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.1);
+            padding-top: 22px;
+            color: #64748b;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        /* =========================================
+           FLOATING WHATSAPP
+        ========================================= */
+
+        .floating-wa {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 999;
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--whatsapp);
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,.18);
+            transition: .25s ease;
+        }
+
+        .floating-wa:hover {
+            background: var(--whatsapp-dark);
+            transform: scale(1.08);
+        }
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .benefit-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .commission-box {
+                grid-template-columns: 1fr;
+                padding: 45px 30px;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .navbar {
+                min-height: 68px;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .nav-whatsapp {
+                padding: 9px 13px;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .hero-text {
+                font-size: 15px;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .service-grid,
+            .process-grid,
+            .audience-grid,
+            .benefit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .opportunity-card {
+                padding: 24px;
+            }
+
+            .commission-box {
+                padding: 35px 22px;
+                border-radius: 20px;
+            }
+
+            .final-cta {
+                padding: 75px 15px;
+            }
+
+            .floating-wa {
+                width: 54px;
+                height: 54px;
+                right: 17px;
+                bottom: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================================================
+         SVG ICON DEFINITIONS
+         Hidden reusable icon library
+    ================================================== -->
+
+    <svg xmlns="http://www.w3.org/2000/svg"
+         style="display:none">
+
+        <!-- WhatsApp -->
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+            <path d="M20 11.5a8.5 8.5 0 0 1-12.7 7.4L4 20l1.1-3.1A8.5 8.5 0 1 1 20 11.5Z"/>
+            <path d="M8.5 8.3c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.6.7c.7 1.2 1.6 2 2.9 2.6l.6-.7c.2-.2.4-.2.6-.1l1.7.8c.2.1.3.3.3.5v.5c0 .3-.1.5-.4.7-.4.3-1 .5-1.6.4-2.1-.4-4.1-1.5-5.6-3.1-1.5-1.5-2.5-3.5-2.8-5.5-.1-.6.1-1.2.6-1.8Z"/>
+        </symbol>
+
+        <!-- Briefcase -->
+        <symbol id="icon-briefcase" viewBox="0 0 24 24">
+            <rect x="3" y="7" width="18" height="13" rx="2"/>
+            <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+            <path d="M3 12h18"/>
+            <path d="M10 12v2h4v-2"/>
+        </symbol>
+
+        <!-- Check -->
+        <symbol id="icon-check" viewBox="0 0 24 24">
+            <path d="m5 12 4 4L19 6"/>
+        </symbol>
+
+        <!-- LinkedIn / profile -->
+        <symbol id="icon-linkedin" viewBox="0 0 24 24">
+            <rect x="4" y="4" width="16" height="16" rx="2"/>
+            <path d="M8 10v6"/>
+            <path d="M8 7.5v.01"/>
+            <path d="M12 16v-3.2a2.8 2.8 0 0 1 5.6 0V16"/>
+            <path d="M12 10v6"/>
+        </symbol>
+
+        <!-- Document -->
+        <symbol id="icon-document" viewBox="0 0 24 24">
+            <path d="M6 3h8l4 4v14H6z"/>
+            <path d="M14 3v5h4"/>
+            <path d="M9 13h6"/>
+            <path d="M9 17h5"/>
+        </symbol>
+
+        <!-- User -->
+        <symbol id="icon-user" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21a8 8 0 0 1 16 0"/>
+        </symbol>
+
+        <!-- Users -->
+        <symbol id="icon-users" viewBox="0 0 24 24">
+            <circle cx="9" cy="8" r="3"/>
+            <circle cx="17" cy="9" r="2.5"/>
+            <path d="M3 20a6 6 0 0 1 12 0"/>
+            <path d="M15 15a5 5 0 0 1 6 5"/>
+        </symbol>
+
+        <!-- Search -->
+        <symbol id="icon-search" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7"/>
+            <path d="m20 20-4-4"/>
+        </symbol>
+
+        <!-- Link -->
+        <symbol id="icon-link" viewBox="0 0 24 24">
+            <path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"/>
+            <path d="M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 7 20l1.1-1.1"/>
+        </symbol>
+
+        <!-- Money -->
+        <symbol id="icon-money" viewBox="0 0 24 24">
+            <rect x="3" y="6" width="18" height="12" rx="2"/>
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M7 9h.01"/>
+            <path d="M17 15h.01"/>
+        </symbol>
+
+        <!-- Globe -->
+        <symbol id="icon-globe" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M3 12h18"/>
+            <path d="M12 3a14 14 0 0 1 0 18"/>
+            <path d="M12 3a14 14 0 0 0 0 18"/>
+        </symbol>
+
+        <!-- Clock -->
+        <symbol id="icon-clock" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 2"/>
+        </symbol>
+
+        <!-- No fee -->
+        <symbol id="icon-no-fee" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M8 8l8 8"/>
+            <path d="M16 8l-8 8"/>
+        </symbol>
+
+        <!-- Support -->
+        <symbol id="icon-support" viewBox="0 0 24 24">
+            <path d="M4 13v-1a8 8 0 0 1 16 0v1"/>
+            <path d="M4 13h3v5H5a1 1 0 0 1-1-1z"/>
+            <path d="M20 13h-3v5h2a1 1 0 0 0 1-1z"/>
+            <path d="M17 18c-.8 1.2-2 2-4 2"/>
+        </symbol>
+
+        <!-- Delivery -->
+        <symbol id="icon-delivery" viewBox="0 0 24 24">
+            <path d="M3 6h11v11H3z"/>
+            <path d="M14 10h4l3 3v4h-7z"/>
+            <circle cx="7" cy="19" r="2"/>
+            <circle cx="18" cy="19" r="2"/>
+        </symbol>
+
+        <!-- Target -->
+        <symbol id="icon-target" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9"/>
+            <circle cx="12" cy="12" r="5"/>
+            <circle cx="12" cy="12" r="1.5"/>
+        </symbol>
+
+        <!-- Arrow -->
+        <symbol id="icon-arrow" viewBox="0 0 24 24">
+            <path d="M5 12h14"/>
+            <path d="m13 6 6 6-6 6"/>
+        </symbol>
+
+        <!-- Star -->
+        <symbol id="icon-star" viewBox="0 0 24 24">
+            <path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9z"/>
+        </symbol>
+
+        <!-- Chart -->
+        <symbol id="icon-chart" viewBox="0 0 24 24">
+            <path d="M4 19V5"/>
+            <path d="M4 19h16"/>
+            <path d="m7 15 3-4 3 2 5-6"/>
+        </symbol>
+
+        <!-- Home -->
+        <symbol id="icon-home" viewBox="0 0 24 24">
+            <path d="m3 11 9-8 9 8"/>
+            <path d="M5 10v10h14V10"/>
+            <path d="M9 20v-6h6v6"/>
+        </symbol>
+
+        <!-- Network -->
+        <symbol id="icon-network" viewBox="0 0 24 24">
+            <circle cx="12" cy="5" r="2"/>
+            <circle cx="5" cy="18" r="2"/>
+            <circle cx="19" cy="18" r="2"/>
+            <path d="M11 7 6 16"/>
+            <path d="m13 7 5 9"/>
+            <path d="M7 18h10"/>
+        </symbol>
+
+    </svg>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="container navbar">
+
+            <a href="#" class="logo">
+                Indic<span>red</span>
+            </a>
+
+            <a
+                href="https://wa.me/918979874608?text=Hi%20Indicred%2C%20I%27m%20interested%20in%20becoming%20a%20Sales%20%26%20Referral%20Agent."
+                class="nav-whatsapp"
+                target="_blank"
+                rel="noopener"
+            >
+                <span class="whatsapp-icon">
+                    <svg class="icon-sm">
+                        <use href="#icon-whatsapp"></use>
+                    </svg>
+                </span>
+                WhatsApp Us
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="container hero-grid">
+
+                <div>
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        Commission-Based Opportunity
+                    </div>
+
+                    <h1>
+                        Earn Commission by
+                        <span>Selling Career Services</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Become an Indicred Sales & Referral Agent and earn
+                        commission by connecting professionals with our
+                        LinkedIn Makeover and Resume Writing services.
+                    </p>
+
+                    <a
+                        href="https://wa.me/918979874608?text=Hi%20Indicred%2C%20I%27m%20interested%20in%20becoming%20a%20Sales%20%26%20Referral%20Agent."
+                        class="hero-cta"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <svg class="icon">
+                            <use href="#icon-whatsapp"></use>
+                        </svg>
+
+                        Become a Sales Agent
+                    </a>
+
+                    <p class="hero-note">
+                        Remote · Flexible · Commission-Based · No Joining Fee
+                    </p>
+
+                </div>
+
+
+                <!-- HERO CARD -->
+
+                <div class="opportunity-card">
+
+                    <div class="card-top">
+
+                        <div class="card-icon">
+
+                            <svg class="icon-lg">
+                                <use href="#icon-network"></use>
+                            </svg>
+
+                        </div>
+
+                        <small>Indicred Agent Network</small>
+
+                        <h3>
+                            Turn Your Network Into Opportunity
+                        </h3>
+
+                    </div>
+
+
+                    <ul class="check-list">
+
+                        <li>
+                            <span class="check">
+                                <svg class="icon-sm">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                            </span>
+
+                            <span>
+                                Promote professional career services
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="check">
+                                <svg class="icon-sm">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                            </span>
+
+                            <span>
+                                Generate your own prospects and referrals
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="check">
+                                <svg class="icon-sm">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                            </span>
+
+                            <span>
+                                Work remotely and flexibly
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="check">
+                                <svg class="icon-sm">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                            </span>
+
+                            <span>
+                                Indicred handles service delivery
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="check">
+                                <svg class="icon-sm">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                            </span>
+
+                            <span>
+                                Earn commission on successful conversions
+                            </span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICES -->
+
+        <section class="services">
+
+            <div class="container">
+
+                <div class="section-head">
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        What You'll Sell
+                    </div>
+
+                    <h2>
+                        Two High-Intent Career Services
+                    </h2>
+
+                    <p>
+                        Help professionals improve their career positioning
+                        through services delivered by Indicred.
+                    </p>
+
+                </div>
+
+
+                <div class="service-grid">
+
+                    <!-- LINKEDIN -->
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+
+                            <svg class="icon-xl">
+                                <use href="#icon-linkedin"></use>
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            LinkedIn Makeover
+                        </h3>
+
+                        <p>
+                            A comprehensive LinkedIn profile transformation
+                            focused on professional positioning, credibility,
+                            visibility and personal branding.
+                        </p>
+
+                    </div>
+
+
+                    <!-- RESUME -->
+
+                    <div class="service-card">
+
+                        <div class="service-icon">
+
+                            <svg class="icon-xl">
+                                <use href="#icon-document"></use>
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Professional Resume Writing
+                        </h3>
+
+                        <p>
+                            Professionally written resumes tailored to the
+                            candidate's experience, target role and career
+                            objectives.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROCESS -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="section-head">
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        Simple Process
+                    </div>
+
+                    <h2>
+                        Find. Refer. Convert. Earn.
+                    </h2>
+
+                    <p>
+                        You focus on finding opportunities. Indicred handles
+                        the service delivery.
+                    </p>
+
+                </div>
+
+
+                <div class="process-grid">
+
+                    <div class="process-card">
+
+                        <div class="process-icon">
+                            <svg class="icon-lg">
+                                <use href="#icon-search"></use>
+                            </svg>
+                        </div>
+
+                        <div class="step-number">
+                            STEP 01
+                        </div>
+
+                        <h3>
+                            Find Prospects
+                        </h3>
+
+                        <p>
+                            Identify professionals who need a better
+                            LinkedIn profile or resume.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-card">
+
+                        <div class="process-icon">
+                            <svg class="icon-lg">
+                                <use href="#icon-link"></use>
+                            </svg>
+                        </div>
+
+                        <div class="step-number">
+                            STEP 02
+                        </div>
+
+                        <h3>
+                            Introduce Indicred
+                        </h3>
+
+                        <p>
+                            Connect interested prospects with the relevant
+                            Indicred service.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-card">
+
+                        <div class="process-icon">
+                            <svg class="icon-lg">
+                                <use href="#icon-target"></use>
+                            </svg>
+                        </div>
+
+                        <div class="step-number">
+                            STEP 03
+                        </div>
+
+                        <h3>
+                            Customer Conversion
+                        </h3>
+
+                        <p>
+                            Indicred coordinates the customer and service
+                            onboarding process.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-card">
+
+                        <div class="process-icon">
+                            <svg class="icon-lg">
+                                <use href="#icon-money"></use>
+                            </svg>
+                        </div>
+
+                        <div class="step-number">
+                            STEP 04
+                        </div>
+
+                        <h3>
+                            Earn Commission
+                        </h3>
+
+                        <p>
+                            Receive your applicable commission for eligible
+                            successful conversions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AUDIENCE -->
+
+        <section class="audience">
+
+            <div class="container">
+
+                <div class="section-head">
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        Who Can Join
+                    </div>
+
+                    <h2>
+                        Built for People With a Network
+                    </h2>
+
+                    <p>
+                        If you already communicate with professionals,
+                        job seekers or career-focused audiences, this
+                        opportunity can fit you.
+                    </p>
+
+                </div>
+
+
+                <div class="audience-grid">
+
+                    <div class="audience-item">
+                        <span class="audience-icon">
+                            <svg class="icon-sm">
+                                <use href="#icon-users"></use>
+                            </svg>
+                        </span>
+                        Recruiters
+                    </div>
+
+                    <div class="audience-item">
+                        <span class="audience-icon">
+                            <svg class="icon-sm">
+                                <use href="#icon-user"></use>
+                            </svg>
+                        </span>
+                        HR Professionals
+                    </div>
+
+                    <div class="audience-item">
+                        <span class="audience-icon">
+                            <svg class="icon-sm">
+                                <use href="#icon-briefcase"></use>
+                            </svg>
+                        </span>
+                        Career Consultants
+                    </div>
+
+                    <div class="audience-item">
+                        <span class="audience-icon">
+                            <svg class="icon-sm">
+                                <use href="#icon-home"></use>
+                            </svg>
+                        </span>
+                        Placement Consultants
+                    </div>
+
+                    <div class="audience-item">
+                        <span class="audience-icon">
+                            <svg class="icon-sm">
+                                <use href="#icon-support"></use>
+                            </svg>
+                        </span>
+                        Career Coaches
+                    </div>
+
+                    <div class="audience-item">
+                        <span class="audience-icon">
+                            <svg class="icon-sm">
+                                <use href="#icon-chart"></use>
+                            </svg>
+                        </span>
+                        Freelance Sales Professionals
+                    </div>
+
+                    <div class="audience-item">
+                        <span class="audience-icon">
+                            <svg class="icon-sm">
+                                <use href="#icon-linkedin"></use>
+                            </svg>
+                        </span>
+                        LinkedIn Creators
+                    </div>
+
+                    <div class="audience-item">
+                        <span class="audience-icon">
+                            <svg class="icon-sm">
+                                <use href="#icon-chart"></use>
+                            </svg>
+                        </span>
+                        Digital Marketers
+                    </div>
+
+                    <div class="audience-item">
+                        <span class="audience-icon">
+                            <svg class="icon-sm">
+                                <use href="#icon-network"></use>
+                            </svg>
+                        </span>
+                        Referral Marketers
+                    </div>
+
+                    <div class="audience-item">
+                        <span class="audience-icon">
+                            <svg class="icon-sm">
+                                <use href="#icon-users"></use>
+                            </svg>
+                        </span>
+                        Community Managers
+                    </div>
+
+                    <div class="audience-item">
+                        <span class="audience-icon">
+                            <svg class="icon-sm">
+                                <use href="#icon-briefcase"></use>
+                            </svg>
+                        </span>
+                        Freelancers
+                    </div>
+
+                    <div class="audience-item">
+                        <span class="audience-icon">
+                            <svg class="icon-sm">
+                                <use href="#icon-network"></use>
+                            </svg>
+                        </span>
+                        Professionals With Strong Networks
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BENEFITS -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="section-head">
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        Why Join
+                    </div>
+
+                    <h2>
+                        A Simple Sales Partnership
+                    </h2>
+
+                </div>
+
+
+                <div class="benefit-grid">
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+                            <svg class="icon-xl">
+                                <use href="#icon-money"></use>
+                            </svg>
+                        </div>
+
+                        <h3>
+                            Commission Based
+                        </h3>
+
+                        <p>
+                            Earn commission from eligible successful
+                            customer conversions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+                            <svg class="icon-xl">
+                                <use href="#icon-globe"></use>
+                            </svg>
+                        </div>
+
+                        <h3>
+                            Remote
+                        </h3>
+
+                        <p>
+                            Work from wherever you are without
+                            office attendance.
+                        </p>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+                            <svg class="icon-xl">
+                                <use href="#icon-clock"></use>
+                            </svg>
+                        </div>
+
+                        <h3>
+                            Flexible
+                        </h3>
+
+                        <p>
+                            Build your sales activity around your
+                            existing schedule.
+                        </p>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+                            <svg class="icon-xl">
+                                <use href="#icon-no-fee"></use>
+                            </svg>
+                        </div>
+
+                        <h3>
+                            No Joining Fee
+                        </h3>
+
+                        <p>
+                            There is no upfront joining fee to become
+                            an independent agent.
+                        </p>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+                            <svg class="icon-xl">
+                                <use href="#icon-support"></use>
+                            </svg>
+                        </div>
+
+                        <h3>
+                            Sales Support
+                        </h3>
+
+                        <p>
+                            Get service information and promotional
+                            support from Indicred.
+                        </p>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <div class="benefit-icon">
+                            <svg class="icon-xl">
+                                <use href="#icon-delivery"></use>
+                            </svg>
+                        </div>
+
+                        <h3>
+                            Delivery Handled
+                        </h3>
+
+                        <p>
+                            You focus on sales and referrals while
+                            Indicred handles delivery.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMMISSION -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="commission-box">
+
+                    <div>
+
+                        <div class="eyebrow">
+                            <span class="eyebrow-dot"></span>
+                            Commission Model
+                        </div>
+
+                        <h2>
+                            Your Network.
+                            Your Sales.
+                            Your Commission.
+                        </h2>
+
+                        <p>
+                            This is an independent commission-based
+                            opportunity. Your commission is linked to
+                            eligible successful customer conversions
+                            according to the applicable Indicred
+                            commission structure.
+                        </p>
+
+                    </div>
+
+
+                    <div class="commission-points">
+
+                        <div class="commission-point">
+
+                            <span class="commission-point-icon">
+                                <svg class="icon-sm">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                            </span>
+
+                            No fixed salary
+
+                        </div>
+
+
+                        <div class="commission-point">
+
+                            <span class="commission-point-icon">
+                                <svg class="icon-sm">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                            </span>
+
+                            No mandatory office attendance
+
+                        </div>
+
+
+                        <div class="commission-point">
+
+                            <span class="commission-point-icon">
+                                <svg class="icon-sm">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                            </span>
+
+                            No fixed working hours
+
+                        </div>
+
+
+                        <div class="commission-point">
+
+                            <span class="commission-point-icon">
+                                <svg class="icon-sm">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                            </span>
+
+                            No joining fee
+
+                        </div>
+
+
+                        <div class="commission-point">
+
+                            <span class="commission-point-icon">
+                                <svg class="icon-sm">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                            </span>
+
+                            No service delivery responsibility
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL CTA -->
+
+        <section class="final-cta">
+
+            <div class="container">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    Start the Conversation
+                </div>
+
+                <h2>
+                    Ready to Become an<br>
+                    Indicred Sales Agent?
+                </h2>
+
+                <p>
+                    Message us on WhatsApp to learn about the agent
+                    opportunity, commission structure and onboarding
+                    process.
+                </p>
+
+                <a
+                    href="https://wa.me/918979874608?text=Hi%20Indicred%2C%20I%27m%20interested%20in%20becoming%20a%20Sales%20%26%20Referral%20Agent."
+                    class="hero-cta"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <svg class="icon">
+                        <use href="#icon-whatsapp"></use>
+                    </svg>
+
+                    Talk to Indicred on WhatsApp
+
+                    <svg class="icon-sm">
+                        <use href="#icon-arrow"></use>
+                    </svg>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+
+                    <div class="footer-logo">
+                        Indic<span>red</span>
+                    </div>
+
+                    <p class="footer-description">
+                        Career branding and professional profile services
+                        helping individuals strengthen their LinkedIn
+                        presence and resumes.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-contact">
+
+                    <h4>
+                        Sales Agent Opportunity
+                    </h4>
+
+                    <a
+                        href="https://wa.me/918979874608?text=Hi%20Indicred%2C%20I%27m%20interested%20in%20becoming%20a%20Sales%20%26%20Referral%20Agent."
+                        target="_blank"
+                        rel="noopener"
+                    >
+
+                        <svg class="icon-sm">
+                            <use href="#icon-whatsapp"></use>
+                        </svg>
+
+                        +91 89798 74608
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                © 2026 Indicred. All rights reserved.
+
+                <br><br>
+
+                This is an independent commission-based opportunity
+                and not a salaried employment position.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- FLOATING WHATSAPP -->
+
+    <a
+        href="https://wa.me/918979874608?text=Hi%20Indicred%2C%20I%27m%20interested%20in%20becoming%20a%20Sales%20%26%20Referral%20Agent."
+        class="floating-wa"
+        target="_blank"
+        rel="noopener"
+        aria-label="Contact Indicred on WhatsApp"
+    >
+
+        <svg class="icon-lg">
+            <use href="#icon-whatsapp"></use>
+        </svg>
+
+    </a>
+
+</body>
+</html>
