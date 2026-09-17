@@ -1,445 +1,500 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <title>Professional Resume Writing for ₹999 | Indicred Career</title>
-
-  <meta name="description"
-        content="Get a professionally written, ATS-friendly resume for just ₹999. Includes resume writing, ATS optimization and a professional cover letter.">
-
-  <style>
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      color: #172033;
-      background: #ffffff;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: auto;
-    }
-
-    /* NAV */
-
-    nav {
-      border-bottom: 1px solid #e8edf5;
-      background: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .nav-inner {
-      height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: 800;
-      color: #2563eb;
-    }
-
-    .nav-btn {
-      background: #2563eb;
-      color: #fff;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-weight: 700;
-    }
-
-    /* HERO */
-
-    .hero {
-      background:
-        linear-gradient(180deg, #f7faff 0%, #ffffff 100%);
-      padding: 70px 0 60px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .badge {
-      display: inline-block;
-      background: #eaf2ff;
-      color: #1d4ed8;
-      padding: 7px 13px;
-      border-radius: 30px;
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-size: clamp(38px, 5vw, 62px);
-      line-height: 1.08;
-      letter-spacing: -1.5px;
-      margin-bottom: 20px;
-    }
-
-    h1 span {
-      color: #2563eb;
-    }
-
-    .hero-text {
-      font-size: 19px;
-      color: #5c6678;
-      max-width: 650px;
-      margin-bottom: 25px;
-    }
-
-    .price {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 25px 0;
-    }
-
-    .price-main {
-      font-size: 42px;
-      font-weight: 800;
-      color: #111827;
-    }
-
-    .price-old {
-      color: #8a94a6;
-      text-decoration: line-through;
-    }
-
-    .cta {
-      display: inline-block;
-      background: #2563eb;
-      color: #fff;
-      padding: 15px 28px;
-      border-radius: 9px;
-      font-weight: 800;
-      font-size: 17px;
-      border: 0;
-      cursor: pointer;
-    }
-
-    .cta:hover {
-      background: #1d4ed8;
-    }
-
-    .trust {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      margin-top: 22px;
-      color: #596579;
-      font-size: 14px;
-    }
-
-    /* FORM CARD */
-
-    .form-card {
-      background: #fff;
-      border: 1px solid #e5eaf2;
-      border-radius: 18px;
-      padding: 30px;
-      box-shadow: 0 18px 50px rgba(20, 40, 80, .10);
-    }
-
-    .form-card h2 {
-      font-size: 25px;
-      margin-bottom: 7px;
-    }
-
-    .form-card p {
-      color: #6b7280;
-      margin-bottom: 22px;
-    }
-
-    .form-group {
-      margin-bottom: 15px;
-    }
-
-    label {
-      display: block;
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 13px 14px;
-      border: 1px solid #d8dee9;
-      border-radius: 8px;
-      font-size: 15px;
-      outline: none;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: #2563eb;
-    }
-
-    textarea {
-      min-height: 90px;
-      resize: vertical;
-    }
-
-    .submit-btn {
-      width: 100%;
-      margin-top: 5px;
-    }
-
-    .small {
-      font-size: 12px;
-      color: #7b8494;
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    /* DELIVERABLES */
-
-    section {
-      padding: 75px 0;
-    }
-
-    .section-heading {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 45px;
-    }
-
-    .section-heading h2 {
-      font-size: 38px;
-      line-height: 1.2;
-      margin-bottom: 12px;
-    }
-
-    .section-heading p {
-      color: #667085;
-      font-size: 17px;
-    }
-
-    .deliverables {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .deliverable {
-      padding: 27px;
-      border: 1px solid #e6eaf0;
-      border-radius: 14px;
-      background: #fff;
-    }
-
-    .icon {
-      width: 44px;
-      height: 44px;
-      display: grid;
-      place-items: center;
-      background: #edf4ff;
-      color: #2563eb;
-      border-radius: 10px;
-      font-size: 20px;
-      margin-bottom: 16px;
-    }
-
-    .deliverable h3 {
-      margin-bottom: 7px;
-    }
-
-    .deliverable p {
-      color: #687386;
-      font-size: 15px;
-    }
-
-    /* INCLUDED */
-
-    .included {
-      background: #f7f9fc;
-    }
-
-    .included-box {
-      max-width: 850px;
-      margin: auto;
-      background: #fff;
-      border: 1px solid #e5eaf0;
-      border-radius: 16px;
-      padding: 35px;
-    }
-
-    .check {
-      display: flex;
-      gap: 12px;
-      padding: 13px 0;
-      border-bottom: 1px solid #eef1f5;
-    }
-
-    .check:last-child {
-      border-bottom: 0;
-    }
-
-    .check-icon {
-      color: #16a34a;
-      font-weight: 800;
-    }
-
-    /* WHO */
-
-    .audience {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .audience div {
-      padding: 18px;
-      border: 1px solid #e6eaf0;
-      border-radius: 10px;
-      font-weight: 600;
-    }
-
-    /* PROCESS */
-
-    .process {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .step {
-      text-align: center;
-      padding: 20px;
-    }
-
-    .number {
-      width: 48px;
-      height: 48px;
-      margin: 0 auto 15px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: #2563eb;
-      color: #fff;
-      font-weight: 800;
-    }
-
-    /* FAQ */
-
-    .faq {
-      max-width: 800px;
-      margin: auto;
-    }
-
-    details {
-      border-bottom: 1px solid #e5e7eb;
-      padding: 18px 0;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 700;
-    }
-
-    details p {
-      color: #687386;
-      margin-top: 10px;
-    }
-
-    /* FINAL CTA */
-
-    .final-cta {
-      background: #172033;
-      color: #fff;
-      text-align: center;
-      padding: 75px 20px;
-    }
-
-    .final-cta h2 {
-      font-size: 40px;
-      margin-bottom: 12px;
-    }
-
-    .final-cta p {
-      color: #c5ccd8;
-      margin-bottom: 25px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #101827;
-      color: #9ba5b5;
-      text-align: center;
-      padding: 25px;
-      font-size: 14px;
-    }
-
-    /* MOBILE */
-
-    @media(max-width: 800px) {
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .deliverables,
-      .process {
-        grid-template-columns: 1fr;
-      }
-
-      .audience {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 45px;
-      }
-
-      section {
-        padding: 55px 0;
-      }
-
-      .nav-btn {
-        padding: 8px 13px;
-        font-size: 14px;
-      }
-
-    }
-
-  </style>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Professional Resume Writing for ₹999 | Indicred Career</title>
+
+<meta name="description"
+      content="Get a professionally written, ATS-friendly resume with a professional cover letter for ₹999. Upload your existing resume and get started.">
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #172033;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #e8edf5;
+}
+
+.nav-inner {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #2563eb;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.nav-button {
+  color: #ffffff;
+  background: #2563eb;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  padding: 70px 0;
+  background: linear-gradient(
+    180deg,
+    #f7faff 0%,
+    #ffffff 100%
+  );
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 7px 13px;
+  margin-bottom: 18px;
+  border-radius: 30px;
+  background: #eaf2ff;
+  color: #1d4ed8;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+
+h1 span {
+  color: #2563eb;
+}
+
+.hero-description {
+  max-width: 650px;
+  color: #5f6b7c;
+  font-size: 19px;
+  margin-bottom: 24px;
+}
+
+.price {
+  margin: 20px 0;
+}
+
+.price-value {
+  color: #111827;
+  font-size: 44px;
+  font-weight: 800;
+}
+
+.price-note {
+  color: #687386;
+  font-size: 14px;
+}
+
+.primary-button {
+  display: inline-block;
+  border: 0;
+  border-radius: 9px;
+  padding: 15px 28px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+}
+
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  color: #596579;
+  font-size: 14px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-card {
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e3e8f0;
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(20,40,80,.10);
+}
+
+.form-card h2 {
+  margin-bottom: 5px;
+  font-size: 26px;
+}
+
+.form-card > p {
+  color: #6b7280;
+  margin-bottom: 22px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d8dee9;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.submit-button {
+  width: 100%;
+}
+
+.form-message {
+  min-height: 22px;
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: #667085;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  padding: 75px 0;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin-bottom: 12px;
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.section-heading p {
+  color: #667085;
+  font-size: 17px;
+}
+
+
+/* =========================
+   DELIVERABLES
+========================= */
+
+.deliverables {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.deliverable {
+  padding: 27px;
+  border: 1px solid #e6eaf0;
+  border-radius: 14px;
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background: #edf4ff;
+  color: #2563eb;
+  font-weight: 800;
+}
+
+.deliverable h3 {
+  margin-bottom: 7px;
+}
+
+.deliverable p {
+  color: #687386;
+  font-size: 15px;
+}
+
+
+/* =========================
+   INCLUDED
+========================= */
+
+.light-section {
+  background: #f7f9fc;
+}
+
+.included-box {
+  max-width: 850px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e5eaf0;
+}
+
+.check {
+  display: flex;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid #eef1f5;
+}
+
+.check:last-child {
+  border-bottom: 0;
+}
+
+.check-icon {
+  color: #16a34a;
+  font-weight: 800;
+}
+
+
+/* =========================
+   AUDIENCE
+========================= */
+
+.audience {
+  max-width: 850px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.audience-item {
+  padding: 18px;
+  border: 1px solid #e6eaf0;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   PROCESS
+========================= */
+
+.process {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.step {
+  text-align: center;
+}
+
+.number {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.step p {
+  margin-top: 7px;
+  color: #687386;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.faq {
+  max-width: 800px;
+  margin: auto;
+}
+
+details {
+  padding: 18px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+details p {
+  margin-top: 10px;
+  color: #687386;
+}
+
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.final-cta {
+  padding: 75px 20px;
+  background: #172033;
+  color: #ffffff;
+  text-align: center;
+}
+
+.final-cta h2 {
+  margin-bottom: 12px;
+  font-size: 40px;
+}
+
+.final-cta p {
+  margin-bottom: 25px;
+  color: #c5ccd8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 25px;
+  background: #101827;
+  color: #9ba5b5;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .hero {
+    padding: 45px 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .deliverables,
+  .process {
+    grid-template-columns: 1fr;
+  }
+
+  .audience {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 55px 0;
+  }
+
+  .section-heading h2 {
+    font-size: 32px;
+  }
+
+}
+
+</style>
+
 </head>
 
 
 <body>
 
 
-<!-- NAV -->
+<!-- =========================
+     NAVBAR
+========================= -->
 
 <nav>
 
@@ -451,7 +506,7 @@
 
     <a
       href="#apply"
-      class="nav-btn"
+      class="nav-button"
     >
       Get Started
     </a>
@@ -462,7 +517,9 @@
 
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -475,26 +532,29 @@
         Professional Resume Writing
       </span>
 
+
       <h1>
         Get a Better Resume
         <span>for ₹999</span>
       </h1>
 
-      <p class="hero-text">
-        Get your existing resume professionally rewritten,
-        structured and optimized to present your skills,
-        experience and achievements more clearly.
+
+      <p class="hero-description">
+        Get your existing resume professionally
+        rewritten, structured and optimized to
+        present your skills, experience and
+        achievements more clearly.
       </p>
 
 
       <div class="price">
 
-        <div class="price-main">
+        <div class="price-value">
           ₹999
         </div>
 
-        <div class="price-old">
-          Starting offer
+        <div class="price-note">
+          Resume Writing + Cover Letter
         </div>
 
       </div>
@@ -502,7 +562,7 @@
 
       <a
         href="#apply"
-        class="cta"
+        class="primary-button"
       >
         Get My Resume →
       </a>
@@ -510,11 +570,11 @@
 
       <div class="trust">
 
-        <span>✓ Professional writing</span>
+        <span>✓ Professional Writing</span>
 
-        <span>✓ ATS-friendly structure</span>
+        <span>✓ ATS-Friendly Structure</span>
 
-        <span>✓ Cover letter included</span>
+        <span>✓ Cover Letter Included</span>
 
       </div>
 
@@ -534,13 +594,15 @@
       </h2>
 
       <p>
-        Submit your details and existing resume.
+        Upload your existing resume to get started.
       </p>
 
 
       <form
         id="resumeForm"
+        enctype="multipart/form-data"
       >
+
 
         <div class="form-group">
 
@@ -599,26 +661,26 @@
           <select name="experience">
 
             <option value="">
-              Select
+              Select Experience
             </option>
 
-            <option>
+            <option value="Fresher">
               Fresher
             </option>
 
-            <option>
+            <option value="1-3 Years">
               1–3 Years
             </option>
 
-            <option>
+            <option value="3-5 Years">
               3–5 Years
             </option>
 
-            <option>
+            <option value="5-10 Years">
               5–10 Years
             </option>
 
-            <option>
+            <option value="10+ Years">
               10+ Years
             </option>
 
@@ -662,12 +724,12 @@
         <div class="form-group">
 
           <label>
-            Anything you want improved?
+            What would you like to improve?
           </label>
 
           <textarea
             name="requirement"
-            placeholder="Tell us what you want to improve..."
+            placeholder="Tell us what you want improved..."
           ></textarea>
 
         </div>
@@ -675,18 +737,18 @@
 
         <button
           type="submit"
-          class="cta submit-btn"
+          class="primary-button submit-button"
+          id="submitButton"
         >
           Submit & Get Started — ₹999
         </button>
 
 
         <div
-          class="small"
+          class="form-message"
           id="formMessage"
-        >
-          Your information is used only to process your request.
-        </div>
+        ></div>
+
 
       </form>
 
@@ -698,7 +760,9 @@
 
 
 
-<!-- DELIVERABLES -->
+<!-- =========================
+     DELIVERABLES
+========================= -->
 
 <section>
 
@@ -752,8 +816,8 @@
 
         <p>
           Clear sections, relevant keywords and
-          clean formatting designed to make your
-          experience easier to understand.
+          clean formatting designed for easier
+          resume scanning.
         </p>
 
       </div>
@@ -770,8 +834,8 @@
         </h3>
 
         <p>
-          A professional cover letter aligned with
-          your profile and target career direction.
+          A professional cover letter aligned
+          with your profile and target role.
         </p>
 
       </div>
@@ -789,8 +853,7 @@
 
         <p>
           Stronger descriptions of responsibilities,
-          achievements, skills and professional
-          experience.
+          achievements, skills and experience.
         </p>
 
       </div>
@@ -808,7 +871,7 @@
 
         <p>
           Better hierarchy, spacing and readability
-          so recruiters can scan your resume quickly.
+          for recruiters.
         </p>
 
       </div>
@@ -825,8 +888,8 @@
         </h3>
 
         <p>
-          Receive your completed resume in a
-          professional digital format.
+          Receive your completed resume and
+          cover letter digitally.
         </p>
 
       </div>
@@ -840,9 +903,11 @@
 
 
 
-<!-- INCLUDED -->
+<!-- =========================
+     INCLUDED
+========================= -->
 
-<section class="included">
+<section class="light-section">
 
   <div class="container">
 
@@ -900,7 +965,9 @@
 
 
 
-<!-- WHO -->
+<!-- =========================
+     AUDIENCE
+========================= -->
 
 <section>
 
@@ -912,37 +979,32 @@
         Who Is This For?
       </h2>
 
-      <p>
-        Suitable for professionals at different
-        stages of their career.
-      </p>
-
     </div>
 
 
     <div class="audience">
 
-      <div>
+      <div class="audience-item">
         ✓ Freshers entering the job market
       </div>
 
-      <div>
+      <div class="audience-item">
         ✓ Professionals looking for a new job
       </div>
 
-      <div>
+      <div class="audience-item">
         ✓ People changing careers
       </div>
 
-      <div>
+      <div class="audience-item">
         ✓ Professionals changing industries
       </div>
 
-      <div>
+      <div class="audience-item">
         ✓ Experienced professionals
       </div>
 
-      <div>
+      <div class="audience-item">
         ✓ Candidates applying for multiple roles
       </div>
 
@@ -954,9 +1016,11 @@
 
 
 
-<!-- PROCESS -->
+<!-- =========================
+     PROCESS
+========================= -->
 
-<section class="included">
+<section class="light-section">
 
   <div class="container">
 
@@ -1034,7 +1098,9 @@
 
 
 
-<!-- FAQ -->
+<!-- =========================
+     FAQ
+========================= -->
 
 <section>
 
@@ -1076,24 +1142,9 @@
 
         <p>
           An existing resume is preferred because
-          it gives us your career information to work
-          from. If you don't have one, you can mention
-          this when submitting your enquiry.
-        </p>
-
-      </details>
-
-
-      <details>
-
-        <summary>
-          Is this an ATS resume?
-        </summary>
-
-        <p>
-          The resume uses a clean, structured format
-          and relevant keywords intended to improve
-          machine readability and recruiter scanning.
+          it provides your career information.
+          If you don't have one, mention this in
+          your requirement.
         </p>
 
       </details>
@@ -1106,8 +1157,8 @@
         </summary>
 
         <p>
-          Yes. A professional cover letter is included
-          in the ₹999 package.
+          Yes. A professional cover letter is
+          included in the ₹999 package.
         </p>
 
       </details>
@@ -1135,10 +1186,10 @@
         </summary>
 
         <p>
-          No. A professionally written resume can
-          improve how your experience is presented,
-          but hiring decisions depend on employers,
-          roles, qualifications and other factors.
+          No. Resume writing improves how your
+          experience is presented, but hiring
+          decisions depend on employers, roles,
+          qualifications and other factors.
         </p>
 
       </details>
@@ -1152,7 +1203,9 @@
 
 
 
-<!-- FINAL CTA -->
+<!-- =========================
+     FINAL CTA
+========================= -->
 
 <section class="final-cta">
 
@@ -1162,12 +1215,12 @@
 
   <p>
     Professional resume writing + cover letter
-    for just ₹999.
+    for ₹999.
   </p>
 
   <a
     href="#apply"
-    class="cta"
+    class="primary-button"
   >
     Get Started — ₹999
   </a>
@@ -1184,188 +1237,382 @@
 
 
 
-<!-- FORM SCRIPT -->
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script>
 
+
+/*
+ * YOUR GOOGLE APPS SCRIPT WEB APP
+ */
+
 const SCRIPT_URL =
-  "YOUR_APPS_SCRIPT_WEB_APP_URL";
+"https://script.google.com/macros/s/AKfycbyTVUmYNTU7QquMfklYZI_30hTEQIWDf8Bl4T0J_UAjIDVKc17WPL-D5zHZGMbaYQVf/exec";
 
 
-document
-  .getElementById("resumeForm")
-  .addEventListener("submit", async function(e) {
 
-    e.preventDefault();
+/*
+ * FORM
+ */
 
-    const form = this;
+const form =
+document.getElementById("resumeForm");
 
-    const file =
-      document.getElementById("resume").files[0];
+const message =
+document.getElementById("formMessage");
 
-    const message =
-      document.getElementById("formMessage");
-
-
-    if (!file) {
-
-      message.textContent =
-        "Please upload your resume.";
-
-      return;
-
-    }
+const submitButton =
+document.getElementById("submitButton");
 
 
-    if (file.size > 5 * 1024 * 1024) {
 
-      message.textContent =
-        "Please upload a file smaller than 5 MB.";
+form.addEventListener(
+"submit",
+async function(event) {
 
-      return;
+  event.preventDefault();
 
-    }
 
+  const file =
+  document.getElementById("resume").files[0];
+
+
+  /*
+   * Check file
+   */
+
+  if (!file) {
 
     message.textContent =
-      "Submitting your details...";
+    "Please upload your resume.";
+
+    return;
+
+  }
 
 
-    try {
+  /*
+   * Maximum 5 MB
+   */
 
-      const base64 =
-        await fileToBase64(file);
+  if (
+    file.size >
+    5 * 1024 * 1024
+  ) {
 
-      const params =
-        new URLSearchParams();
+    message.textContent =
+    "Please upload a file smaller than 5 MB.";
 
+    return;
 
-      params.append(
-        "name",
-        form.name.value
-      );
-
-      params.append(
-        "email",
-        form.email.value
-      );
-
-      params.append(
-        "phone",
-        form.phone.value
-      );
-
-      params.append(
-        "experience",
-        form.experience.value
-      );
-
-      params.append(
-        "target_role",
-        form.target_role.value
-      );
-
-      params.append(
-        "requirement",
-        form.requirement.value
-      );
+  }
 
 
-      params.append(
-        "resume",
-        base64
-      );
+  /*
+   * Allowed file types
+   */
 
-      params.append(
-        "resumeName",
-        file.name
-      );
-
-      params.append(
-        "resumeType",
-        file.type
-      );
+  const allowedTypes = [
+    "application/pdf",
+    "application/msword",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  ];
 
 
-      params.append(
-        "landing_page",
-        window.location.href
-      );
+  const extension =
+  file.name
+  .split(".")
+  .pop()
+  .toLowerCase();
 
 
-      const urlParams =
-        new URLSearchParams(
-          window.location.search
-        );
+  if (
+    !allowedTypes.includes(file.type) &&
+    !["pdf","doc","docx"].includes(extension)
+  ) {
+
+    message.textContent =
+    "Only PDF, DOC and DOCX files are allowed.";
+
+    return;
+
+  }
 
 
-      [
-        "utm_source",
-        "utm_medium",
-        "utm_campaign",
-        "utm_term",
-        "utm_content",
-        "gclid",
-        "fbclid"
-      ].forEach(function(key) {
+  /*
+   * Loading state
+   */
 
-        params.append(
-          key,
-          urlParams.get(key) || ""
-        );
+  submitButton.disabled = true;
 
-      });
+  submitButton.textContent =
+  "Uploading Resume...";
+
+  message.textContent =
+  "Please wait...";
 
 
-      params.append(
-        "user_agent",
-        navigator.userAgent
-      );
+  try {
 
 
-      const response =
-        await fetch(
-          SCRIPT_URL,
+    /*
+     * Convert resume to Base64
+     */
+
+    const base64 =
+    await fileToBase64(file);
+
+
+    /*
+     * Create request
+     */
+
+    const params =
+    new URLSearchParams();
+
+
+    /*
+     * Lead information
+     */
+
+    params.append(
+      "name",
+      form.elements["name"].value.trim()
+    );
+
+
+    params.append(
+      "email",
+      form.elements["email"].value.trim()
+    );
+
+
+    params.append(
+      "phone",
+      form.elements["phone"].value.trim()
+    );
+
+
+    params.append(
+      "experience",
+      form.elements["experience"].value
+    );
+
+
+    params.append(
+      "target_role",
+      form.elements["target_role"].value.trim()
+    );
+
+
+    params.append(
+      "requirement",
+      form.elements["requirement"].value.trim()
+    );
+
+
+    /*
+     * Resume
+     */
+
+    params.append(
+      "resume",
+      base64
+    );
+
+
+    params.append(
+      "resumeName",
+      file.name
+    );
+
+
+    params.append(
+      "resumeType",
+      file.type
+    );
+
+
+    /*
+     * Landing page
+     */
+
+    params.append(
+      "landing_page",
+      window.location.href
+    );
+
+
+    /*
+     * URL parameters
+     */
+
+    const urlParams =
+    new URLSearchParams(
+      window.location.search
+    );
+
+
+    params.append(
+      "utm_source",
+      urlParams.get("utm_source") || ""
+    );
+
+
+    params.append(
+      "utm_medium",
+      urlParams.get("utm_medium") || ""
+    );
+
+
+    params.append(
+      "utm_campaign",
+      urlParams.get("utm_campaign") || ""
+    );
+
+
+    params.append(
+      "utm_term",
+      urlParams.get("utm_term") || ""
+    );
+
+
+    params.append(
+      "utm_content",
+      urlParams.get("utm_content") || ""
+    );
+
+
+    params.append(
+      "gclid",
+      urlParams.get("gclid") || ""
+    );
+
+
+    params.append(
+      "fbclid",
+      urlParams.get("fbclid") || ""
+    );
+
+
+    /*
+     * Browser
+     */
+
+    params.append(
+      "user_agent",
+      navigator.userAgent
+    );
+
+
+    /*
+     * Send to Apps Script
+     */
+
+    const response =
+    await fetch(
+      SCRIPT_URL,
+      {
+        method: "POST",
+        body: params
+      }
+    );
+
+
+    /*
+     * Read response
+     */
+
+    const result =
+    await response.json();
+
+
+    /*
+     * SUCCESS
+     */
+
+    if (result.success) {
+
+      message.textContent =
+      "✓ Resume submitted successfully. We will contact you shortly.";
+
+      form.reset();
+
+      submitButton.disabled = false;
+
+      submitButton.textContent =
+      "Submitted ✓";
+
+
+      /*
+       * Optional conversion event
+       */
+
+      if (
+        typeof gtag === "function"
+      ) {
+
+        gtag(
+          "event",
+          "resume_lead",
           {
-            method: "POST",
-            body: params
+            event_category:
+            "Resume Writing",
+
+            event_label:
+            "₹999 Resume"
           }
         );
-
-
-      const result =
-        await response.json();
-
-
-      if (result.success) {
-
-        message.textContent =
-          "Thank you! Your resume has been submitted successfully.";
-
-        form.reset();
-
-      } else {
-
-        message.textContent =
-          "Something went wrong. Please try again.";
-
-        console.error(result.error);
 
       }
 
 
-    } catch(error) {
+    }
 
-      console.error(error);
 
-      message.textContent =
-        "Unable to submit your request. Please try again.";
+    /*
+     * ERROR
+     */
+
+    else {
+
+      throw new Error(
+        result.error ||
+        result.message ||
+        "Submission failed."
+      );
 
     }
 
-  });
+
+  } catch(error) {
 
 
+    console.error(error);
+
+
+    message.textContent =
+    "Unable to submit your resume. Please try again.";
+
+
+    submitButton.disabled =
+    false;
+
+
+    submitButton.textContent =
+    "Submit & Get Started — ₹999";
+
+  }
+
+});
+
+
+
+/*
+ * FILE → BASE64
+ */
 
 function fileToBase64(file) {
 
@@ -1373,21 +1620,35 @@ function fileToBase64(file) {
     function(resolve, reject) {
 
       const reader =
-        new FileReader();
+      new FileReader();
 
 
       reader.onload =
-        function() {
+      function() {
 
-          resolve(
-            reader.result.split(",")[1]
-          );
+        const result =
+        reader.result;
 
-        };
+
+        const base64 =
+        result.split(",")[1];
+
+
+        resolve(base64);
+
+      };
 
 
       reader.onerror =
-        reject;
+      function() {
+
+        reject(
+          new Error(
+            "Unable to read resume file."
+          )
+        );
+
+      };
 
 
       reader.readAsDataURL(file);
@@ -1401,4 +1662,5 @@ function fileToBase64(file) {
 
 
 </body>
+
 </html>
