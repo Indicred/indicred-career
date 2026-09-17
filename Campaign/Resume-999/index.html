@@ -1,1666 +1,2308 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<title>Professional Resume Writing for ₹999 | Indicred Career</title>
-
-<meta name="description"
-      content="Get a professionally written, ATS-friendly resume with a professional cover letter for ₹999. Upload your existing resume and get started.">
-
-<style>
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  color: #172033;
-  background: #ffffff;
-  line-height: 1.6;
-}
-
-.container {
-  width: min(1120px, 92%);
-  margin: auto;
-}
-
-a {
-  text-decoration: none;
-}
-
-button,
-input,
-select,
-textarea {
-  font: inherit;
-}
-
-
-/* =========================
-   NAVBAR
-========================= */
-
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #ffffff;
-  border-bottom: 1px solid #e8edf5;
-}
-
-.nav-inner {
-  min-height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  color: #2563eb;
-  font-size: 24px;
-  font-weight: 800;
-}
-
-.nav-button {
-  color: #ffffff;
-  background: #2563eb;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-weight: 700;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-  padding: 70px 0;
-  background: linear-gradient(
-    180deg,
-    #f7faff 0%,
-    #ffffff 100%
-  );
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.badge {
-  display: inline-block;
-  padding: 7px 13px;
-  margin-bottom: 18px;
-  border-radius: 30px;
-  background: #eaf2ff;
-  color: #1d4ed8;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-h1 {
-  font-size: clamp(38px, 5vw, 60px);
-  line-height: 1.08;
-  letter-spacing: -1.5px;
-  margin-bottom: 20px;
-}
-
-h1 span {
-  color: #2563eb;
-}
-
-.hero-description {
-  max-width: 650px;
-  color: #5f6b7c;
-  font-size: 19px;
-  margin-bottom: 24px;
-}
-
-.price {
-  margin: 20px 0;
-}
-
-.price-value {
-  color: #111827;
-  font-size: 44px;
-  font-weight: 800;
-}
-
-.price-note {
-  color: #687386;
-  font-size: 14px;
-}
-
-.primary-button {
-  display: inline-block;
-  border: 0;
-  border-radius: 9px;
-  padding: 15px 28px;
-  background: #2563eb;
-  color: #ffffff;
-  font-size: 17px;
-  font-weight: 800;
-  cursor: pointer;
-}
-
-.primary-button:hover {
-  background: #1d4ed8;
-}
-
-.trust {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 20px;
-  color: #596579;
-  font-size: 14px;
-}
-
-
-/* =========================
-   FORM
-========================= */
-
-.form-card {
-  padding: 30px;
-  background: #ffffff;
-  border: 1px solid #e3e8f0;
-  border-radius: 18px;
-  box-shadow: 0 18px 50px rgba(20,40,80,.10);
-}
-
-.form-card h2 {
-  margin-bottom: 5px;
-  font-size: 26px;
-}
-
-.form-card > p {
-  color: #6b7280;
-  margin-bottom: 22px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 13px 14px;
-  border: 1px solid #d8dee9;
-  border-radius: 8px;
-  outline: none;
-  background: #ffffff;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: #2563eb;
-}
-
-textarea {
-  min-height: 90px;
-  resize: vertical;
-}
-
-.submit-button {
-  width: 100%;
-}
-
-.form-message {
-  min-height: 22px;
-  margin-top: 12px;
-  text-align: center;
-  font-size: 14px;
-  color: #667085;
-}
-
-
-/* =========================
-   SECTIONS
-========================= */
-
-section {
-  padding: 75px 0;
-}
-
-.section-heading {
-  max-width: 700px;
-  margin: 0 auto 45px;
-  text-align: center;
-}
-
-.section-heading h2 {
-  margin-bottom: 12px;
-  font-size: 38px;
-  line-height: 1.2;
-}
-
-.section-heading p {
-  color: #667085;
-  font-size: 17px;
-}
-
-
-/* =========================
-   DELIVERABLES
-========================= */
-
-.deliverables {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.deliverable {
-  padding: 27px;
-  border: 1px solid #e6eaf0;
-  border-radius: 14px;
-}
-
-.icon {
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  background: #edf4ff;
-  color: #2563eb;
-  font-weight: 800;
-}
-
-.deliverable h3 {
-  margin-bottom: 7px;
-}
-
-.deliverable p {
-  color: #687386;
-  font-size: 15px;
-}
-
-
-/* =========================
-   INCLUDED
-========================= */
-
-.light-section {
-  background: #f7f9fc;
-}
-
-.included-box {
-  max-width: 850px;
-  margin: auto;
-  padding: 30px;
-  border-radius: 16px;
-  background: #ffffff;
-  border: 1px solid #e5eaf0;
-}
-
-.check {
-  display: flex;
-  gap: 12px;
-  padding: 13px 0;
-  border-bottom: 1px solid #eef1f5;
-}
-
-.check:last-child {
-  border-bottom: 0;
-}
-
-.check-icon {
-  color: #16a34a;
-  font-weight: 800;
-}
-
-
-/* =========================
-   AUDIENCE
-========================= */
-
-.audience {
-  max-width: 850px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-}
-
-.audience-item {
-  padding: 18px;
-  border: 1px solid #e6eaf0;
-  border-radius: 10px;
-  font-weight: 600;
-}
-
-
-/* =========================
-   PROCESS
-========================= */
-
-.process {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.step {
-  text-align: center;
-}
-
-.number {
-  width: 48px;
-  height: 48px;
-  display: grid;
-  place-items: center;
-  margin: 0 auto 15px;
-  border-radius: 50%;
-  background: #2563eb;
-  color: #ffffff;
-  font-weight: 800;
-}
-
-.step p {
-  margin-top: 7px;
-  color: #687386;
-}
-
-
-/* =========================
-   FAQ
-========================= */
-
-.faq {
-  max-width: 800px;
-  margin: auto;
-}
-
-details {
-  padding: 18px 0;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-summary {
-  cursor: pointer;
-  font-weight: 700;
-}
-
-details p {
-  margin-top: 10px;
-  color: #687386;
-}
-
-
-/* =========================
-   FINAL CTA
-========================= */
-
-.final-cta {
-  padding: 75px 20px;
-  background: #172033;
-  color: #ffffff;
-  text-align: center;
-}
-
-.final-cta h2 {
-  margin-bottom: 12px;
-  font-size: 40px;
-}
-
-.final-cta p {
-  margin-bottom: 25px;
-  color: #c5ccd8;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  padding: 25px;
-  background: #101827;
-  color: #9ba5b5;
-  text-align: center;
-  font-size: 14px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 800px) {
-
-  .hero {
-    padding: 45px 0;
-  }
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .deliverables,
-  .process {
-    grid-template-columns: 1fr;
-  }
-
-  .audience {
-    grid-template-columns: 1fr;
-  }
-
-  section {
-    padding: 55px 0;
-  }
-
-  .section-heading h2 {
-    font-size: 32px;
-  }
-
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Professional Resume Writing for ₹999 | Resume + Cover Letter</title>
+
+  <meta
+    name="description"
+    content="Get a professionally rewritten, ATS-friendly resume and cover letter for ₹999. Submit your existing resume and let us improve your professional presentation."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-light: #eff6ff;
+      --text: #111827;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --green: #16a34a;
+      --danger: #dc2626;
+      --shadow: 0 20px 50px rgba(15, 23, 42, .10);
+      --radius: 20px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font-family: inherit;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(226,232,240,.8);
+    }
+
+    .nav {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -.5px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: #dcfce7;
+      color: #15803d;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .25s ease;
+    }
+
+    .nav-whatsapp:hover {
+      transform: translateY(-2px);
+      background: #bbf7d0;
+    }
+
+    .nav-cta {
+      padding: 11px 18px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      transition: .25s ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37,99,235,.25);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      position: relative;
+      padding: 75px 0 90px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(37,99,235,.10), transparent 30%),
+        radial-gradient(circle at 10% 70%, rgba(59,130,246,.07), transparent 30%),
+        #fff;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--primary);
+      border-radius: 50%;
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0%,100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.6);
+        opacity: .45;
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero-description {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 25px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .price {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .price-label {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .trust-list {
+      display: grid;
+      gap: 11px;
+      margin-bottom: 28px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .check {
+      width: 23px;
+      height: 23px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #dcfce7;
+      color: var(--green);
+      flex-shrink: 0;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      border: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: .25s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 12px 25px rgba(37,99,235,.20);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 30px rgba(37,99,235,.28);
+    }
+
+    .btn-whatsapp {
+      background: #16a34a;
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      background: #15803d;
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       FORM CARD
+    ========================== */
+
+    .form-card {
+      position: relative;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: 24px;
+      pointer-events: none;
+      background: linear-gradient(
+        135deg,
+        rgba(37,99,235,.18),
+        transparent 35%
+      );
+      z-index: -1;
+    }
+
+    .form-heading {
+      margin-bottom: 22px;
+    }
+
+    .form-heading h2 {
+      font-size: 23px;
+      margin-bottom: 5px;
+    }
+
+    .form-heading p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 7px;
+      color: #334155;
+    }
+
+    .input,
+    .textarea,
+    .select {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 11px;
+      padding: 13px 14px;
+      outline: none;
+      font-size: 13px;
+      color: var(--text);
+      transition: .2s ease;
+    }
+
+    .input:hover,
+    .textarea:hover,
+    .select:hover {
+      border-color: #cbd5e1;
+    }
+
+    .input:focus,
+    .textarea:focus,
+    .select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(37,99,235,.09);
+    }
+
+    .textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .upload-box {
+      position: relative;
+      border: 1.5px dashed #bfdbfe;
+      background: #f8fbff;
+      border-radius: 13px;
+      padding: 18px;
+      text-align: center;
+      transition: .25s ease;
+      cursor: pointer;
+    }
+
+    .upload-box:hover {
+      border-color: var(--primary);
+      background: #eff6ff;
+      transform: translateY(-1px);
+    }
+
+    .upload-icon {
+      width: 38px;
+      height: 38px;
+      margin: auto auto 8px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: #dbeafe;
+      color: var(--primary);
+    }
+
+    .upload-box strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+
+    .upload-box span {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .upload-box input {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .file-name {
+      margin-top: 8px;
+      font-size: 11px;
+      color: var(--green);
+      display: none;
+      word-break: break-word;
+    }
+
+    .form-submit {
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    .form-note {
+      margin-top: 10px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .form-status {
+      display: none;
+      margin-top: 14px;
+      padding: 11px 13px;
+      border-radius: 10px;
+      font-size: 12px;
+    }
+
+    .form-status.success {
+      display: block;
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .form-status.error {
+      display: block;
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================== */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-header {
+      max-width: 700px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 13px;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       PROBLEM
+    ========================== */
+
+    .problem-section {
+      background: var(--bg);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 25px;
+      transition: .3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(15,23,42,.08);
+    }
+
+    .icon-box {
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--primary-light);
+      color: var(--primary);
+      margin-bottom: 17px;
+    }
+
+    .card h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       DELIVERABLES
+    ========================== */
+
+    .deliverables {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .deliverable {
+      display: flex;
+      gap: 13px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      transition: .25s ease;
+    }
+
+    .deliverable:hover {
+      border-color: #bfdbfe;
+      transform: translateX(4px);
+      background: #fbfdff;
+    }
+
+    .deliverable-icon {
+      color: var(--green);
+      flex-shrink: 0;
+    }
+
+    .deliverable h3 {
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+
+    .deliverable p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* =========================
+       BEFORE AFTER
+    ========================== */
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .comparison-card {
+      padding: 28px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+    }
+
+    .comparison-card.before {
+      background: #fff7f7;
+    }
+
+    .comparison-card.after {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+    }
+
+    .comparison-label {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 17px;
+    }
+
+    .before .comparison-label {
+      background: #fee2e2;
+      color: #b91c1c;
+    }
+
+    .after .comparison-label {
+      background: #dcfce7;
+      color: #15803d;
+    }
+
+    .comparison-card p {
+      font-size: 14px;
+      color: #475569;
+    }
+
+    /* =========================
+       AUDIENCE
+    ========================== */
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .audience-card {
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      transition: .25s ease;
+    }
+
+    .audience-card:hover {
+      transform: translateY(-4px);
+      border-color: #bfdbfe;
+    }
+
+    .audience-card h3 {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .audience-card p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* =========================
+       PROCESS
+    ========================== */
+
+    .process {
+      background: var(--bg);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .step {
+      position: relative;
+      text-align: center;
+    }
+
+    .step-number {
+      width: 58px;
+      height: 58px;
+      margin: auto auto 16px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      font-size: 18px;
+      font-weight: 800;
+      box-shadow: 0 12px 25px rgba(37,99,235,.20);
+    }
+
+    .step h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* =========================
+       PRICING
+    ========================== */
+
+    .pricing-box {
+      max-width: 680px;
+      margin: auto;
+      border: 1px solid #bfdbfe;
+      border-radius: 25px;
+      padding: 40px;
+      text-align: center;
+      background:
+        radial-gradient(circle at top right, rgba(37,99,235,.08), transparent 40%),
+        white;
+      box-shadow: var(--shadow);
+    }
+
+    .pricing-box h2 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .pricing-price {
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 8px 0 18px;
+    }
+
+    .pricing-list {
+      text-align: left;
+      max-width: 420px;
+      margin: 0 auto 25px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .pricing-list div {
+      display: flex;
+      gap: 9px;
+      font-size: 13px;
+    }
+
+    /* =========================
+       FAQ
+    ========================== */
+
+    .faq {
+      max-width: 780px;
+      margin: auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-question {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .faq-icon {
+      font-size: 20px;
+      color: var(--primary);
+      transition: .25s ease;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s ease;
+    }
+
+    .faq-answer p {
+      color: var(--muted);
+      font-size: 13px;
+      padding-bottom: 18px;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    /* =========================
+       FINAL CTA
+    ========================== */
+
+    .final-cta {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .final-cta p {
+      color: #cbd5e1;
+      font-size: 14px;
+      max-width: 600px;
+      margin: 0 auto 25px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding: 28px 0;
+      background: #020617;
+      color: #94a3b8;
+      text-align: center;
+      font-size: 11px;
+    }
+
+    /* =========================
+       STICKY WHATSAPP
+    ========================== */
+
+    .sticky-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+      width: 55px;
+      height: 55px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #16a34a;
+      color: white;
+      box-shadow: 0 12px 30px rgba(22,163,74,.30);
+      transition: .25s ease;
+      animation: whatsappFloat 3s ease-in-out infinite;
+    }
+
+    .sticky-whatsapp:hover {
+      transform: scale(1.08);
+      background: #15803d;
+    }
+
+    @keyframes whatsappFloat {
+      0%,100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    /* =========================
+       SCROLL REVEAL
+    ========================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero {
+        padding: 55px 0 65px;
+      }
+
+      .cards,
+      .audience-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .nav {
+        height: 64px;
+      }
+
+      .nav-whatsapp {
+        display: none;
+      }
+
+      .nav-cta {
+        padding: 9px 14px;
+      }
+
+      .hero {
+        padding: 42px 0 55px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+        letter-spacing: -1.3px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .form-card {
+        padding: 22px;
+        border-radius: 18px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .cards,
+      .audience-grid,
+      .deliverables,
+      .comparison {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-box {
+        padding: 28px 20px;
+      }
+
+      .pricing-price {
+        font-size: 42px;
+      }
+
+      .sticky-whatsapp {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 15px;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-<!-- =========================
-     NAVBAR
-========================= -->
+  <header>
+    <div class="container nav">
 
-<nav>
+      <a href="#" class="logo">
+        Indicred
+      </a>
 
-  <div class="container nav-inner">
+      <div class="nav-actions">
 
-    <div class="logo">
-      Indicred Career
+        <a
+          href="https://wa.me/918979874608?text=Hi%2C%20I%27m%20interested%20in%20the%20%E2%82%B9999%20Resume%20Writing%20service."
+          target="_blank"
+          class="nav-whatsapp"
+        >
+          WhatsApp
+        </a>
+
+        <a href="#resume-form" class="nav-cta">
+          Get My Resume
+        </a>
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero">
+
+    <div class="container hero-grid">
+
+      <div class="hero-content reveal">
+
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Resume Writing Service
+        </div>
+
+        <h1>
+          Get a Better
+          <span>Resume for ₹999</span>
+        </h1>
+
+        <p class="hero-description">
+          Get a professionally rewritten resume and cover letter
+          designed to present your experience, skills and achievements
+          more clearly.
+        </p>
+
+        <div class="price-row">
+          <div class="price">₹999</div>
+          <div class="price-label">
+            One-time service<br>
+            Resume + Cover Letter
+          </div>
+        </div>
+
+        <div class="trust-list">
+
+          <div class="trust-item">
+            <span class="check">✓</span>
+            Professional Resume Writing
+          </div>
+
+          <div class="trust-item">
+            <span class="check">✓</span>
+            ATS-Friendly Structure
+          </div>
+
+          <div class="trust-item">
+            <span class="check">✓</span>
+            Cover Letter Included
+          </div>
+
+          <div class="trust-item">
+            <span class="check">✓</span>
+            Final Digital Copy
+          </div>
+
+        </div>
+
+        <div class="hero-buttons">
+
+          <a href="#resume-form" class="btn btn-primary">
+            Get My Resume →
+          </a>
+
+          <a
+            href="https://wa.me/918979874608?text=Hi%2C%20I%27m%20interested%20in%20the%20%E2%82%B9999%20Resume%20Writing%20service."
+            target="_blank"
+            class="btn btn-whatsapp"
+          >
+            WhatsApp Us
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- FORM -->
+
+      <div class="form-card reveal" id="resume-form">
+
+        <div class="form-heading">
+
+          <h2>Start Your Resume</h2>
+
+          <p>
+            Submit your details and existing resume to get started.
+          </p>
+
+        </div>
+
+        <form id="resumeLeadForm">
+
+          <div class="form-group">
+
+            <label class="form-label">
+              Full Name *
+            </label>
+
+            <input
+              type="text"
+              name="name"
+              class="input"
+              placeholder="Your full name"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label">
+              Email *
+            </label>
+
+            <input
+              type="email"
+              name="email"
+              class="input"
+              placeholder="you@example.com"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label">
+              WhatsApp / Phone *
+            </label>
+
+            <input
+              type="tel"
+              name="phone"
+              class="input"
+              placeholder="+91 98765 43210"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label">
+              Experience
+            </label>
+
+            <select name="experience" class="select">
+
+              <option value="">
+                Select experience
+              </option>
+
+              <option value="Fresher">
+                Fresher
+              </option>
+
+              <option value="0-2 years">
+                0–2 years
+              </option>
+
+              <option value="3-5 years">
+                3–5 years
+              </option>
+
+              <option value="6-10 years">
+                6–10 years
+              </option>
+
+              <option value="10+ years">
+                10+ years
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label">
+              Target Role
+            </label>
+
+            <input
+              type="text"
+              name="target_role"
+              class="input"
+              placeholder="e.g. Business Analyst"
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label">
+              Upload Existing Resume
+            </label>
+
+            <div class="upload-box">
+
+              <div class="upload-icon">
+
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 16V4"/>
+                  <path d="M7 9l5-5 5 5"/>
+                  <path d="M5 20h14"/>
+                </svg>
+
+              </div>
+
+              <strong>
+                Click to upload your resume
+              </strong>
+
+              <span>
+                PDF, DOC or DOCX · Max 3 MB
+              </span>
+
+              <input
+                type="file"
+                id="resumeFile"
+                accept=".pdf,.doc,.docx"
+              >
+
+            </div>
+
+            <div id="fileName" class="file-name"></div>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label class="form-label">
+              What would you like to improve?
+            </label>
+
+            <textarea
+              name="requirement"
+              class="textarea"
+              placeholder="Tell us what you want to improve in your resume..."
+            ></textarea>
+
+          </div>
+
+
+          <!-- Tracking -->
+
+          <input type="hidden" name="landing_page" id="landing_page">
+          <input type="hidden" name="utm_source" id="utm_source">
+          <input type="hidden" name="utm_medium" id="utm_medium">
+          <input type="hidden" name="utm_campaign" id="utm_campaign">
+          <input type="hidden" name="utm_term" id="utm_term">
+          <input type="hidden" name="utm_content" id="utm_content">
+          <input type="hidden" name="gclid" id="gclid">
+          <input type="hidden" name="fbclid" id="fbclid">
+          <input type="hidden" name="user_agent" id="user_agent">
+
+
+          <button
+            type="submit"
+            class="btn btn-primary form-submit"
+            id="submitButton"
+          >
+            Submit & Get Started — ₹999
+          </button>
+
+          <div class="form-note">
+            Your information is used only to process your enquiry.
+          </div>
+
+          <div id="formStatus" class="form-status"></div>
+
+        </form>
+
+      </div>
+
     </div>
 
-    <a
-      href="#apply"
-      class="nav-button"
-    >
-      Get Started
-    </a>
-
-  </div>
-
-</nav>
+  </section>
 
 
+  <!-- =========================
+       PROBLEM
+  ========================== -->
 
-<!-- =========================
-     HERO
-========================= -->
+  <section class="problem-section">
 
-<section class="hero">
+    <div class="container">
 
-  <div class="container hero-grid">
+      <div class="section-header reveal">
 
+        <div class="eyebrow">
+          The Problem
+        </div>
 
-    <div>
+        <h2>
+          Your Experience Deserves a Better Presentation
+        </h2>
 
-      <span class="badge">
-        Professional Resume Writing
-      </span>
+        <p>
+          A resume should make your professional experience easier
+          to understand, not harder.
+        </p>
 
-
-      <h1>
-        Get a Better Resume
-        <span>for ₹999</span>
-      </h1>
-
-
-      <p class="hero-description">
-        Get your existing resume professionally
-        rewritten, structured and optimized to
-        present your skills, experience and
-        achievements more clearly.
-      </p>
+      </div>
 
 
-      <div class="price">
+      <div class="cards">
 
-        <div class="price-value">
+        <div class="card reveal">
+
+          <div class="icon-box">✕</div>
+
+          <h3>
+            Generic Resume Content
+          </h3>
+
+          <p>
+            Your resume may describe responsibilities without
+            clearly communicating your value.
+          </p>
+
+        </div>
+
+
+        <div class="card reveal">
+
+          <div class="icon-box">↗</div>
+
+          <h3>
+            Weak Professional Positioning
+          </h3>
+
+          <p>
+            Important experience and achievements can get lost
+            when the resume lacks a clear structure.
+          </p>
+
+        </div>
+
+
+        <div class="card reveal">
+
+          <div class="icon-box">≡</div>
+
+          <h3>
+            Difficult to Scan
+          </h3>
+
+          <p>
+            Poor formatting and organization can make important
+            information difficult to find quickly.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       DELIVERABLES
+  ========================== -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-header reveal">
+
+        <div class="eyebrow">
+          What's Included
+        </div>
+
+        <h2>
+          Everything You Need for ₹999
+        </h2>
+
+        <p>
+          A complete resume improvement package rather than
+          just a design change.
+        </p>
+
+      </div>
+
+
+      <div class="deliverables">
+
+        <div class="deliverable reveal">
+          <div class="deliverable-icon">✓</div>
+          <div>
+            <h3>Professional Resume</h3>
+            <p>Clear and professionally structured resume.</p>
+          </div>
+        </div>
+
+        <div class="deliverable reveal">
+          <div class="deliverable-icon">✓</div>
+          <div>
+            <h3>Content Rewriting</h3>
+            <p>Improve clarity and professional presentation.</p>
+          </div>
+        </div>
+
+        <div class="deliverable reveal">
+          <div class="deliverable-icon">✓</div>
+          <div>
+            <h3>Professional Summary</h3>
+            <p>A stronger introduction to your professional profile.</p>
+          </div>
+        </div>
+
+        <div class="deliverable reveal">
+          <div class="deliverable-icon">✓</div>
+          <div>
+            <h3>Experience Optimization</h3>
+            <p>Improve how responsibilities and achievements are presented.</p>
+          </div>
+        </div>
+
+        <div class="deliverable reveal">
+          <div class="deliverable-icon">✓</div>
+          <div>
+            <h3>Skills & Keywords</h3>
+            <p>Organize relevant skills and role-related keywords.</p>
+          </div>
+        </div>
+
+        <div class="deliverable reveal">
+          <div class="deliverable-icon">✓</div>
+          <div>
+            <h3>ATS-Friendly Structure</h3>
+            <p>Clean structure designed to remain easy to parse.</p>
+          </div>
+        </div>
+
+        <div class="deliverable reveal">
+          <div class="deliverable-icon">✓</div>
+          <div>
+            <h3>Professional Formatting</h3>
+            <p>Clean, readable and professional presentation.</p>
+          </div>
+        </div>
+
+        <div class="deliverable reveal">
+          <div class="deliverable-icon">✓</div>
+          <div>
+            <h3>Cover Letter</h3>
+            <p>A professional cover letter is included.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       BEFORE / AFTER
+  ========================== -->
+
+  <section class="problem-section">
+
+    <div class="container">
+
+      <div class="section-header reveal">
+
+        <div class="eyebrow">
+          What Changes
+        </div>
+
+        <h2>
+          From Generic Description to Professional Positioning
+        </h2>
+
+      </div>
+
+
+      <div class="comparison">
+
+        <div class="comparison-card before reveal">
+
+          <div class="comparison-label">
+            BEFORE
+          </div>
+
+          <p>
+            "Responsible for handling customers and managing
+            sales activities."
+          </p>
+
+        </div>
+
+
+        <div class="comparison-card after reveal">
+
+          <div class="comparison-label">
+            IMPROVED
+          </div>
+
+          <p>
+            "Managed customer interactions and sales activities
+            while working toward monthly revenue and customer
+            acquisition targets."
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       AUDIENCE
+  ========================== -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-header reveal">
+
+        <div class="eyebrow">
+          Who It's For
+        </div>
+
+        <h2>
+          Built for Different Career Stages
+        </h2>
+
+      </div>
+
+
+      <div class="audience-grid">
+
+        <div class="audience-card reveal">
+          <h3>Freshers</h3>
+          <p>Create a stronger professional first impression.</p>
+        </div>
+
+        <div class="audience-card reveal">
+          <h3>Job Seekers</h3>
+          <p>Present your experience more clearly to employers.</p>
+        </div>
+
+        <div class="audience-card reveal">
+          <h3>Experienced Professionals</h3>
+          <p>Turn years of experience into a clearer professional story.</p>
+        </div>
+
+        <div class="audience-card reveal">
+          <h3>Career Changers</h3>
+          <p>Highlight transferable skills for your target direction.</p>
+        </div>
+
+        <div class="audience-card reveal">
+          <h3>Industry Changers</h3>
+          <p>Reposition relevant experience toward a new industry.</p>
+        </div>
+
+        <div class="audience-card reveal">
+          <h3>Active Applicants</h3>
+          <p>Improve the resume you use for multiple applications.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROCESS
+  ========================== -->
+
+  <section class="process">
+
+    <div class="container">
+
+      <div class="section-header reveal">
+
+        <div class="eyebrow">
+          Simple Process
+        </div>
+
+        <h2>
+          Submit. Improve. Receive.
+        </h2>
+
+      </div>
+
+
+      <div class="process-grid">
+
+        <div class="step reveal">
+
+          <div class="step-number">
+            1
+          </div>
+
+          <h3>
+            Submit Your Details
+          </h3>
+
+          <p>
+            Share your information and existing resume.
+          </p>
+
+        </div>
+
+
+        <div class="step reveal">
+
+          <div class="step-number">
+            2
+          </div>
+
+          <h3>
+            We Rewrite & Improve
+          </h3>
+
+          <p>
+            Your content and structure are professionally improved.
+          </p>
+
+        </div>
+
+
+        <div class="step reveal">
+
+          <div class="step-number">
+            3
+          </div>
+
+          <h3>
+            Receive Your Resume
+          </h3>
+
+          <p>
+            Receive your completed digital resume and cover letter.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PRICING
+  ========================== -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="pricing-box reveal">
+
+        <div class="eyebrow">
+          Simple Pricing
+        </div>
+
+        <h2>
+          Professional Resume Package
+        </h2>
+
+        <div class="pricing-price">
           ₹999
         </div>
 
-        <div class="price-note">
-          Resume Writing + Cover Letter
+        <div class="pricing-list">
+
+          <div>✓ Professional Resume</div>
+          <div>✓ Content Rewriting</div>
+          <div>✓ Experience Optimization</div>
+          <div>✓ Skills & Keyword Optimization</div>
+          <div>✓ ATS-Friendly Structure</div>
+          <div>✓ Professional Formatting</div>
+          <div>✓ Cover Letter</div>
+          <div>✓ Final Digital Copy</div>
+
         </div>
 
-      </div>
-
-
-      <a
-        href="#apply"
-        class="primary-button"
-      >
-        Get My Resume →
-      </a>
-
-
-      <div class="trust">
-
-        <span>✓ Professional Writing</span>
-
-        <span>✓ ATS-Friendly Structure</span>
-
-        <span>✓ Cover Letter Included</span>
+        <a href="#resume-form" class="btn btn-primary">
+          Get Started — ₹999
+        </a>
 
       </div>
 
     </div>
 
+  </section>
 
 
-    <!-- FORM -->
+  <!-- =========================
+       FAQ
+  ========================== -->
 
-    <div
-      class="form-card"
-      id="apply"
-    >
+  <section class="problem-section">
+
+    <div class="container">
+
+      <div class="section-header reveal">
+
+        <div class="eyebrow">
+          FAQ
+        </div>
+
+        <h2>
+          Frequently Asked Questions
+        </h2>
+
+      </div>
+
+
+      <div class="faq">
+
+        <div class="faq-item">
+
+          <button class="faq-question">
+            <span>Is the cover letter included?</span>
+            <span class="faq-icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              Yes. A professional cover letter is included in
+              the ₹999 package.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button class="faq-question">
+            <span>Do I need an existing resume?</span>
+            <span class="faq-icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              An existing resume is helpful, but you can also
+              provide your professional and education details
+              if you don't have one.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button class="faq-question">
+            <span>Is the resume ATS-friendly?</span>
+            <span class="faq-icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              The resume uses a clean, ATS-friendly structure
+              and relevant keywords where appropriate.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button class="faq-question">
+            <span>Is there a job or interview guarantee?</span>
+            <span class="faq-icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              No. The service improves your resume and professional
+              presentation, but hiring decisions are made by employers.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button class="faq-question">
+            <span>How will I receive the final resume?</span>
+            <span class="faq-icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              Your completed resume and cover letter will be
+              delivered digitally.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FINAL CTA
+  ========================== -->
+
+  <section class="final-cta">
+
+    <div class="container reveal">
 
       <h2>
-        Get Your Resume
+        Ready to Upgrade Your Resume?
       </h2>
 
       <p>
-        Upload your existing resume to get started.
+        Get a professionally rewritten resume and cover letter
+        for ₹999.
       </p>
 
+      <div class="hero-buttons" style="justify-content:center;">
 
-      <form
-        id="resumeForm"
-        enctype="multipart/form-data"
-      >
+        <a href="#resume-form" class="btn btn-primary">
+          Get My Resume →
+        </a>
 
-
-        <div class="form-group">
-
-          <label>
-            Full Name
-          </label>
-
-          <input
-            type="text"
-            name="name"
-            required
-            placeholder="Your full name"
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label>
-            Email
-          </label>
-
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="you@example.com"
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label>
-            WhatsApp / Phone
-          </label>
-
-          <input
-            type="tel"
-            name="phone"
-            required
-            placeholder="+91"
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label>
-            Experience
-          </label>
-
-          <select name="experience">
-
-            <option value="">
-              Select Experience
-            </option>
-
-            <option value="Fresher">
-              Fresher
-            </option>
-
-            <option value="1-3 Years">
-              1–3 Years
-            </option>
-
-            <option value="3-5 Years">
-              3–5 Years
-            </option>
-
-            <option value="5-10 Years">
-              5–10 Years
-            </option>
-
-            <option value="10+ Years">
-              10+ Years
-            </option>
-
-          </select>
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label>
-            Target Role
-          </label>
-
-          <input
-            type="text"
-            name="target_role"
-            placeholder="e.g. Business Analyst"
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label>
-            Upload Existing Resume
-          </label>
-
-          <input
-            type="file"
-            id="resume"
-            name="resume"
-            accept=".pdf,.doc,.docx"
-            required
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label>
-            What would you like to improve?
-          </label>
-
-          <textarea
-            name="requirement"
-            placeholder="Tell us what you want improved..."
-          ></textarea>
-
-        </div>
-
-
-        <button
-          type="submit"
-          class="primary-button submit-button"
-          id="submitButton"
+        <a
+          href="https://wa.me/918979874608?text=Hi%2C%20I%27m%20interested%20in%20the%20%E2%82%B9999%20Resume%20Writing%20service."
+          target="_blank"
+          class="btn btn-whatsapp"
         >
-          Submit & Get Started — ₹999
-        </button>
+          WhatsApp Us
+        </a>
 
-
-        <div
-          class="form-message"
-          id="formMessage"
-        ></div>
-
-
-      </form>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     DELIVERABLES
-========================= -->
-
-<section>
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <h2>
-        What You Get for ₹999
-      </h2>
-
-      <p>
-        A complete resume improvement package,
-        not just a template.
-      </p>
-
-    </div>
-
-
-    <div class="deliverables">
-
-
-      <div class="deliverable">
-
-        <div class="icon">
-          ✓
-        </div>
-
-        <h3>
-          Professional Resume
-        </h3>
-
-        <p>
-          Your existing resume is rewritten and
-          professionally structured around your
-          experience, skills and achievements.
-        </p>
-
-      </div>
-
-
-      <div class="deliverable">
-
-        <div class="icon">
-          ✓
-        </div>
-
-        <h3>
-          ATS-Friendly Structure
-        </h3>
-
-        <p>
-          Clear sections, relevant keywords and
-          clean formatting designed for easier
-          resume scanning.
-        </p>
-
-      </div>
-
-
-      <div class="deliverable">
-
-        <div class="icon">
-          ✓
-        </div>
-
-        <h3>
-          Cover Letter
-        </h3>
-
-        <p>
-          A professional cover letter aligned
-          with your profile and target role.
-        </p>
-
-      </div>
-
-
-      <div class="deliverable">
-
-        <div class="icon">
-          ✓
-        </div>
-
-        <h3>
-          Content Improvement
-        </h3>
-
-        <p>
-          Stronger descriptions of responsibilities,
-          achievements, skills and experience.
-        </p>
-
-      </div>
-
-
-      <div class="deliverable">
-
-        <div class="icon">
-          ✓
-        </div>
-
-        <h3>
-          Professional Formatting
-        </h3>
-
-        <p>
-          Better hierarchy, spacing and readability
-          for recruiters.
-        </p>
-
-      </div>
-
-
-      <div class="deliverable">
-
-        <div class="icon">
-          ✓
-        </div>
-
-        <h3>
-          Final Digital Copy
-        </h3>
-
-        <p>
-          Receive your completed resume and
-          cover letter digitally.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     INCLUDED
-========================= -->
-
-<section class="light-section">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <h2>
-        What's Included
-      </h2>
-
-    </div>
-
-
-    <div class="included-box">
-
-      <div class="check">
-        <span class="check-icon">✓</span>
-        <span>Resume content rewriting</span>
-      </div>
-
-      <div class="check">
-        <span class="check-icon">✓</span>
-        <span>Professional summary / profile section</span>
-      </div>
-
-      <div class="check">
-        <span class="check-icon">✓</span>
-        <span>Experience and achievement optimization</span>
-      </div>
-
-      <div class="check">
-        <span class="check-icon">✓</span>
-        <span>Skills and keyword optimization</span>
-      </div>
-
-      <div class="check">
-        <span class="check-icon">✓</span>
-        <span>ATS-friendly formatting</span>
-      </div>
-
-      <div class="check">
-        <span class="check-icon">✓</span>
-        <span>Professional cover letter</span>
-      </div>
-
-      <div class="check">
-        <span class="check-icon">✓</span>
-        <span>Final resume delivered digitally</span>
       </div>
 
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
-<!-- =========================
-     AUDIENCE
-========================= -->
-
-<section>
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <h2>
-        Who Is This For?
-      </h2>
-
+  <footer>
+    <div class="container">
+      © 2026 Indicred. Resume Writing Service.
     </div>
+  </footer>
 
 
-    <div class="audience">
-
-      <div class="audience-item">
-        ✓ Freshers entering the job market
-      </div>
-
-      <div class="audience-item">
-        ✓ Professionals looking for a new job
-      </div>
-
-      <div class="audience-item">
-        ✓ People changing careers
-      </div>
-
-      <div class="audience-item">
-        ✓ Professionals changing industries
-      </div>
-
-      <div class="audience-item">
-        ✓ Experienced professionals
-      </div>
-
-      <div class="audience-item">
-        ✓ Candidates applying for multiple roles
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     PROCESS
-========================= -->
-
-<section class="light-section">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <h2>
-        How It Works
-      </h2>
-
-    </div>
-
-
-    <div class="process">
-
-
-      <div class="step">
-
-        <div class="number">
-          1
-        </div>
-
-        <h3>
-          Submit Your Resume
-        </h3>
-
-        <p>
-          Share your current resume and
-          career details.
-        </p>
-
-      </div>
-
-
-      <div class="step">
-
-        <div class="number">
-          2
-        </div>
-
-        <h3>
-          We Rewrite It
-        </h3>
-
-        <p>
-          Your resume is reviewed, rewritten
-          and professionally structured.
-        </p>
-
-      </div>
-
-
-      <div class="step">
-
-        <div class="number">
-          3
-        </div>
-
-        <h3>
-          Receive Your Resume
-        </h3>
-
-        <p>
-          Get your completed resume and
-          cover letter digitally.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     FAQ
-========================= -->
-
-<section>
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <h2>
-        Frequently Asked Questions
-      </h2>
-
-    </div>
-
-
-    <div class="faq">
-
-
-      <details open>
-
-        <summary>
-          What does ₹999 include?
-        </summary>
-
-        <p>
-          The ₹999 package includes professional
-          resume rewriting, ATS-friendly structuring,
-          content improvement, formatting and a
-          professional cover letter.
-        </p>
-
-      </details>
-
-
-      <details>
-
-        <summary>
-          Do I need an existing resume?
-        </summary>
-
-        <p>
-          An existing resume is preferred because
-          it provides your career information.
-          If you don't have one, mention this in
-          your requirement.
-        </p>
-
-      </details>
-
-
-      <details>
-
-        <summary>
-          Is the cover letter included?
-        </summary>
-
-        <p>
-          Yes. A professional cover letter is
-          included in the ₹999 package.
-        </p>
-
-      </details>
-
-
-      <details>
-
-        <summary>
-          Who can apply?
-        </summary>
-
-        <p>
-          Freshers, job seekers, experienced
-          professionals and candidates changing
-          roles or industries can apply.
-        </p>
-
-      </details>
-
-
-      <details>
-
-        <summary>
-          Can you guarantee a job?
-        </summary>
-
-        <p>
-          No. Resume writing improves how your
-          experience is presented, but hiring
-          decisions depend on employers, roles,
-          qualifications and other factors.
-        </p>
-
-      </details>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     FINAL CTA
-========================= -->
-
-<section class="final-cta">
-
-  <h2>
-    Ready to Upgrade Your Resume?
-  </h2>
-
-  <p>
-    Professional resume writing + cover letter
-    for ₹999.
-  </p>
+  <!-- =========================
+       STICKY WHATSAPP
+  ========================== -->
 
   <a
-    href="#apply"
-    class="primary-button"
+    href="https://wa.me/918979874608?text=Hi%2C%20I%27m%20interested%20in%20the%20%E2%82%B9999%20Resume%20Writing%20service."
+    target="_blank"
+    class="sticky-whatsapp"
+    aria-label="Chat on WhatsApp"
   >
-    Get Started — ₹999
+
+    <svg
+      width="26"
+      height="26"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path d="M21 11.5a8.4 8.4 0 0 1-9 9 8.4 8.4 0 0 1-3.7-.9L3 21l1.4-5.1A8.4 8.4 0 1 1 21 11.5Z"/>
+      <path d="M8.5 8.5c.2 2.5 2.5 4.8 5 5 .5.1 1-.1 1.3-.5l.5-.7c.2-.3.1-.7-.2-.8l-1.2-.6c-.3-.1-.6-.1-.8.2l-.4.5c-1-.4-1.8-1.2-2.2-2.2l.5-.4c.2-.2.3-.5.2-.8l-.6-1.2c-.2-.3-.5-.4-.8-.2l-.7.5c-.5.3-.7.8-.6 1.2Z"/>
+    </svg>
+
   </a>
 
-</section>
 
+  <script>
 
+    /* ==========================================
+       APPS SCRIPT ENDPOINT
+    ========================================== */
 
-<footer>
+    const SCRIPT_URL =
+      "https://script.google.com/macros/s/AKfycby8fh8QMr_XlGDfu_Sqs8SmYUmbl0CBbWOZhRV4dbPA_Z_T8PAbrnC_KESQ-rOzG4D3/exec";
 
-  © 2026 Indicred Career. All rights reserved.
 
-</footer>
+    /* ==========================================
+       TRACKING
+    ========================================== */
 
+    const params = new URLSearchParams(window.location.search);
 
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
-<script>
-
-
-/*
- * YOUR GOOGLE APPS SCRIPT WEB APP
- */
-
-const SCRIPT_URL =
-"https://script.google.com/macros/s/AKfycby8fh8QMr_XlGDfu_Sqs8SmYUmbl0CBbWOZhRV4dbPA_Z_T8PAbrnC_KESQ-rOzG4D3/exec";
-
-
-
-/*
- * FORM
- */
-
-const form =
-document.getElementById("resumeForm");
-
-const message =
-document.getElementById("formMessage");
-
-const submitButton =
-document.getElementById("submitButton");
-
-
-
-form.addEventListener(
-"submit",
-async function(event) {
-
-  event.preventDefault();
-
-
-  const file =
-  document.getElementById("resume").files[0];
-
-
-  /*
-   * Check file
-   */
-
-  if (!file) {
-
-    message.textContent =
-    "Please upload your resume.";
-
-    return;
-
-  }
-
-
-  /*
-   * Maximum 5 MB
-   */
-
-  if (
-    file.size >
-    5 * 1024 * 1024
-  ) {
-
-    message.textContent =
-    "Please upload a file smaller than 5 MB.";
-
-    return;
-
-  }
-
-
-  /*
-   * Allowed file types
-   */
-
-  const allowedTypes = [
-    "application/pdf",
-    "application/msword",
-    "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-  ];
-
-
-  const extension =
-  file.name
-  .split(".")
-  .pop()
-  .toLowerCase();
-
-
-  if (
-    !allowedTypes.includes(file.type) &&
-    !["pdf","doc","docx"].includes(extension)
-  ) {
-
-    message.textContent =
-    "Only PDF, DOC and DOCX files are allowed.";
-
-    return;
-
-  }
-
-
-  /*
-   * Loading state
-   */
-
-  submitButton.disabled = true;
-
-  submitButton.textContent =
-  "Uploading Resume...";
-
-  message.textContent =
-  "Please wait...";
-
-
-  try {
-
-
-    /*
-     * Convert resume to Base64
-     */
-
-    const base64 =
-    await fileToBase64(file);
-
-
-    /*
-     * Create request
-     */
-
-    const params =
-    new URLSearchParams();
-
-
-    /*
-     * Lead information
-     */
-
-    params.append(
-      "name",
-      form.elements["name"].value.trim()
-    );
-
-
-    params.append(
-      "email",
-      form.elements["email"].value.trim()
-    );
-
-
-    params.append(
-      "phone",
-      form.elements["phone"].value.trim()
-    );
-
-
-    params.append(
-      "experience",
-      form.elements["experience"].value
-    );
-
-
-    params.append(
-      "target_role",
-      form.elements["target_role"].value.trim()
-    );
-
-
-    params.append(
-      "requirement",
-      form.elements["requirement"].value.trim()
-    );
-
-
-    /*
-     * Resume
-     */
-
-    params.append(
-      "resume",
-      base64
-    );
-
-
-    params.append(
-      "resumeName",
-      file.name
-    );
-
-
-    params.append(
-      "resumeType",
-      file.type
-    );
-
-
-    /*
-     * Landing page
-     */
-
-    params.append(
-      "landing_page",
-      window.location.href
-    );
-
-
-    /*
-     * URL parameters
-     */
-
-    const urlParams =
-    new URLSearchParams(
-      window.location.search
-    );
-
-
-    params.append(
+    const trackingFields = [
       "utm_source",
-      urlParams.get("utm_source") || ""
-    );
-
-
-    params.append(
       "utm_medium",
-      urlParams.get("utm_medium") || ""
-    );
-
-
-    params.append(
       "utm_campaign",
-      urlParams.get("utm_campaign") || ""
-    );
-
-
-    params.append(
       "utm_term",
-      urlParams.get("utm_term") || ""
-    );
-
-
-    params.append(
       "utm_content",
-      urlParams.get("utm_content") || ""
-    );
-
-
-    params.append(
       "gclid",
-      urlParams.get("gclid") || ""
-    );
+      "fbclid"
+    ];
 
+    trackingFields.forEach(function(field) {
 
-    params.append(
-      "fbclid",
-      urlParams.get("fbclid") || ""
-    );
+      const element = document.getElementById(field);
 
-
-    /*
-     * Browser
-     */
-
-    params.append(
-      "user_agent",
-      navigator.userAgent
-    );
-
-
-    /*
-     * Send to Apps Script
-     */
-
-    const response =
-    await fetch(
-      SCRIPT_URL,
-      {
-        method: "POST",
-        body: params
+      if (element) {
+        element.value = params.get(field) || "";
       }
-    );
+
+    });
+
+    document.getElementById("landing_page").value =
+      window.location.href;
+
+    document.getElementById("user_agent").value =
+      navigator.userAgent;
 
 
-    /*
-     * Read response
-     */
+    /* ==========================================
+       FILE DISPLAY
+    ========================================== */
 
-    const result =
-    await response.json();
+    const resumeFile =
+      document.getElementById("resumeFile");
+
+    const fileName =
+      document.getElementById("fileName");
+
+    resumeFile.addEventListener("change", function() {
+
+      if (!this.files.length) {
+        fileName.style.display = "none";
+        return;
+      }
+
+      const file = this.files[0];
+
+      fileName.textContent =
+        "Selected: " + file.name;
+
+      fileName.style.display = "block";
+
+    });
 
 
-    /*
-     * SUCCESS
-     */
+    /* ==========================================
+       FAQ
+    ========================================== */
 
-    if (result.success) {
+    document.querySelectorAll(".faq-question")
+      .forEach(function(button) {
 
-      message.textContent =
-      "✓ Resume submitted successfully. We will contact you shortly.";
+        button.addEventListener("click", function() {
 
-      form.reset();
+          const item =
+            this.parentElement;
 
-      submitButton.disabled = false;
+          const answer =
+            item.querySelector(".faq-answer");
 
-      submitButton.textContent =
-      "Submitted ✓";
+          const isActive =
+            item.classList.contains("active");
 
 
-      /*
-       * Optional conversion event
-       */
+          document.querySelectorAll(".faq-item")
+            .forEach(function(other) {
 
-      if (
-        typeof gtag === "function"
-      ) {
+              other.classList.remove("active");
 
-        gtag(
-          "event",
-          "resume_lead",
-          {
-            event_category:
-            "Resume Writing",
+              other.querySelector(".faq-answer")
+                .style.maxHeight = null;
 
-            event_label:
-            "₹999 Resume"
+            });
+
+
+          if (!isActive) {
+
+            item.classList.add("active");
+
+            answer.style.maxHeight =
+              answer.scrollHeight + "px";
+
           }
-        );
 
-      }
+        });
 
-
-    }
+      });
 
 
-    /*
-     * ERROR
-     */
+    /* ==========================================
+       SCROLL REVEAL
+    ========================================== */
 
-    else {
+    const observer =
+      new IntersectionObserver(
+        function(entries) {
 
-      throw new Error(
-        result.error ||
-        result.message ||
-        "Submission failed."
+          entries.forEach(function(entry) {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+            }
+
+          });
+
+        },
+        {
+          threshold: .12
+        }
       );
 
+
+    document.querySelectorAll(".reveal")
+      .forEach(function(element) {
+
+        observer.observe(element);
+
+      });
+
+
+    /* ==========================================
+       BASE64 FILE READER
+    ========================================== */
+
+    function fileToBase64(file) {
+
+      return new Promise(function(resolve, reject) {
+
+        const reader =
+          new FileReader();
+
+        reader.onload = function() {
+
+          const result =
+            reader.result;
+
+          const base64 =
+            result.split(",")[1];
+
+          resolve(base64);
+
+        };
+
+        reader.onerror = function() {
+
+          reject(
+            new Error("Unable to read resume file.")
+          );
+
+        };
+
+        reader.readAsDataURL(file);
+
+      });
+
     }
 
 
-  } catch(error) {
+    /* ==========================================
+       FORM SUBMISSION
+    ========================================== */
+
+    const form =
+      document.getElementById("resumeLeadForm");
+
+    const submitButton =
+      document.getElementById("submitButton");
+
+    const formStatus =
+      document.getElementById("formStatus");
 
 
-    console.error(error);
+    form.addEventListener("submit", async function(event) {
+
+      event.preventDefault();
+
+      formStatus.className = "form-status";
+      formStatus.textContent = "";
 
 
-    message.textContent =
-    "Unable to submit your resume. Please try again.";
+      const file =
+        resumeFile.files[0];
 
 
-    submitButton.disabled =
-    false;
+      /* File validation */
+
+      if (file) {
+
+        const maxSize =
+          3 * 1024 * 1024;
+
+        if (file.size > maxSize) {
+
+          formStatus.className =
+            "form-status error";
+
+          formStatus.textContent =
+            "Please upload a resume smaller than 3 MB.";
+
+          return;
+
+        }
 
 
-    submitButton.textContent =
-    "Submit & Get Started — ₹999";
-
-  }
-
-});
-
-
-
-/*
- * FILE → BASE64
- */
-
-function fileToBase64(file) {
-
-  return new Promise(
-    function(resolve, reject) {
-
-      const reader =
-      new FileReader();
+        const allowedTypes =
+          [
+            "application/pdf",
+            "application/msword",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          ];
 
 
-      reader.onload =
-      function() {
+        const extension =
+          file.name
+            .split(".")
+            .pop()
+            .toLowerCase();
+
+
+        if (
+          !allowedTypes.includes(file.type) &&
+          !["pdf", "doc", "docx"].includes(extension)
+        ) {
+
+          formStatus.className =
+            "form-status error";
+
+          formStatus.textContent =
+            "Only PDF, DOC or DOCX files are allowed.";
+
+          return;
+
+        }
+
+      }
+
+
+      submitButton.disabled = true;
+
+      submitButton.innerHTML =
+        "Submitting...";
+
+
+      try {
+
+        const formData =
+          new FormData(form);
+
+
+        const data =
+          new URLSearchParams();
+
+
+        for (const [key, value] of formData.entries()) {
+
+          data.append(key, value);
+
+        }
+
+
+        if (file) {
+
+          const base64 =
+            await fileToBase64(file);
+
+          data.append(
+            "resume",
+            base64
+          );
+
+          data.append(
+            "resumeName",
+            file.name
+          );
+
+          data.append(
+            "resumeType",
+            file.type || "application/octet-stream"
+          );
+
+        }
+
+
+        const response =
+          await fetch(
+            SCRIPT_URL,
+            {
+              method: "POST",
+              body: data
+            }
+          );
+
 
         const result =
-        reader.result;
+          await response.json();
 
 
-        const base64 =
-        result.split(",")[1];
+        if (result.success) {
+
+          formStatus.className =
+            "form-status success";
+
+          formStatus.textContent =
+            "✓ Your resume has been submitted successfully. We'll contact you shortly.";
+
+          form.reset();
+
+          fileName.style.display =
+            "none";
+
+          submitButton.innerHTML =
+            "Submitted ✓";
+
+        } else {
+
+          throw new Error(
+            result.error ||
+            result.message ||
+            "Submission failed."
+          );
+
+        }
 
 
-        resolve(base64);
+      } catch (error) {
 
-      };
+        console.error(error);
 
+        formStatus.className =
+          "form-status error";
 
-      reader.onerror =
-      function() {
+        formStatus.textContent =
+          "Unable to submit your resume. Please try again or contact us on WhatsApp.";
 
-        reject(
-          new Error(
-            "Unable to read resume file."
-          )
-        );
+        submitButton.disabled =
+          false;
 
-      };
+        submitButton.innerHTML =
+          "Submit & Get Started — ₹999";
 
+      }
 
-      reader.readAsDataURL(file);
+    });
 
-    }
-  );
-
-}
-
-</script>
-
+  </script>
 
 </body>
-
 </html>
